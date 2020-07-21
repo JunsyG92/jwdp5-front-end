@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head itemscope="" itemtype="https://schema.org/WebSite">
+        <meta charset="UTF-8" />
+        <meta name="google-site-verification" content=""/>
+        <meta name="keywords" content=""/>
+        <meta name="description" content=""/>
+        <meta name="robots" content="index, follow"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/purpose.css" />
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script defer src="https://kit.fontawesome.com/69d9156c55.js" crossorigin="anonymous"></script>
+
+        <script type="module" src="assets/js/analyse.js"></script>
+        <title>Analyse</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+                <a class="navbar-brand" href="index.html">
+                    <svg width="1px" height="1em" viewBox="0 0 16 16" class="bi bi-camera2 text-dark h1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 5C7.343 5 5 6.343 5 8a4 4 0 0 1 4-4v1z" />
+                        <path fill-rule="evenodd" d="M14.333 3h-2.015A5.97 5.97 0 0 0 9 2a5.972 5.972 0 0 0-3.318 1H1.667C.747 3 0 3.746 0 4.667v6.666C0 12.253.746 13 1.667 13h4.015c.95.632 2.091 1 3.318 1a5.973 5.973 0 0 0 3.318-1h2.015c.92 0 1.667-.746 1.667-1.667V4.667C16 3.747 15.254 3 14.333 3zM1.5 5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zM9 13A5 5 0 1 0 9 3a5 5 0 0 0 0 10z"/>
+                        <path d="M2 3a1 1 0 0 1 1-1h1a1 1 0 0 1 0 2H3a1 1 0 0 1-1-1z" />
+                    </svg>
+                    OriCam
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav" >
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="mailto:athieu.nesseir@gmail.com">Contacter le développeur</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main class="py-5">
+            <section class="container" id="top">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 col-sm-12 mb-5">
+                        <div id="accordion" class="sticky-top">
+                            <div class="card border-0 shadow-none">
+                                <div class="card-header border-0 py-0" id="headingOne">
+                                <h3 class="mb-0">
+                                    <button class="btn btn-link text-dark text-uppercase font-weight-bold h1" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Api
+                                    </button>
+                                </h3>
+                                </div>
+                                <div id="collapseOne" class="collapse show ml-5" aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div class="card-body m-0 p-0">
+                                        <ul class="nav nav-pills mb-3 flex-column" id="api-tab" role="tablist">
+                                            <li class="nav-item">
+                                            <a class="nav-link active bg-transparent" id="pills-apiCamera-tab" data-toggle="pill" href="#pills-apiCamera" role="tab" aria-controls="pills-apiCamera" aria-selected="true">apiCamera( )</a>
+                                            </li>
+                                            <li class="nav-item">
+                                            <a class="nav-link bg-transparent" id="pills-sendForm-tab" data-toggle="pill" href="#pills-sendForm" role="tab" aria-controls="pills-sendForm" aria-selected="false">sendForm( )</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="card border-0 shadow-none">
+                                <div class="card-header border-0 py-0" id="headingTwo">
+                                    <h3 class="mb-0">
+                                        <button class="btn btn-link collapsed text-dark text-uppercase font-weight-bold h1" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Classe
+                                        </button>
+                                    </h3>
+                                </div>
+                                <div id="collapseTwo" class="collapse ml-5" aria-labelledby="headingTwo" data-parent="#accordion">
+                                    <div class="card-body m-0 p-0">
+                                        <ul class="nav nav-pills mb-3 flex-column" id="class-tab" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link bg-transparent" id="pills-Camera-tab" data-toggle="pill" href="#pills-Camera" role="tab" aria-controls="pills-Camera" aria-selected="true">Camera</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link bg-transparent" id="pills-AddProduct-tab" data-toggle="pill" href="#pills-AddProduct" role="tab" aria-controls="pills-AddProduct" aria-selected="false">AddProduct</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link bg-transparent" id="pills-NewForm-tab" data-toggle="pill" href="#pills-NewForm" role="tab" aria-controls="pills-NewForm" aria-selected="false">NewForm</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card border-0 shadow-none">
+                                <div class="card-header border-0 py-0" id="headingThree">
+                                    <h3 class="mb-0">
+                                        <button class="btn btn-link collapsed text-dark text-uppercase font-weight-bold h1" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Function
+                                        </button>
+                                    </h3>
+                                </div>
+                                <div id="collapseThree" class="collapse ml-5" aria-labelledby="headingThree" data-parent="#accordion">
+                                    <div class="card-body m-0 p-0">
+                                        <ul class="nav nav-pills mb-3 flex-column" id="function-tab" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link bg-transparent" id="pills-addMoreProduct-tab" data-toggle="pill" href="#pills-addMoreProduct" role="tab" aria-controls="pills-addMoreProduct" aria-selected="true">addMoreProduct()</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link bg-transparent" id="pills-addOrderLocalStorage-tab" data-toggle="pill" href="#pills-addOrderLocalStorage" role="tab" aria-controls="pills-addOrderLocalStorage" aria-selected="true">addOrderLocalStorage()</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link bg-transparent" id="pills-addProductLocalStorage-tab" data-toggle="pill" href="#pills-addProductLocalStorage" role="tab" aria-controls="pills-addProductLocalStorage" aria-selected="false">addProductLocalStorage()</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link bg-transparent" id="pills-badgeCount-tab" data-toggle="pill" href="#pills-badgeCount" role="tab" aria-controls="pills-badgeCount" aria-selected="true">badgeCount()</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link bg-transparent" id="pills-cartChekcout-tab" data-toggle="pill" href="#pills-cartChekcout" role="tab" aria-controls="pills-cartChekcout" aria-selected="false">cartChekcout()</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link bg-transparent" id="pills-cartDropdown-tab" data-toggle="pill" href="#pills-cartDropdown" role="tab" aria-controls="pills-cartDropdown" aria-selected="false">cartDropdown()</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link bg-transparent" id="pills-errorMessage-tab" data-toggle="pill" href="#pills-errorMessage" role="tab" aria-controls="pills-errorMessage" aria-selected="false">errorMessage()</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link bg-transparent" id="pills-getJsonItems-tab" data-toggle="pill" href="#pills-getJsonItems" role="tab" aria-controls="pills-getJsonItems" aria-selected="false">getJsonItems()</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link bg-transparent" id="pills-listProductCartFunction-tab" data-toggle="pill" href="#pills-listProductCartFunction" role="tab" aria-controls="pills-listProductCartFunction" aria-selected="true">listProductCartFunction()</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link bg-transparent" id="pills-price-tab" data-toggle="pill" href="#pills-price" role="tab" aria-controls="pills-price" aria-selected="false">price()</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link bg-transparent" id="pills-removeMoreProduct-tab" data-toggle="pill" href="#pills-removeMoreProduct" role="tab" aria-controls="pills-removeMoreProduct" aria-selected="false">removeMoreProduct()</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link bg-transparent" id="pills-removeProductLocalStorage-tab" data-toggle="pill" href="#pills-removeProductLocalStorage" role="tab" aria-controls="pills-removeProductLocalStorage" aria-selected="false">removeProductLocalStorage()</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link bg-transparent" id="pills-displayPrice-tab" data-toggle="pill" href="#pills-displayPrice" role="tab" aria-controls="pills-displayPrice" aria-selected="false">displayPrice()</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link bg-transparent" id="pills-updateLocalStorage-tab" data-toggle="pill" href="#pills-updateLocalStorage" role="tab" aria-controls="pills-updateLocalStorage" aria-selected="false">updateLocalStorage()</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card border-0 shadow-none">
+                                <div class="card-header border-0 py-0" id="headingFour">
+                                    <h3 class="mb-0">
+                                        <button class="btn btn-link collapsed text-dark text-uppercase font-weight-bold h1" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        Templates
+                                        </button>
+                                    </h3>
+                                </div>
+                                <div id="collapseFour" class="collapse ml-5" aria-labelledby="headingFour" data-parent="#accordion">
+                                    <div class="card-body m-0 p-0">
+                                        <ul class="nav nav-pills mb-3 flex-column" id="template-tab" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link bg-transparent" id="pills-Cart-tab" data-toggle="pill" href="#pills-Cart" role="tab" aria-controls="pills-Cart" aria-selected="true">Cart.js</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link bg-transparent" id="pills-Checkout-tab" data-toggle="pill" href="#pills-Checkout" role="tab" aria-controls="pills-Checkout" aria-selected="false">Checkout.js</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link bg-transparent" id="pills-Index-tab" data-toggle="pill" href="#pills-Index" role="tab" aria-controls="pills-Index" aria-selected="false">Index.js</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link bg-transparent" id="pills-Product-tab" data-toggle="pill" href="#pills-Product" role="tab" aria-controls="pills-Product" aria-selected="true">Product.js</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link bg-transparent" id="pills-Thanks-tab" data-toggle="pill" href="#pills-Thanks" role="tab" aria-controls="pills-Thanks" aria-selected="false">Thanks.js</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-12 col-sm-12">
+                        <div class="tab-content" id="pills-tabContent">
+
+                            <!-- api-1 -->
+                            <div class="tab-pane fade show active" id="pills-apiCamera" role="tabpanel" aria-labelledby="pills-apiCamera-tab">
+                                <article>
+                                    <div class="article-header mb-5">
+                                        <h3 class="h1">apiCamera( method, url )</h3>
+                                        <p class="text-muted lead mt-5">La fonction qui représente la base de l'application. Elle prend en paramètre une méthode ainsi qu'une URL et retourne une nouvelle Promesse</p>
+                                    </div>
+                                    <div class="article-body">
+                                        <figure class="code rounded">
+                                            <p class="font-weight-light m-0 path text-right text-sm">assets/js/util/Api.js</p>
+                                            <pre><code>
+    <span class="declar">function</span> <span class="nom">apiCamera</span>(<span class="param">method</span>, <span class="param">url</span>) {
+        <span class="ier">return</span> <span class="declar">new</span> <span class="class">Promise</span>((<span class="nom">resolve</span>, <span class="nom">reject</span>) <span class="declar">=></span> {
+            <span class="declar">const</span> <span class="nomf">xhr</span> = <span class="declar">new</span> <span class="class">XMLHttpRequest</span>();
+            <span class="nomf">xhr</span>.<span class="nom">open</span>(<span class="param">method</span>, <span class="param">url</span>, <span class="declar">true</span>);
+            <span class="nomf">xhr</span>.<span class="nom">onload</span> = () <span class="declar">=></span> <span class="nom">resolve</span>(<span class="param">JSON</span>.<span class="nom">parse</span>(<span class="nomf">xhr</span>.<span class="nomf">responseText</span>));
+            <span class="nomf">xhr</span>.<span class="nom">onerror</span> = () <span class="declar">=></span> <span class="nom">reject</span>(<span class="nom">xhr</span>.<span class="nomf">statusText</span>);
+            <span class="nomf">xhr</span>.<span class="nom">send</span>();
+        });
+    }
+                                            </code></pre>
+                                        </figure>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- api-2 -->
+                            <div class="tab-pane fade" id="pills-sendForm" role="tabpanel" aria-labelledby="pills-sendForm-tab">
+                                <article>
+                                    <div class="article-header mb-5">
+                                        <h3 class="h1">sendForm( method, url, jsonBody, redirection )</h3>
+                                        <p class="text-muted lead mt-5">L'envoie du formulaire passe par une fonction qui prend quatre paramètres : une méthode, une URL, un corp de body et une redirection. Elle retourne une nouvelle Promesse.</p>
+                                    </div>
+                                    <div class="article-body">
+                                        <figure class="code rounded">
+                                            <p class="font-weight-light m-0 path text-right text-sm">assets/js/util/Api.js</p>
+                                            <pre><code>
+    <span class="declar">function</span> <span class="nom">sendForm</span>(<span class="param">method</span>, <span class="param">url</span>, <span class="param">jsonBody</span>, <span class="param">redirection</span>) {
+        <span class="ier">return</span> <span class="declar">new</span> <span class="class">Promise</span>((<span class="nom">resolve</span>, <span class="nom">reject</span>) <span class="declar">=></span> {
+            <span class="declar">const</span> <span class="nomf">xhr</span> = <span class="declar">new</span> <span class="class">XMLHttpRequest</span>();
+            <span class="nomf">xhr</span>.<span class="nom">open</span>(<span class="param">method</span>, <span class="param">url</span>, <span class="declar">true</span>);
+            <span class="nomf">xhr</span>.<span class="nom">setRequestHeader</span>(<span class="text">"Content-type"</span> ,<span class="text">"application/json"</span>);
+            <span class="nomf">xhr</span>.<span class="nom">onload</span> = () <span class="declar">=></span> <span class="nom">resolve</span>(<span class="param">window</span>.<span class="param">location</span>.<span class="param">href</span> = <span class="param">redirection</span>);
+            <span class="nomf">xhr</span>.<span class="nom">onerror</span> = () <span class="declar">=></span> <span class="nom">reject</span>(<span class="param">console</span>.<span class="nom">log</span>(<span class="text">"Une erreur est survenue"</span>));
+            <span class="nomf">xhr</span>.<span class="nom">send</span>(<span class="param">JSON</span>.<span class="nom">stringify</span>(<span class="param">jsonBody</span>);
+        });
+    }
+                                                </code></pre>
+                                        </figure>
+                                    </div>
+                                </article> 
+                            </div>
+
+                            <!-- classe-1 -->
+                            <div class="tab-pane fade" id="pills-Camera" role="tabpanel" aria-labelledby="pills-Camera-tab">
+                                <article>
+                                    <div class="article-header mb-5">
+                                        <h3 class="h1">Camera</h3>
+                                        <p class="text-muted lead mt-5">Cette classe reprèsente la base de l'application. Elle prend dans son constructeur tous les champs que l'api nous retourne (id, description, image, lentilles, nom et le prix).</p>
+                                    </div>
+                                    <div class="article-body">
+                                        <figure class="code rounded">
+                                            <p class="font-weight-light m-0 path text-right text-sm">assets/js/util/Class.js</p>
+                                            <pre><code>
+    <span class="declar">class</span> <span class="class">Camera</span> {
+        <span class="declar">constructor</span> (<span class="param">id</span>, <span class="param">description</span>, <span class="param">imageUrl</span>, <span class="param">lenses</span>, <span class="param">name</span>, <span class="param">price</span>) {
+            <span class="declar">this</span>.<span class="param">id</span> = <span class="param">id</span>;
+            <span class="declar">this</span>.<span class="param">description</span> = , <span class="param">description</span>;
+            <span class="declar">this</span>.<span class="param">imageUrl</span> = <span class="param">imageUrl</span>;
+            <span class="declar">this</span>.<span class="param">lenses</span> = <span class="param">lenses</span>;
+            <span class="declar">this</span>.<span class="param">name</span> = <span class="param">name</span>;
+            <span class="declar">this</span>.<span class="param">price</span> = <span class="param">price</span>;
+        });
+    }
+                                                </code></pre>
+                                        </figure>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- classe-2 -->
+                            <div class="tab-pane fade" id="pills-AddProduct" role="tabpanel" aria-labelledby="pills-AddProduct-tab">
+                                <article>
+                                    <div class="article-header mb-5">
+                                        <h3 class="h1">AddProduct</h3>
+                                        <p class="text-muted lead mt-5">La classe AddProduct permet de créer de nouveaux objets de produits pour, plus tard, l'ajout dans le panier. Dans son constructeur, on y retrouve : l'id, le nom, l'image, le prix et sa quantité</p>
+                                    </div>
+                                    <div class="article-body">
+                                        <figure class="code rounded">
+                                            <p class="font-weight-light m-0 path text-right text-sm">assets/js/util/Class.js</p>
+                                            <pre><code>
+    <span class="declar">class</span> <span class="class">AddProduct</span> {
+        <span class="declar">constructor</span> (<span class="param">id</span>, <span class="param">name</span>, <span class="param">imageUrl</span>, <span class="param">price</span>, <span class="param">add</span>) {
+            <span class="declar">this</span>.<span class="param">id</span> = <span class="param">id</span>;
+            <span class="declar">this</span>.<span class="param">name</span> = <span class="param">name</span>;
+            <span class="declar">this</span>.<span class="param">imageUrl</span> = <span class="param">imageUrl</span>;
+            <span class="declar">this</span>.<span class="param">price</span> = <span class="param">price</span>;
+            <span class="declar">this</span>.<span class="param">add</span> = <span class="param">add</span>;
+        });
+    }
+                                                </code></pre>
+                                        </figure>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- classe-3 -->
+                            <div class="tab-pane fade" id="pills-NewForm" role="tabpanel" aria-labelledby="pills-NewForm-tab">
+                                <article>
+                                    <div class="article-header mb-5">
+                                        <h3 class="h1">NewForm</h3>
+                                        <p class="text-muted lead mt-5">NewForm est une classe qui créera de nouveaux objets pour l'envoie du formulaire. Celui-ci fera des vérifications au niveau des données qu'on lui passera dans son constructeur (Prénom, nom, email, N° de rue, adresse, code postal, ville, carte de crédit, date d'expiration et le code CVC). On y retrouve aussi deux champs qui n'ont pas besoin de vérification : l'id et le prix.</p>
+                                    </div>
+                                    <div class="article-body">
+                                        <figure class="code rounded">
+                                            <p class="font-weight-light m-0 path text-right text-sm">assets/js/util/Class.js</p>
+                                            <pre><code>
+    <span class="declar">class</span> <span class="class">NewForm</span> {
+        <span class="declar">constructor</span> (<span class="param">firstName</span>, <span class="param">lastName</span>, <span class="param">email</span>, <span class="param">numberStreet</span>, <span class="param">address</span>, <span class="param">zipCoden</span>, <span class="param">city</span>, <span class="param">creditCard</span>, <span class="param">date</span>, <span class="param">cvc</span>, <span class="param">price</span>, <span class="param">id</span>) {
+            <span class="declar">this</span>.<span class="param">prenom</span> = <span class="param">firstName</span>;
+            <span class="declar">this</span>.<span class="param">nom</span> = <span class="param">lastName</span>;
+            <span class="declar">this</span>.<span class="param">email</span> = <span class="param">email</span>;
+            <span class="declar">this</span>.<span class="param">numero_de_rue</span> = <span class="param">numberStreet</span>;
+            <span class="declar">this</span>.<span class="param">adresse</span> = <span class="param">address</span>;
+            <span class="declar">this</span>.<span class="param">code_postale</span> = <span class="param">zipCoden</span>;
+            <span class="declar">this</span>.<span class="param">ville</span> = <span class="param">city</span>;
+            <span class="declar">this</span>.<span class="param">carte_de_credit</span> = <span class="param">creditCard</span>;
+            <span class="declar">this</span>.<span class="param">date_d_expiration</span> = <span class="param">date</span>;
+            <span class="declar">this</span>.<span class="param">cvc</span> = <span class="param">cvc</span>;
+            <span class="declar">this</span>.<span class="param">price</span> = <span class="param">price</span>;
+            <span class="declar">this</span>.<span class="param">id</span> = <span class="param">id</span>;
+        });
+
+        <span class="nom">isValidCharacter</span>(<span class="param">element</span>) {
+            <span class="declar">const</span> <span class="nomf">regExCharacter</span> = <span class="text">/^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/</span>;
+            <span class="ier">if</span> (<span class="nomf">regExCharacter</span>).<span class="nom">test</span>(<span class="param">element</span>)) <span class="ier">return</span> <span class="declar">true</span>
+            <span class="ier">else</span> <span class="ier">return</span> <span class="declar">false</span>
+        }
+
+        <span class="nom">isValidNumber</span>(<span class="param">element</span>) {
+            <span class="declar">const</span> <span class="nomf">regExNumber</span> = <span class="text">/^[0-9]*$/</span>;
+            <span class="ier">if</span> (<span class="nomf">regExNumber</span>).<span class="nom">test</span>(<span class="param">element</span>)) <span class="ier">return</span> <span class="declar">true</span>
+            <span class="ier">else</span> <span class="ier">return</span> <span class="declar">false</span>
+        }
+
+        <span class="nom">isValidCreditCard</span>(<span class="param">element</span>) {
+            <span class="declar">const</span> <span class="nomf">regExCreditCard</span> = <span class="text">/^((4\d{3})|(5[1-5]\d{2})|(6011))-?\d{4}-?\d{4}-?\d{4}|3[4,7]\d{13}$/</span>;
+            <span class="ier">if</span> (<span class="nomf">regExCreditCard</span>).<span class="nom">test</span>(<span class="param">element</span>)) <span class="ier">return</span> <span class="declar">true</span>
+            <span class="ier">else</span> <span class="ier">return</span> <span class="declar">false</span>
+        }
+
+        <span class="nom">isValidDate</span>(<span class="param">element</span>) {
+            <span class="declar">const</span> <span class="nomf">regExDate</span> = <span class="text">/^(0[1-9]|1[0-2])\/(2[0-9]|20[2-3][0-9])$/</span>;
+            <span class="ier">if</span> (<span class="nomf">regExDate</span>).<span class="nom">test</span>(<span class="param">element</span>)) <span class="ier">return</span> <span class="declar">true</span>
+            <span class="ier">else</span> <span class="ier">return</span> <span class="declar">false</span>
+        }
+
+        <span class="nom">isValidMail</span>(<span class="param">element</span>) {
+            <span class="declar">const</span> <span class="nomf">regExMail</span> = <span class="text">/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/</span>;
+            <span class="ier">if</span> (<span class="nomf">regExMail</span>).<span class="nom">test</span>(<span class="param">element</span>)) <span class="ier">return</span> <span class="declar">true</span>
+            <span class="ier">else</span> <span class="ier">return</span> <span class="declar">false</span>
+        }
+
+        <span class="nom">isValidCVC</span>(<span class="param">element</span>) {
+            <span class="declar">const</span> <span class="nomf">regExCVC</span> = <span class="text">/^[0-9]{3}$/</span>;
+            <span class="ier">if</span> (<span class="nomf">regExCVC</span>).<span class="nom">test</span>(<span class="param">element</span>)) <span class="ier">return</span> <span class="declar">true</span>
+            <span class="ier">else</span> <span class="ier">return</span> <span class="declar">false</span>
+        }
+        <span class="nom">isEmpty</span>(<span class="param">element</span>) {
+            <span class="ier">if</span> (<span class="param">element</span>.<span class="nom">trim</span>() !== <span class="text">""</span>)) <span class="ier">return</span> <span class="declar">true</span>
+            <span class="ier">else</span> <span class="ier">return</span> <span class="declar">false</span>
+        }
+    }
+                                                </code></pre>
+                                        </figure>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- function-1 -->
+                            <div class="tab-pane fade" id="pills-addMoreProduct" role="tabpanel" aria-labelledby="pills-addMoreProduct-tab">
+                                <article>
+                                    <div class="article-header mb-5">
+                                        <h3 class="h1">addMoreProduct</h3>
+                                        <p class="text-muted lead mt-5">addMoreProduct s'occupe de l'incrémentation du produit qu'on retrouve dans le localStorage. On y retrouve un aperçu de cette fonction dans la page du panier.</p>
+                                    </div>
+                                    <div class="article-body">
+                                        <figure class="code rounded">
+                                            <p class="font-weight-light m-0 path text-right text-sm">assets/js/util/Function.js</p>
+                                            <pre><code>
+    <span class="declar">const</span> <span class="nom">addMoreProduct</span> = () <span class="nomf">=></span> {
+        <span class="declar">var</span> <span class="param">arrayIds</span> = []
+        <span class="ier">if</span> (<span class="nom">getJsonItems</span>().<span class="param">length</span> > <span class="num">0</span>) {
+            <span class="nom">getJsonItems</span>().<span class="nom">map</span>(<span class="param">product</span> <span class="nomf">=></span> {
+                <span class="param">arrayIds</span>.<span class="nom">push</span>(<span class="param">product</span>)
+                <span class="declar">let</span> <span class="param">removeProduct</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"more-"</span> + .<span class="param">product</span>.<span class="param">id</span>);
+                <span class="param">removeProduct</span>.<span class="nom">addEventListener</span>(<span class="text">"click"</span>, <span class="declar">function</span>() {
+                    <span class="param">product</span>.<span class="param">add</span>++
+                    <span class="nom">updateLocalStorage</span>(<span class="param">arrayIds</span>)
+                });
+            });
+        }
+    }
+                                                </code></pre>
+                                        </figure>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- function-2 -->
+                            <div class="tab-pane fade" id="pills-addOrderLocalStorage" role="tabpanel" aria-labelledby="pills-addOrderLocalStorage-tab">
+                                <article>
+                                    <div class="article-header mb-5">
+                                        <h3 class="h1">addOrderLocalStorage</h3>
+                                        <p class="text-muted lead mt-5">Cette fonction créer une nouvelle clé qui se nomme "Order" ou y on retrouve les informations de l'utilisateur transmise via le formulaire et supprime la clé "Product" et ses valeurs. On y retrouve un aperçu dans la page de remerciement.</p>
+                                    </div>
+                                    <div class="article-body">
+                                        <figure class="code rounded">
+                                            <p class="font-weight-light m-0 path text-right text-sm">assets/js/util/Function.js</p>
+                                            <pre><code>
+    <span class="declar">const</span> <span class="nom">addOrderLocalStorage</span> = (<span class="param">data</span>) <span class="nomf">=></span> {
+        <span class="param">localStorage</span>.<span class="nom">setItem</span>(<span class="text">"Order"</span>, <span class="param">JSON</span>.<span class="nom">stringify</span>(<span class="param">data</span>))
+        <span class="param">localStorage</span>.<span class="nom">removeItem</span>(<span class="text">"Product"</span>, <span class="param">JSON</span>.<span class="nom">stringify</span>(<span class="param">data</span>))
+    }
+                                                </code></pre>
+                                        </figure>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- function-3 -->
+                            <div class="tab-pane fade" id="pills-addProductLocalStorage" role="tabpanel" aria-labelledby="pills-addProductLocalStorage-tab">
+                                <article>
+                                    <div class="article-header mb-5">
+                                        <h3 class="h1">addProductLocalStorage</h3>
+                                        <p class="text-muted lead mt-5">Cette fonction créer une nouvelle clé qui se nomme "Product" et prend en valeur les données du produit ajouter au panier. On y retrouve un aperçu dans la page produit</p>
+                                    </div>
+                                    <div class="article-body">
+                                        <figure class="code rounded">
+                                            <p class="font-weight-light m-0 path text-right text-sm">assets/js/util/Function.js</p>
+                                            <pre><code>
+    <span class="declar">const</span> <span class="nom">addProductLocalStorage</span> = (<span class="param">data</span>) <span class="nomf">=></span> {
+        <span class="param">localStorage</span>.<span class="nom">setItem</span>(<span class="text">"Product"</span>, <span class="param">JSON</span>.<span class="nom">stringify</span>(<span class="param">data</span>))
+        <span class="nom">badgeCount</span>()
+        <span class="nom">cartDropdown</span>()
+    }
+                                                </code></pre>
+                                        </figure>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- function-4 -->
+                            <div class="tab-pane fade" id="pills-badgeCount" role="tabpanel" aria-labelledby="pills-badgeCount-tab">
+                                <article>
+                                    <div class="article-header mb-5">
+                                        <h3 class="h1">badgeCount</h3>
+                                        <p class="text-muted lead mt-5">Cette fonction permet d'afficher le nombre de produits existant dans le panier (c'est à dire dans la clé "Product" du localStorage). On y retrouve un aperçu dans toutes les pages du site.</p>
+                                    </div>
+                                    <div class="article-body">
+                                        <figure class="code rounded">
+                                            <p class="font-weight-light m-0 path text-right text-sm">assets/js/util/Function.js</p>
+                                            <pre><code>
+    <span class="declar">const</span> <span class="nom">badgeCount</span> = () <span class="nomf">=></span> {
+        <span class="ier">if</span>(<span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"badge"</span>)) {    
+            <span class="declar">let</span> <span class="param">badge</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"badge"</span>)
+            <span class="ier">if</span>(!<span class="nom">getJsonItems</span>()) {
+                <span class="param">badge</span>.<span class="nomf">classList</span>.<span class="nom">add</span>(<span class="text">"d-none"</span>)
+            } <span class="ier">else</span> {
+                <span class="declar">let</span> <span class="param">quantityCart</span> = <span class="num">0</span>
+                <span class="ier">for</span> (<span class="declar">let</span> <span class="param">i</span> <span class="declar">in</span> <span class="nom">getJsonItems</span>()) {
+                    <span class="param">quantityCart</span> += <span class="nom">getJsonItems</span>()[<span class="param">i</span>].<span class="param">add</span>
+                    <span class="param">badge</span>.<span class="param">innerHTML</span> = <span class="param">quantityCart</span>
+                }
+            }
+        }
+    }
+                                                </code></pre>
+                                        </figure>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- function-5 -->
+                            <div class="tab-pane fade" id="pills-cartChekcout" role="tabpanel" aria-labelledby="pills-cartChekcout-tab">
+                                <article>
+                                    <div class="article-header mb-5">
+                                        <h3 class="h1">cartChekcout</h3>
+                                        <p class="text-muted lead mt-5">cartCheckout permet d'afficher le contenu du panier à partir des valeurs existante dans la clé "Produit" du localStorage. On y retrouve un aperçu dans la page checkout</p>
+                                    </div>
+                                    <div class="article-body">
+                                        <figure class="code rounded">
+                                            <p class="font-weight-light m-0 path text-right text-sm">assets/js/util/Function.js</p>
+                                            <pre><code>
+    <span class="declar">const</span> <span class="nom">cartChekcout</span> = () <span class="nomf">=></span> {
+        <span class="declar">const</span> <span class="nomf">listChekout</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"listChekout"</span>)
+        <span class="declar">const</span> <span class="nomf">quantityProduct</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"quantityProduct"</span>)
+        <span class="declar">const</span> <span class="nomf">delivery</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"delivery"</span>)
+        <span class="declar">const</span> <span class="nomf">getTotal</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"total"</span>)
+        <span class="ier">if</span>(<span class="nom">getJsonItems</span>()) {
+            <span class="declar">let</span> <span class="param">productNumber</span> = <span class="num">0</span>
+            <span class="declar">let</span> <span class="param">checkoutProduct</span> = <span class="nom">getJsonItems</span>().<span class="nom">map</span>(<span class="param">product</span> <span class="nomf">=></span> {
+                <span class="param">productNumber</span> += <span class="param">product</span>.<span class="param">add</span>
+                <span class="ier">if</span>(<span class="nom">getJsonItems</span>().<span class="param">length</span> == <span class="num">1</span> && <span class="param">product</span>.<span class="param">add</span> == <span class="num">1</span>) {
+                    <span class="nomf">quantityProduct</span>.<span class="param">innerHTML</span> = <span class="param">productNumber</span> + <span class="text">" produit"</span>
+                } <span class="ier">else</span> {
+                    <span class="nomf">quantityProduct</span>.<span class="param">innerHTML</span> = <span class="param">productNumber</span> + <span class="text">" produits"</span>
+                }
+                <span class="ier">return</span> <span class="text">`
+                    &ltdiv class="row py-3">
+                        &ltdiv class="col-8">
+                            &ltdiv class="media align-items-center">
+                                &ltimg alt="Image placeholder" class="mr-2" src="<span class="nomf">${</span><span class="param">product</span>.<span class="param">imageUrl</span><span class="nomf">}</span>" style="width: 42px;">
+                                &ltdiv class="media-body">
+                                    &ltdiv class="text-limit lh-100">
+                                        &ltsmall class="font-weight-bold mb-0">&lta href="product.html?id=<span class="nomf">${</span><span class="param">product</span>.<span class="param">id</span><span class="nomf">}</span>"><span class="nomf">${</span><span class="param">product</span>.<span class="param">name</span><span class="nomf">}</span>&lt/a>&lt/small>
+                                    &lt/div>
+                                    &ltsmall class="text-muted"><span class="nomf">${</span><span class="param">product</span>.<span class="param">add</span><span class="nomf">}</span> x <span class="nomf">${</span><span class="nom">price</span>(<span class="param">product</span>.<span class="param">price</span>)<span class="nomf">}</span> €&lt/small>
+                                &lt/div>
+                            &lt/div>
+                        &lt/div>
+                        &ltdiv class="col-4 text-right lh-100">
+                            &ltsmall class="text-dark total"><span class="nomf">${</span><span class="param">product</span>.<span class="param">add</span> * <span class="nom">price</span>(<span class="param">product</span>.<span class="param">price</span>)<span class="nomf">}</span> €&lt/small>
+                        &lt/div>
+                    &lt/div>
+                `</span>
+            }).<span class="nom">join</span>(<span class="text">""</span>);
+            <span class="declar">let</span> <span class="param">deliveryPrice</span> = <span class="num">250</span>
+            <span class="nomf">listChekout</span>.<span class="param">innerHTML</span> = <span class="param">checkoutProduct</span>
+            <span class="nomf">delivery</span>.<span class="param">innerHTML</span> = <span class="param">deliveryPrice</span> + <span class="text">" €"</span> 
+            <span class="declar">let</span> <span class="param">total</span> = <span class="num">0</span>
+            <span class="ier">if</span>(<span class="nom">getJsonItems</span>()) {
+                <span class="nom">getJsonItems</span>().<span class="nom">map</span>(<span class="param">product</span> <span class="nomf">=></span> {
+                    <span class="param">total</span> += <span class="nom">price</span>(<span class="param">product</span>.<span class="param">price</span>) * <span class="param">product</span>.<span class="param">add</span>
+                    <span class="nomf">getTotal</span>.<span class="param">innerHTML</span> = <span class="text">"<span class="nomf">${</span><span class="param">total</span> + <span class="param">deliveryPrice</span><span class="nomf">}</span> €"</span>
+                })<span class="nom">join</span>(<span class="text">""</span>);
+            }
+        }
+    }
+                                                </code></pre>
+                                        </figure>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- function-6 -->
+                            <div class="tab-pane fade" id="pills-cartDropdown" role="tabpanel" aria-labelledby="pills-cartDropdown-tab">
+                                <article>
+                                    <div class="article-header mb-5">
+                                        <h3 class="h1">cartDropdown</h3>
+                                        <p class="text-muted lead mt-5">cartDropdown permet d'afficher le contenu du panier dans le hover (dropdown) à partir des valeurs existante dans la clé "Produit" du localStorage. Celui-ci se trouve au niveau de la barre de navigation (l'icône panier). On y retrouve un aperçu dans la page d'accueil et la page produit du site.</p>
+                                    </div>
+                                    <div class="article-body">
+                                        <figure class="code rounded">
+                                            <p class="font-weight-light m-0 path text-right text-sm">assets/js/util/Function.js</p>
+                                            <pre><code>
+    <span class="declar">const</span> <span class="nom">cartDropdown</span> = () <span class="nomf">=></span> {
+        <span class="declar">const</span> <span class="nomf">listCart</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"listCart"</span>)
+        <span class="declar">const</span> <span class="nomf">table</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"table-dropdown"</span>)
+        <span class="declar">const</span> <span class="nomf">noProducts</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"not-products"</span>)
+        <span class="declar">const</span> <span class="nomf">priceDropdown</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"price-dropdown"</span>)
+
+        <span class="ier">if</span>(<span class="nom">getJsonItems</span>() != <span class="declar">null</span>) {
+            <span class="declar">let</span> <span class="param">productCart</span> = <span class="nom">getJsonItems</span>().<span class="nom">map</span>(<span class="param">product</span> <span class="nomf">=></span> {
+                <span class="ier">return</span> <span class="text">`
+                    &lttr class="table-divider">&lt/tr>
+                    &lttr>
+                        &ltth scope="row">
+                            &ltdiv class="media align-items-center">
+                                &ltimg alt="Image placeholder" src="<span class="nomf">${</span><span class="param">product</span>.<span class="param">imageUrl</span><span class="nomf">}</span>" class="" style="width: 80px;">
+                                &ltdiv class="media-body pl-3">
+                                    &ltdiv class="lh-100">
+                                        &lta href="product.html?id=<span class="nomf">${</span><span class="param">product</span>.<span class="param">id</span><span class="nomf">}</span>" class="font-weight-bold mb-0"><span class="nomf">${</span><span class="param">product</span>.<span class="param">name</span><span class="nomf">}</span>&lt/a>
+                                    &lt/div>
+                                &lt/div>
+                            &lt/div>
+                        &lt/th>
+                        &lttd class="price text-right pr-5"><span class="nomf">${</span><span class="nom">price</span>(<span class="param">product</span>.<span class="param">price</span>)<span class="nomf">}</span> €&lt/td>
+                        &lttd class="price text-right pr-5"><span class="nomf">${</span><span class="param">product</span>.<span class="param">add</span><span class="nomf">}</span>&lt/td>
+                        &lttd class="price text-right pr-5"><span class="nomf">${</span><span class="nom">price</span>(<span class="param">product</span>.<span class="param">price</span>) * <span class="param">product</span>.<span class="param">add</span><span class="nomf">}</span> €&lt/td>
+                        &lttd class="text-right">
+                            &ltbutton class="remove bg-transparent border-0" id="product-<span class="nomf">${</span><span class="param">product</span>.<span class="param">id</span><span class="nomf">}</span>" >
+                                &ltsvg width="1.3em" height="1.3em" viewBox="0 0 16 16" class="bi bi-x-circle-fill text-danger" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    &ltpath fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.146-3.146a.5.5 0 0 0-.708-.708L8 7.293 4.854 4.146a.5.5 0 1 0-.708.708L7.293 8l-3.147 3.146a.5.5 0 0 0 .708.708L8 8.707l3.146 3.147a.5.5 0 0 0 .708-.708L8.707 8l3.147-3.146z"/>
+                                &lt/svg>
+                            &lt/button>
+                        &lt/td>
+                    &lt/tr>
+                    `</span>
+            }).<span class="nom">join</span>(<span class="text">""</span>)
+    
+            <span class="nomf">noProducts</span>.<span class="nomf">classList</span>.<span class="nom">add</span>(<span class="text">"d-none"</span>)
+            <span class="nomf">noProducts</span>.<span class="nomf">classList</span>.<span class="nom">remove</span>(<span class="text">"d-block"</span>)
+            <span class="nomf">table</span>.<span class="nomf">classList</span>.<span class="nom">add</span>(<span class="text">"d-block"</span>)
+            <span class="nomf">priceDropdown</span>.<span class="nomf">classList</span>.<span class="nom">remove</span>(<span class="text">"d-none"</span>)
+            <span class="nomf">listCart</span>.<span class="param">innerHTML</span> = <span class="param">productCart</span>
+            <span class="nom">displayPrice</span>()
+        }
+
+        <span class="ier">if</span>(<span class="nom">getJsonItems</span>().<span class="param">length</span> === <span class="num">0</span> ) {
+            <span class="nomf">table</span>.<span class="nomf">classList</span>.<span class="nom">add</span>(<span class="text">"d-none"</span>)
+            <span class="nomf">priceDropdown</span>.<span class="nomf">classList</span>.<span class="nom">add</span>(<span class="text">"d-none"</span>)
+            <span class="nomf">noProducts</span>.<span class="nomf">classList</span>.<span class="nom">add</span>(<span class="text">"d-block"</span>)
+            <span class="nomf">table</span>.<span class="nomf">classList</span>.<span class="nom">remove</span>(<span class="text">"d-block"</span>)
+            <span class="nomf">noProducts</span>.<span class="param">innerHTML</span> = <span class="text">"&ltp class='text-center mb-0'>Vous n'avez aucun produit dans votre panier&lt/p>"</span>
+        }
+    }
+                                        </code></pre>
+                                    </figure>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- function-7 -->
+                            <div class="tab-pane fade" id="pills-errorMessage" role="tabpanel" aria-labelledby="pills-errorMessage-tab">
+                                <article>
+                                    <div class="article-header mb-5">
+                                        <h3 class="h1">errorMessage</h3>
+                                        <p class="text-muted lead mt-5">errorMessage affiche les messages d'erreurs retourn" par les vérifications de validation des champs de formulaire. On y trouve un aperçu dans la page checkout.</p>
+                                    </div>
+                                    <div class="article-body">
+                                        <figure class="code rounded">
+                                            <p class="font-weight-light m-0 path text-right text-sm">assets/js/util/Function.js</p>
+                                            <pre><code>
+    <span class="declar">const</span> <span class="nom">errorMessage</span> = (<span class="param">message</span>) <span class="nomf">=></span> {
+        <span class="declar">const</span> <span class="nomf">info</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"error"</span>)
+        <span class="nomf">info</span>.<span class="nomf">classList</span>.<span class="nom">remove</span>(<span class="text">"d-none"</span>)
+        <span class="nomf">info</span>.<span class="nomf">classList</span>.<span class="nom">add</span>(<span class="text">"d-block"</span>)
+        <span class="nomf">info</span>.<span class="param">innerHTML</span> = <span class="text">`&ltp><span class="nomf">${</span><span class="param">message</span><span class="nomf">}</span>&lt/p>`</span>
+    }
+                                                </code></pre>
+                                        </figure>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- function-8 -->
+                            <div class="tab-pane fade" id="pills-getJsonItems" role="tabpanel" aria-labelledby="pills-getJsonItems-tab">
+                                <article>
+                                    <div class="article-header mb-5">
+                                        <h3 class="h1">getJsonItems</h3>
+                                        <p class="text-muted lead mt-5">getJsonItems retroune un array JSON.parse des éléments se trouvant dans la clé "Product" du localStorage.</p>
+                                    </div>
+                                    <div class="article-body">
+                                        <figure class="code rounded">
+                                            <p class="font-weight-light m-0 path text-right text-sm">assets/js/util/Function.js</p>
+                                            <pre><code>
+    <span class="declar">const</span> <span class="nom">getJsonItems</span> = () <span class="nomf">=></span> {
+        <span class="ier">if</span>(<span class="param">localStorage</span>.<span class="nom">getItem</span>(<span class="text">"Product"</span>)) {
+            <span class="declar">let</span> <span class="param">keyStorage</span> = <span class="param">localStorage</span>.<span class="nom">getItem</span>(<span class="text">"Product"</span>);
+            <span class="declar">let</span> <span class="param">products</span> = <span class="param">JSON</span>.<span class="nom">parse</span>(<span class="param">keyStorage</span>);
+            <span class="ier">return</span> <span class="param">products</span>;
+        } <span class="ier">else</span> {
+            <span class="declar">let</span> <span class="param">products</span> = [];
+            <span class="ier">return</span> <span class="param">products</span>;
+        }
+    }
+                                                </code></pre>
+                                        </figure>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- function-9 -->
+                            <div class="tab-pane fade" id="pills-listProductCartFunction" role="tabpanel" aria-labelledby="pills-listProductCartFunction-tab">
+                                <article>
+                                    <div class="article-header mb-5">
+                                        <h3 class="h1">listProductCartFunction</h3>
+                                        <p class="text-muted lead mt-5">listProductCartFunction permet d'afficher le contenu du panier à partir des valeurs existante de la clé "Produit" du localStorage. On y retrouve un aperçu dans la page panier</p>
+                                    </div>
+                                    <div class="article-body">
+                                        <figure class="code rounded">
+                                            <p class="font-weight-light m-0 path text-right text-sm">assets/js/util/Function.js</p>
+                                            <pre><code>
+    <span class="declar">const</span> <span class="nom">listProductCartFunction</span> = () <span class="nomf">=></span> {
+        <span class="ier">if</span>(<span class="nom">getJsonItems</span>()) {
+            <span class="declar">let</span> <span class="param">listProductCart</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"list-array"</span>)
+            <span class="declar">let</span> <span class="param">productCart</span> = <span class="nom">getJsonItems</span>().<span class="nom">map</span>(<span class="param">product</span> <span class="nomf">=></span> {
+                <span class="ier">return</span><span class="text">`
+                        &lttr class="table-divider"></tr>
+                        &lttr>
+                            &ltth scope="row">
+                                &ltdiv class="media align-items-center">
+                                    &ltimg alt="Image placeholder" src="<span class="nomf">${</span><span class="param">product</span>.<span class="param">imageUrl</span><span class="nomf">}</span>" style="width: 80px;">
+                                    &ltdiv class="media-body pl-3">
+                                        &ltdiv class="lh-100">
+                                            &lta href="product.html?id=<span class="nomf">${</span><span class="param">product</span>.<span class="param">id</span><span class="nomf">}</span>" class="font-weight-bold mb-0"><span class="nomf">${</span><span class="param">product</span>.<span class="param">name</span><span class="nomf">}</span>&lt/a>
+                                        &lt/div>
+                                    &lt/div>
+                                &lt/div>
+                            &lt/th>
+                            &lttd class="price text-right pr-5"><span class="nomf">${</span><span class="nom">price</span>(<span class="param">product</span>.<span class="param">price</span>)<span class="nomf">}</span> €&lt/td>
+                            &lttd class="text-center pr-">
+                                &ltbutton class="less bg-transparent border-0" id="less-<span class="nomf">${</span><span class="param">product</span>.<span class="param">id</span><span class="nomf">}</span>" >
+                                    &ltsvg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-caret-left-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        &ltpath d="M3.86 8.753l5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+                                    &lt/svg>
+                                &lt/button>
+                                
+                                <span class="nomf">${</span><span class="param">product</span>.<span class="param">add</span><span class="nomf">}</span>
+                            
+                                &ltbutton class="more bg-transparent border-0" id="more-<span class="nomf">${</span><span class="param">product</span>.<span class="param">id</span><span class="nomf">}</span>" >
+                                    &ltsvg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        &ltpath d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                                    &lt/svg>
+                                &lt/button>
+                            &lt/td>
+                            &lttd class="text-right"><span class="nomf">${</span><span class="nom">price</span>(<span class="param">product</span>.<span class="param">price</span>)* <span class="param">product</span>.<span class="param">add</span><span class="nomf">}</span> €&lt/td>
+                            &lttd class="text-right pr-5">
+                                &ltbutton class="remove bg-transparent border-0" id="product-<span class="nomf">${</span><span class="param">product</span>.<span class="param">id</span><span class="nomf">}</span>" >
+                                    &ltsvg width="1.3em" height="1.3em" viewBox="0 0 16 16" class="bi bi-x-circle-fill text-danger" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        &ltpath fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.146-3.146a.5.5 0 0 0-.708-.708L8 7.293 4.854 4.146a.5.5 0 1 0-.708.708L7.293 8l-3.147 3.146a.5.5 0 0 0 .708.708L8 8.707l3.146 3.147a.5.5 0 0 0 .708-.708L8.707 8l3.147-3.146z"/>
+                                    &lt/svg>
+                                &lt/button>
+                            &lt/td>
+                        &lt/tr>
+                    `</span>
+            }).<span class="nom">join</span>(<span class="text">""</span>)
+            <span class="param">listProductCart</span>.<span class="param">innerHTML</span> = <span class="param">productCart</span>
+        }
+        <span class="nom">displayPrice</span>();
+        <span class="nom">addMoreProduct</span>();
+        <span class="nom">removeMoreProduct</span>();
+        <span class="nom">removeProductLocalStorage</span>();
+    }
+                                            </code></pre>
+                                        </figure>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- function-10 -->
+                            <div class="tab-pane fade" id="pills-price" role="tabpanel" aria-labelledby="pills-price-tab">
+                                <article>
+                                    <div class="article-header mb-5">
+                                        <h3 class="h1">price</h3>
+                                        <p class="text-muted lead mt-5">Price() divise la somme donnée par 100.</p>
+                                    </div>
+                                    <div class="article-body">
+                                        <figure class="code rounded">
+                                            <p class="font-weight-light m-0 path text-right text-sm">assets/js/util/Function.js</p>
+                                            <pre><code>
+    <span class="declar">const</span> <span class="nom">price</span> = <span class="param">product</span> <span class="nomf">=></span> {
+        <span class="declar">let</span> <span class="param">price</span> = <span class="param">Math</span>.<span class="nom">round</span>(<span class="param">product</span> / <span class="num">100</span>);
+        <span class="ier">return</span> <span class="param">price</span>;
+        }
+    }
+                                                </code></pre>
+                                        </figure>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="tab-pane fade" id="pills-removeMoreProduct" role="tabpanel" aria-labelledby="pills-removeMoreProduct-tab">
+                                <article>
+                                    <div class="article-header mb-5">
+                                        <h3 class="h1">removeMoreProduct</h3>
+                                        <p class="text-muted lead mt-5">removeMoreProduct s'occupe de la décrémentation du produit qu'on retrouve dans le localStorage. Lorsque le produit posséde la valeur de "0" dans sa quantité, celui-ci est supprimer de la clé "Produit". On y retrouve un aperçu de cette fonction dans la page du panier.</p>
+                                    </div>
+                                    <div class="article-body">
+                                        <figure class="code rounded">
+                                            <p class="font-weight-light m-0 path text-right text-sm">assets/js/util/Function.js</p>
+                                            <pre><code>
+    <span class="declar">const</span> <span class="nom">removeMoreProduct</span> = () <span class="nomf">=></span> {
+        <span class="declar">let</span> <span class="param">arrayIds</span> = []
+        <span class="ier">if</span>(<span class="nom">getJsonItems</span>().<span class="param">length</span> > <span class="num">0</span>) {
+            <span class="nom">getJsonItems</span>().<span class="nom">map</span>(<span class="param">product</span> <span class="nomf">=></span> {
+                <span class="param">arrayIds</span>.<span class="nom">push</span>(<span class="param">product</span>)
+                <span class="declar">let</span> <span class="param">removeProduct</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"less-"</span> + <span class="param">product</span>.<span class="param">id</span>)
+                <span class="param">removeProduct</span>.<span class="nom">addEventListener</span>(<span class="text">"click"</span>, <span class="declar">function</span>() {
+                    <span class="param">product</span>.<span class="param">add</span>--
+                    <span class="nom">updateLocalStorage</span>(<span class="param">arrayIds</span>)
+                    <span class="ier">if</span>(<span class="param">product</span>.<span class="param">add</span> == <span class="num">0</span>) {
+                        <span class="declar">let</span> <span class="param">findObject</span> = <span class="param">arrayIds</span>.<span class="nom">find</span>(<span class="param">x</span> <span class="nomf">=></span> <span class="param">x</span>.<span class="param">id</span> === <span class="param">product</span>.<span class="param">id</span>)
+                        <span class="declar">let</span> <span class="param">keyObject</span> = <span class="param">arrayIds</span>.<span class="nom">indexOf</span>(<span class="param">findObject</span>)
+                        <span class="param">arrayIds</span>.<span class="nom">splice</span>(<span class="param">keyObject</span>, <span class="num">1</span>)
+                        <span class="nom">updateLocalStorage</span>(<span class="param">arrayIds</span>)
+                    }
+                })
+            })
+        }
+    }
+                                            </code></pre>
+                                        </figure>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- function-11 -->
+                            <div class="tab-pane fade" id="pills-removeProductLocalStorage" role="tabpanel" aria-labelledby="pills-removeProductLocalStorage-tab">
+                                <article>
+                                    <div class="article-header mb-5">
+                                        <h3 class="h1">removeProductLocalStorage</h3>
+                                        <p class="text-muted lead mt-5">removeProductLocalStorage retire le produit du localStorage. On y retrouve un aperçu de cette fonction dans la page du panier.</p>
+                                    </div>
+                                    <div class="article-body">
+                                        <figure class="code rounded">
+                                            <p class="font-weight-light m-0 path text-right text-sm">assets/js/util/Function.js</p>
+                                            <pre><code>
+    <span class="declar">const</span> <span class="nom">removeProductLocalStorage</span> = () <span class="nomf">=></span> {
+        <span class="declar">let</span> <span class="param">arrayIds</span> = []
+        <span class="ier">if</span>(<span class="nom">getJsonItems</span>().<span class="param">length</span> > <span class="num">0</span>) {
+            <span class="nom">getJsonItems</span>().<span class="nom">map</span>(<span class="param">product</span> <span class="nomf">=></span> {
+                <span class="param">arrayIds</span>.<span class="nom">push</span>(<span class="param">product</span>)
+                <span class="declar">let</span> <span class="param">removeProduct</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"product-"</span> + <span class="param">product</span>.<span class="param">id</span>)
+                <span class="param">removeProduct</span>.<span class="nom">addEventListener</span>(<span class="text">"click"</span>, <span class="declar">function</span>() {
+                    <span class="declar">let</span> <span class="param">findObject</span> = <span class="param">arrayIds</span>.<span class="nom">find</span>(<span class="param">x</span> <span class="nomf">=></span> <span class="param">x</span>.<span class="param">id</span> === <span class="param">product</span>.<span class="param">id</span>)
+                    <span class="declar">let</span> <span class="param">keyObject</span> = <span class="param">arrayIds</span>.<span class="nom">indexOf</span>(<span class="param">findObject</span>)
+                    <span class="param">arrayIds</span>.<span class="nom">splice</span>(<span class="param">keyObject</span>, <span class="num">1</span>)
+                    <span class="nom">updateLocalStorage</span>(<span class="param">arrayIds</span>)
+                    }
+                })
+            })
+        }
+    }
+                                            </code></pre>
+                                        </figure>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- function-12 -->
+                            <div class="tab-pane fade" id="pills-displayPrice" role="tabpanel" aria-labelledby="pills-displayPrice-tab">
+                                <article>
+                                    <div class="article-header mb-5">
+                                        <h3 class="h1">displayPrice</h3>
+                                        <p class="text-muted lead mt-5">Cette fonction calcule la valeur total du prix de tous les produits existant dans le localStorage. Elle prend en compte la quantité d'un produit et le nombre total de produit. On y retrouve un aperçu dans le dropdown de la barre de navigation, la page panier et la page checkout.</p>
+                                    </div>
+                                    <div class="article-body">
+                                        <figure class="code rounded">
+                                            <p class="font-weight-light m-0 path text-right text-sm">assets/js/util/Function.js</p>
+                                            <pre><code>
+    <span class="declar">const</span> <span class="nom">displayPrice</span> = () <span class="nomf">=></span> {
+        <span class="declar">let</span> <span class="param">totalPrice</span> = <span class="param">document</span>.<span class="nom">querySelector</span>(<span class="text">"span.total"</span>)
+        <span class="declar">let</span> <span class="param">total</span> = <span class="num">0</span>
+
+        <span class="ier">if</span>(<span class="nom">getJsonItems</span>().<span class="param">length</span> > <span class="num">0</span>) {
+            <span class="nom">getJsonItems</span>().<span class="nom">map</span>(<span class="param">product</span> <span class="nomf">=></span> {
+                <span class="param">total</span> += <span class="nom">price</span>(<span class="param">product</span>.<span class="param">price</span>) * <span class="param">product</span>.<span class="param">add</span>
+                <span class="param">totalPrice</span>.<span class="param">innerHTML</span> = <span class="text">`<span class="nomf">${</span><span class="param">total</span><span class="nomf">}</span> €`</span>
+            }).<span class="nom">join</span>(<span class="text">""</span>)
+        } <span class="ier">else</span> {
+            <span class="ier">if</span>(<span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"cart-empty"</span>)) {
+                <span class="declar">let</span> <span class="param">badge</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"badge"</span>)
+                <span class="declar">let</span> <span class="param">container</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"badge"</span>)
+                <span class="param">container</span>.<span class="param">innerHTML</span> = <span class="text">"&ltp class='text-center mb-0'>Vous n'avez aucun produit dans votre panier. &lta href='index.html'>Retourner dans la boutique&lt/a>&lt/p>"</span>
+                <span class="param">badge</span>.<span class="nomf">classList</span>.<span class="nom">add</span>(<span class="text">"d-none"</span>)
+            }
+        }
+    }
+                                            </code></pre>
+                                        </figure>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- function-13 -->
+                            <div class="tab-pane fade" id="pills-updateLocalStorage" role="tabpanel" aria-labelledby="pills-updateLocalStorage-tab">
+                                <article>
+                                    <div class="article-header mb-5">
+                                        <h3 class="h1">updateLocalStorage</h3>
+                                        <p class="text-muted lead mt-5">Cette fonction permet de mettre à jour le localStorage après modification (par exemple, si on incrémente un produit à partir de la page panier, le localStorage, le prix totale et le nombre de produit dans le panier se met à jour).</p>
+                                    </div>
+                                    <div class="article-body">
+                                        <figure class="code rounded">
+                                            <p class="font-weight-light m-0 path text-right text-sm">assets/js/util/Function.js</p>
+                                            <pre><code>
+    <span class="declar">const</span> <span class="nom">updateLocalStorage</span> = (<span class="param">data</span>) <span class="nomf">=></span> {
+        <span class="param">localStorage</span>.<span class="nom">setItem</span>(<span class="text">"Product"</span>, <span class="param">JSON</span>.<span class="nom">stringify</span>(<span class="param">data</span>))
+        <span class="nom">listProductCartFunction</span>()
+        <span class="nom">badgeCount</span>()
+    }
+                                                </code></pre>
+                                        </figure>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- template-1 -->
+                            <div class="tab-pane fade" id="pills-Cart" role="tabpanel" aria-labelledby="pills-Cart-tab">
+                                <article>
+                                    <div class="article-header mb-5">
+                                        <h3 class="h1">Cart.js</h3>
+                                        <p class="text-muted lead mt-5">Cart.js est le fichier javascript appelé à partir de son fichier HTML cart.html. Celui-ci est de type module afin qu'il puisse importer les fonction et classe se trouvant dans d'autres fichiers.</p>
+                                    </div>
+                                    <div class="article-body">
+                                        <figure class="code rounded">
+                                            <p class="font-weight-light m-0 path text-right text-sm">assets/js/cart.js</p>
+                                            <pre><code>
+    <span class="ier">import</span> { <span class="param">badgeCount</span>, <span class="param">listProductCartFunction</span> } <span class="ier">from</span> <span class="text">"./util/Function.js"</span>;
+    <span class="nom">badgeCount</span>();
+    <span class="nom">listProductCartFunction</span>();
+                                            </code></pre>
+                                        </figure>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- template-2 -->
+                            <div class="tab-pane fade" id="pills-Checkout" role="tabpanel" aria-labelledby="pills-Checkout-tab">
+                                <article>
+                                    <div class="article-header mb-5">
+                                        <h3 class="h1">Checkout.js</h3>
+                                        <p class="text-muted lead mt-5">Checkout.js est le fichier javascript appelé à partir de son fichier HTML checkout.html. Celui-ci est de type module afin qu'il puisse importer les fonction et classe se trouvant dans d'autres fichiers.</p>
+                                    </div>
+                                    <div class="article-body">
+                                        <figure class="code rounded">
+                                            <p class="font-weight-light m-0 path text-right text-sm">assets/js/checkout.js</p>
+                                            <pre><code>
+    <span class="ier">import</span> { <span class="param">sendForm</span> } <span class="ier">from</span> <span class="text">"./util/Api.js"</span>;
+    <span class="ier">import</span> { <span class="param">badgeCount</span>, <span class="param">cartChekcout</span>, <span class="param">displayPrice</span>, <span class="param">addOrderLocalStorage</span>, <span class="param">getJsonItems</span> } <span class="ier">from</span> <span class="text">"./util/Function.js"</span>;
+    <span class="ier">import</span> { <span class="param">NewForm</span> } <span class="ier">from</span> <span class="text">"./util/Class.js"</span>;
+
+    <span class="ier">if</span>(<span class="nom">getJsonItems</span>().<span class="param">length</span> == <span class="num">0</span>) {
+        <span class="declar">const</span> <span class="nomf">section</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"container"</span>)
+        <span class="nomf">section</span>.<span class="param">innerHTML</span> = <span class="text">"&ltp class='text-center mb-0'>Vous n'avez aucun produit dans votre panier. &lta href='index.html'>Retourner dans la boutique&lt/a>&lt/p>"</span>
+    } <span class="ier">else</span> {
+        <span class="nom">badgeCount</span>()
+        <span class="nom">cartChekcout</span>()
+        <span class="nom">displayPrice</span>()
+        
+        <span class="declar">const</span> <span class="nomf">formCheckout</span> = <span class="param">document</span>.<span class="nomf">forms</span>[<span class="text">"paiement"</span>]
+        <span class="declar">const</span> <span class="nomf">button</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"button"</span>)
+        <span class="declar">const</span> <span class="nomf">errorHtml</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"error"</span>)
+        <span class="declar">const</span> <span class="nomf">totalPriceSpan</span> = <span class="param">document</span>.<span class="nom">querySelector</span>(<span class="text">"span.total"</span>)
+
+        <span class="nomf">button</span>.<span class="nom">addEventListener</span>(<span class="text">"click"</span>, <span class="declar">function</span>() {
+            <span class="param">event</span>.<span class="nom">preventDefault</span>()
+
+            <span class="nomf">errorHtml</span>.<span class="nomf">classList</span>.<span class="nom">remove</span>(<span class="text">"d-none"</span>)
+            <span class="declar">const</span> <span class="nomf">firstName</span> = <span class="nomf">formCheckout</span>[<span class="text">"firstName"</span>].<span class="param">value</span>
+            <span class="declar">const</span> <span class="nomf">lastName</span> = <span class="nomf">formCheckout</span>[<span class="text">"lastName"</span>].<span class="param">value</span>
+            <span class="declar">const</span> <span class="nomf">address</span> = <span class="param">formCheckout</span>[<span class="text">"address"</span>].<span class="param">value</span>
+            <span class="declar">const</span> <span class="nomf">numberStreet</span> = <span class="nomf">formCheckout</span>[<span class="text">"numberStreet"</span>].<span class="param">value</span>
+            <span class="declar">const</span> <span class="nomf">zipCode</span> = <span class="nomf">formCheckout</span>[<span class="text">"zipCode"</span>].<span class="param">value</span>
+            <span class="declar">const</span> <span class="nomf">city</span> = <span class="nomf">formCheckout</span>[<span class="text">"city"</span>].<span class="param">value</span>
+            <span class="declar">const</span> <span class="nomf">creditCard</span> = <span class="nomf">formCheckout</span>[<span class="text">"creditCard"</span>].<span class="param">value</span>
+            <span class="declar">const</span> <span class="nomf">date</span> = <span class="nomf">formCheckout</span>[<span class="text">"date"</span>].<span class="param">value</span>
+            <span class="declar">const</span> <span class="nomf">email</span> = <span class="nomf">formCheckout</span>[<span class="text">"email"</span>].<span class="param">value</span>
+            <span class="declar">const</span> <span class="nomf">cvc</span> = <span class="nomf">formCheckout</span>[<span class="text">"cvc"</span>].<span class="param">value</span>
+
+            <span class="declar">const</span> <span class="nomf">price</span> = <span class="nomf">totalPriceSpan</span>.<span class="param">textContent</span>
+            <span class="nomf">price</span>.<span class="nom">substring</span>(<span class="num">0</span>, <span class="nomf">price</span>.<span class="nomf">length</span> <span class="num">-1</span>)
+            <span class="declar">const</span> <span class="nomf">id</span> = <span class="param">Math</span>.<span class="nom">floor</span>(<span class="param">Math</span>.<span class="nom">random</span>() * <span class="num">999</span> + <span class="param">Math</span>.<span class="nom">random</span>() * <span class="num">9999</span>)
+
+            <span class="declar">const</span> <span class="nomf">newDataFrom</span> = <span class="declar">new</span> <span class="class">NewForm</span> (<span class="nomf">firstName</span>, <span class="nomf">lastName</span>, <span class="nomf">email</span>, <span class="nomf">numberStreet</span>, <span class="nomf">address</span>, <span class="nomf">zipCode</span>, <span class="nomf">city</span>, <span class="nomf">creditCard</span>, <span class="nomf">date</span>, <span class="nomf">cvc</span>, <span class="nomf">price</span>, <span class="nomf">id</span>)
+
+            <span class="declar">let</span> <span class="param">errors</span> = {}
+            <span class="declar">let</span> <span class="param">arrayError</span> = [<span class="text">"firstName"</span>, <span class="text">"lastName"</span>, <span class="text">"email"</span>, <span class="text">"numberStreet"</span>, <span class="text">"address"</span>, <span class="text">"zipCode"</span>, <span class="text">"city"</span>, <span class="text">"creditCard"</span>, <span class="text">"date"</span>, <span class="text">"cvc"</span>]
+
+            <span class="ier">if</span>(!<span class="nomf">newDataFrom</span>.<span class="nom">isValidCharacter</span>(<span class="nomf">firstName</span>) && !<span class="nomf">newDataFrom</span>.<span class="nom">isEmpty</span>(<span class="nomf">firstName</span>)) {<span class="param">errors</span>.<span class="param">firstName</span> = <span class="text">"Une erreur est survenue dans le champ de votre prénom. Vérifiez à ne pas utiliser des caractère spéciaux ou des nombres."</span>}
+            <span class="ier">if</span>(!<span class="nomf">newDataFrom</span>.<span class="nom">isValidCharacter</span>(<span class="nomf">lastName</span>) && !<span class="nomf">newDataFrom</span>.<span class="nom">isEmpty</span>(<span class="nomf">lastName</span>)) {<span class="param">errors</span>.<span class="param">lastName</span> = <span class="text">"Une erreur est survenue dans le champ de votre nom. Vérifiez à ne pas utiliser des caractère spéciaux ou des nombres."</span>}
+            <span class="ier">if</span>(!<span class="nomf">newDataFrom</span>.<span class="nom">isValidCharacter</span>(<span class="nomf">address</span>) && !<span class="nomf">newDataFrom</span>.<span class="nom">isEmpty</span>(<span class="nomf">address</span>)) {<span class="param">errors</span>.<span class="param">address</span> = <span class="text">"Une erreur est survenue dans le champ de votre adresse. Vérifiez à ne pas utiliser des caractère spéciaux ou des nombres."</span>}
+            <span class="ier">if</span>(!<span class="nomf">newDataFrom</span>.<span class="nom">isValidNumber</span>(<span class="nomf">numberStreet</span>) && !<span class="nomf">newDataFrom</span>.<span class="nom">isEmpty</span>(<span class="nomf">numberStreet</span>)) {<span class="param">errors</span>.<span class="param">numberStreet</span> = <span class="text">"Une erreur est survenue dans le numéro de votre rue. Vérifiez à utiliser uniquement des nombres."</span>}
+            <span class="ier">if</span>(!<span class="nomf">newDataFrom</span>.<span class="nom">isValidCharacter</span>(<span class="nomf">city</span>) && !<span class="nomf">newDataFrom</span>.<span class="nom">isEmpty</span>(<span class="nomf">city</span>)) {<span class="param">errors</span>.<span class="param">city</span> = <span class="text">"Une erreur est survenue dans le champ de votre ville. Vérifiez à ne pas utiliser des caractère spéciaux ou des nombres."</span>}
+            <span class="ier">if</span>(!<span class="nomf">newDataFrom</span>.<span class="nom">isValidNumber</span>(<span class="nomf">zipCode</span>) && !<span class="nomf">newDataFrom</span>.<span class="nom">isEmpty</span>(<span class="nomf">zipCode</span>)) {<span class="param">errors</span>.<span class="param">zipCode</span> = <span class="text">"Une erreur est survenue dans le numéro de votre code postale. Vérifiez à utiliser uniquement des nombres."</span>}
+            <span class="ier">if</span>(!<span class="nomf">newDataFrom</span>.<span class="nom">isValidCreditCard</span>(<span class="nomf">creditCard</span>) && !<span class="nomf">newDataFrom</span>.<span class="nom">isEmpty</span>(<span class="nomf">creditCard</span>)) {<span class="param">errors</span>.<span class="param">creditCard</span> = <span class="text">"Veuillez remplir le champ d\'un numéro de carte valide (Celui-ci doit commencer par "4")."</span>}
+            <span class="ier">if</span>(!<span class="nomf">newDataFrom</span>.<span class="nom">isValidDate</span>(<span class="nomf">date</span>) && !<span class="nomf">newDataFrom</span>.<span class="nom">isEmpty</span>(<span class="nomf">date</span>)) {<span class="param">errors</span>.<span class="param">date</span> = <span class="text">"Veuillez remplir le champ d\'une date valide (De 01/2020 au 12/2039)."</span>}
+            <span class="ier">if</span>(!<span class="nomf">newDataFrom</span>.<span class="nom">isValidMail</span>(<span class="nomf">email</span>) && !<span class="nomf">newDataFrom</span>.<span class="nom">isEmpty</span>(<span class="nomf">email</span>)) {<span class="param">errors</span>.<span class="param">email</span> = <span class="text">"Veuillez remplir le champ d'une adresse mail valide"</span>}
+            <span class="ier">if</span>(!<span class="nomf">newDataFrom</span>.<span class="nom">isValidCVC</span>(<span class="nomf">cvc</span>) && !<span class="nomf">newDataFrom</span>.<span class="nom">isEmpty</span>(<span class="nomf">cvc</span>)) {<span class="param">errors</span>.<span class="param">cvc</span> = <span class="text">"Veuillez renseigner un code cvc valide"</span>}
+
+            <span class="ier">if</span>(<span class="class">Object</span>.<span class="nom">keys</span>(<span class="param">errors</span>).<span class="param">length</span> != <span class="num">0</span>) {
+                <span class="nomf">errorHtml</span>.<span class="param">innerHTML</span> = <span class="text">""</span>
+                <span class="nomf">errorHtml</span>.<span class="nomf">classList</span>.<span class="nom">add</span>(<span class="text">"alert-danger"</span>)
+                <span class="ier">if</span>(<span class="nomf">errorHtml</span>.<span class="nomf">classList</span>.<span class="nom">contains</span>(<span class="text">"alert-success"</span>)) {
+                    <span class="nomf">errorHtml</span>.<span class="nomf">classList</span>.<span class="nom">remove</span>(<span class="text">"alert-success"</span>)
+                }
+                <span class="ier">for</span>(<span class="declar">let</span> <span class="param">error</span> <span class="declar">in</span> <span class="param">errors</span>) {
+                    <span class="nomf">formCheckout</span>[<span class="param">error</span>].<span class="param">classList</span>.<span class="nom">add</span>(<span class="text">"is-invalid"</span>)
+                    <span class="nomf">errorHtml</span>.<span class="param">innerHTML</span> += <span class="text">`&ltli class="ml-5"><span class="nomf">${</span><span class="param">errors</span>[<span class="param">error</span>]<span class="nomf">}</span>&lt/li>`</span>
+                }
+            } <span class="ier">else</span> {
+                <span class="param">arrayError</span>.<span class="nom">map</span>(<span class="param">value</span> <span class="nomf">=></span> {
+                    <span class="ier">if</span>(<span class="nomf">formCheckout</span>[<span class="param">value</span>].<span class="param">classList</span>.<span class="nom">contains</span>(<span class="text">"is-invalid"</span>)) {
+                        <span class="nomf">formCheckout</span>[<span class="param">value</span>].<span class="param">classList</span>.<span class="nom">remove</span>(<span class="text">"is-invalid"</span>)
+                    }
+                    <span class="nomf">formCheckout</span>[<span class="param">value</span>].<span class="param">classList</span>.<span class="nom">add</span>(<span class="text">"is-valid"</span>)
+                })
+                <span class="ier">if</span>(<span class="nomf">errorHtml</span>.<span class="nomf">classList</span>.<span class="nom">contains</span>(<span class="text">"alert-danger"</span>)) {
+                    <span class="nomf">errorHtml</span>.<span class="nomf">classList</span>.<span class="nom">remove</span>(<span class="text">"alert-danger"</span>)
+                }
+                <span class="nom">addOrderLocalStorage</span>(<span class="nomf">newDataFrom</span>)
+                <span class="nom">setTimeout</span>(<span class="nom">sendForm</span>(<span class="text">"POST"</span>, <span class="text">"http://localhost:3000/order"</span>, <span class="nomf">newDataFrom</span>, <span class="text">`http://127.0.0.1:5500/front-end/thanks.html?order=<span class="nomf">${</span><span class="param">id</span><span class="nomf">}</span>`</span>)
+                .<span class="nom">then</span>(<span class="param">res</span> <span class="declar">=></span> {
+                    <span class="nomf">errorHtml</span>.<span class="nomf">classList</span>.<span class="nom">add</span>(<span class="text">"alert-success"</span>)
+                    <span class="nomf">errorHtml</span>.<span class="param">innerHTML</span> = <span class="text">"&ltp>Transaction en cours...&lt/p>"</span>
+                  })
+                  .<span class="nom">catch</span>(<span class="param">err</span> <span class="declar">=></span> {
+                    <span class="param">console</span>.<span class="nom">log</span>(<span class="param">err</span>)
+                  })
+                , <span class="num">1000</span>)
+            }
+        })
+    }
+                                            </code></pre>
+                                        </figure>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- template-3 -->
+                            <div class="tab-pane fade" id="pills-Index" role="tabpanel" aria-labelledby="pills-Index-tab">
+                                <article>
+                                    <div class="article-header mb-5">
+                                        <h3 class="h1">Index.js</h3>
+                                        <p class="text-muted lead mt-5">Index.js est le fichier javascript appelé à partir de son fichier HTML index.html. Celui-ci est de type module afin qu'il puisse importer les fonction et classe se trouvant dans d'autres fichiers.</p>
+                                    </div>
+                                    <div class="article-body">
+                                        <figure class="code rounded">
+                                            <p class="font-weight-light m-0 path text-right text-sm">assets/js/index.js</p>
+                                            <pre><code>
+    <span class="ier">import</span> { <span class="param">apiCamera</span> } <span class="ier">from</span> <span class="text">"./util/Api.js"</span>;
+    <span class="ier">import</span> { <span class="param">Camera</span> } <span class="ier">from</span> <span class="text">"/util/Class.js""</span>;
+    <span class="ier">import</span> { <span class="param">badgeCount</span>, <span class="param">cartDropdown</span>, <span class="param">price</span> } <span class="ier">from</span> <span class="text">"./util/Function.js"</span>;
+
+    <span class="nom">badgeCount</span>();
+    <span class="nom">cartDropdown</span>();
+    <span class="nom">apiCamera</span>(<span class="text">"GET"</span>, <span class="text">'http://localhost:3000/'</span>)
+        .<span class="nom">then</span>(<span class="param">res</span> <span class="declar">=></span> {
+            <span class="declar">let</span> <span class="param">newCamera</span> = []
+            <span class="declar">let</span> <span class="param">cameraObject</span> = <span class="param">res</span>.<span class="nom">map</span>(<span class="param">camera</span> <span class="declar">=></span> {
+                <span class="param">newCamera</span>.<span class="nom">push</span>(
+                    <span class="declar">new</span> <span class="class">Camera</span> (
+                        <span class="param">camera</span>.<span class="param">_id</span>,
+                        <span class="param">camera</span>.<span class="param">description</span>,
+                        <span class="param">camera</span>.<span class="param">imageUrl</span>,
+                        <span class="param">camera</span>.<span class="param">lenses</span>,
+                        <span class="param">camera</span>.<span class="param">name</span>,
+                        <span class="param">camera</span>.<span class="param">price</span>,
+                    )
+                )
+            })
+            <span class="declar">let</span> <span class="param">cardView</span> = <span class="param">res</span>.<span class="nom">map</span>(<span class="param">camera</span> <span class="declar">=></span> {
+                <span class="ier">return</span><span class="text">`
+                    &ltdiv class="d-flex align-items-center mb-5">
+                        &ltdiv class="col-md-8">
+                            &ltdiv class="card-image">
+                                &lta href="product.html?id=<span class="nomf">${</span><span class="param">camera</span>.<span class="param">_id</span><span class="nomf">}</span>">
+                                    &ltimg alt="<span class="nomf">${</span><span class="param">camera</span>.<span class="param">name</span><span class="nomf">}</span>" src="<span class="nomf">${</span><span class="param">camera</span>.<span class="param">imageUrl</span><span class="nomf">}</span>" class="img-center img-fluid rounded" id="picture">
+                                &lt/a>
+                            &lt/div>
+                        &lt/div>
+                        &ltdiv class="col-md-4">
+                            &lth2>&lta href="product.html?id=<span class="nomf">${</span><span class="param">camera</span>.<span class="param">_id</span><span class="nomf">}</span>" id="title"><span class="nomf">${</span><span class="param">camera</span>.<span class="param">name</span><span class="nomf">}</span>&lt/a>&lt/h2>
+                            &ltp class="text-sm" id="description"><span class="nomf">${</span><span class="param">camera</span>.<span class="param">description</span><span class="nomf">}</span>&lt/p>
+                            &ltspan class="card-price h5" id="price"><span class="nomf">${</span><span class="nom">price</span>(<span class="param">camera</span>.<span class="param">price</span>)<span class="nomf">}</span> €&lt/span>
+                            &ltdiv class="link mt-3">
+                                &lta href="product.html?id=<span class="nomf">${</span><span class="param">camera</span>.<span class="param">_id</span><span class="nomf">}</span>">+ de détails sur l'appareil <span class="nomf">${</span><span class="param">camera</span>.<span class="param">name</span><span class="nomf">}</span>&lt/a>
+                            &lt/div>
+                        &lt/div>
+                    &lt/div>
+                     `;
+                    `</span>
+            }).<span class="nom">join</span>(<span class="text">""</span>)
+
+            <span class="param">cardProduct</span>.<span class="param">innerHTML</span> = <span class="param">cardView</span>
+        })
+        .<span class="nom">catch</span>(<span class="param">err</span> <span class="declar">=></span> {
+            <span class="param">console</span>.<span class="nom">log</span>(<span class="param">err</span>)
+        })
+                                            </code></pre>
+                                        </figure>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- template-4 -->
+                            <div class="tab-pane fade" id="pills-Product" role="tabpanel" aria-labelledby="pills-Product-tab">
+                                <article>
+                                    <div class="article-header mb-5">
+                                        <h3 class="h1">Product.js</h3>
+                                        <p class="text-muted lead mt-5">Product.js est le fichier javascript appelé à partir de son fichier HTML product.html. Celui-ci est de type module afin qu'il puisse importer les fonction et classe se trouvant dans d'autres fichiers.</p>
+                                    </div>
+                                    <div class="article-body">
+                                        <figure class="code rounded">
+                                            <p class="font-weight-light m-0 path text-right text-sm">assets/js/product.js</p>
+                                            <pre><code>
+    <span class="ier">import</span> { <span class="param">apiCamera</span> } <span class="ier">from</span> <span class="text">"./util/Api.js"</span>;
+    <span class="ier">import</span> { <span class="param">badgeCount</span>, <span class="param">cartDropdown</span>, <span class="param">addProductLocalStorage</span>, <span class="param">getJsonItems</span>, <span class="param">price</span> } <span class="ier">from</span> <span class="text">"./util/Function.js"</span>;
+    <span class="ier">import</span> { <span class="param">AddProduct</span> } <span class="ier">from</span> <span class="text">"./util/Class.js"</span>;
+
+    <span class="nom">badgeCount</span>();
+    <span class="nom">cartDropdown</span>();
+
+    <span class="declar">let</span> <span class="param">urlcourante</span> = <span class="param">document</span>.<span class="param">location</span>.<span class="param">href</span>
+    <span class="param">urlcourante</span> = <span class="param">urlcourante</span>.<span class="nom">replace</span>(<span class="text">/\/$/</span>, <span class="text">""</span>)
+    <span class="declar">let</span> <span class="param">queueUrl</span> = <span class="param">urlcourante</span>.<span class="nom">substring</span>(<span class="param">urlcourante</span>.<span class="nom">lastIndexOf</span>(<span class="text">"/"</span>) + <span class="num">1</span>)
+    <span class="declar">let</span> <span class="param">idResponse</span> = <span class="param">queueUrl</span>.<span class="nom">substring</span>(<span class="num">16</span>)
+
+    <span class="declar">const</span> <span class="nomf">nameProduct</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"nameProduct"</span>)
+    <span class="declar">const</span> <span class="nomf">bigNameProduct</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"bigNameProduct"</span>)
+    <span class="declar">const</span> <span class="nomf">pictureFancybox</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"pictureFancybox"</span>)
+    <span class="declar">const</span> <span class="nomf">pictureProduct</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"pictureProduct"</span>)
+    <span class="declar">const</span> <span class="nomf">idProduct</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"idProduct"</span>)
+    <span class="declar">const</span> <span class="nomf">descProduct</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"descProduct"</span>)
+    <span class="declar">const</span> <span class="nomf">viewLenses</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"viewLenses"</span>)
+    <span class="declar">const</span> <span class="nomf">priceProduct</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"priceProduct"</span>)
+    <span class="declar">const</span> <span class="nomf">addToCart</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"addToCart"</span>)
+
+    <span class="nom">apiCamera</span>(<span class="text">"GET"</span>, <span class="text">`http://localhost:3000/<span class="nomf">${</span><span class="param">idResponse</span><span class="nomf">}</span>`</span>);
+        .<span class="nom">then</span>(<span class="param">res</span> <span class="declar">=></span> {
+            <span class="declar">let</span> <span class="param">lenseShow</span> = <span class="param">res</span>.<span class="param">lenses</span>.<span class="nom">map</span>(<span class="param">lense</span> <span class="nomf">=></span> {
+                <span class="ier">return</span><span class="text">`
+                        &ltlabel class="btn btn-lg btn-neutral col-12 mb-2 text-left text-sm">
+                            &ltinput type="radio" name="radio-memory" value="1" checked="">
+                            <span class="nomf">${</span><span class="param">lense</span><span class="nomf">}</span>
+                        &lt/label>
+                    `</span>
+            }).
+
+            <span class="nomf">nameProduct</span>.<span class="param">innerHTML</span> = <span class="param">res</span>.<span class="param">name</span>
+            <span class="nomf">bigNameProduct</span>.<span class="param">innerHTML</span> = <span class="param">res</span>.<span class="param">name</span>
+            <span class="nomf">idProduct</span>.<span class="param">innerHTML</span> = <span class="text">"ID : "</span> + <span class="param">res</span>.<span class="param">_id</span>
+            <span class="nomf">descProduct</span>.<span class="param">innerHTML</span> = <span class="param">res</span>.<span class="param">description</span>
+            <span class="nomf">viewLenses</span>.<span class="param">innerHTML</span> = <span class="param">lenseShow</span>
+            <span class="nomf">priceProduct</span>.<span class="param">innerHTML</span> = <span class="nom">price</span>(<span class="param">res</span>.<span class="param">price</span>) + <span class="text">" €"</span>
+
+            <span class="nomf">pictureFancybox</span>.<span class="nom">setAttribute</span>(<span class="text">"href"</span>, <span class="param">res</span>.<span class="param">imageUrl</span>)
+            <span class="nomf">pictureProduct</span>.<span class="nom">setAttribute</span>(<span class="text">"src"</span>, <span class="param">res</span>.<span class="param">imageUrl</span>)
+            <span class="nomf">pictureProduct</span>.<span class="nom">setAttribute</span>(<span class="text">"alt"</span>, <span class="param">res</span>.<span class="param">name</span>)
+
+            <span class="ier">return</span> <span class="param">res</span>
+        })
+        .<span class="nom">then</span>(<span class="param">res</span> <span class="declar">=></span> {
+            <span class="declar">let</span> <span class="param">add</span> = <span class="num">1</span>
+            <span class="declar">let</span> <span class="param">product</span> = []
+
+            <span class="nomf">addToCart</span>.<span class="nom">addEventListener</span>(<span class="text">"click"</span>, <span class="declar">function</span>() {
+                <span class="declar">let</span> <span class="param">productData</span> = <span class="declar">new</span> <span class="class">AddProduct</span>(<span class="param">res</span>.<span class="param">_id</span>, <span class="param">res</span>.<span class="param">name</span>, <span class="param">res</span>.<span class="param">imageUrl</span>, <span class="param">res</span>.<span class="param">price</span>, <span class="param">add</span>)
+                <span class="ier">if</span>(!<span class="nom">getJsonItems</span>()) {
+                    <span class="param">product</span><span class="nom">push</span>(<span class="param">productData</span>)
+                } <span class="ier">else</span> {
+                    <span class="param">product</span> = <span class="nom">getJsonItems</span>()
+                    <span class="declar">const</span> <span class="nomf">findProduct</span> = <span class="param">product</span>.<span class="nom">find</span>(<span class="param">element</span> <span class="declar">=></span> <span class="param">element</span>.<span class="param">id</span> === <span class="param">productData</span>.<span class="param">id</span>)
+                    <span class="ier">if</span>(<span class="nomf">findProduct</span>) {
+                        <span class="nomf">findProduct</span>.<span class="param">add</span> += <span class="num">1</span>
+                    } <span class="ier">else</span> {
+                        <span class="param">product</span>.<span class="nom">push</span>(<span class="param">productData</span>)
+                    }
+                }
+                <span class="nom">addProductLocalStorage</span>(<span class="param">product</span>)
+            })
+        })
+        .<span class="nom">catch</span>(<span class="param">err</span> <span class="declar">=></span> {
+            <span class="param">console</span>.<span class="nom">log</span>(<span class="param">err</span>)
+        })
+                                            </code></pre>
+                                        </figure>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- template-5 -->
+                            <div class="tab-pane fade" id="pills-Thanks" role="tabpanel" aria-labelledby="pills-Thanks-tab">
+                                <article>
+                                    <div class="article-header mb-5">
+                                        <h3 class="h1">Thanks.js</h3>
+                                        <p class="text-muted lead mt-5">Thanks.js est le fichier javascript appelé à partir de son fichier HTML thanks.html.</p>
+                                    </div>
+                                    <div class="article-body">
+                                        <figure class="code rounded">
+                                            <p class="font-weight-light m-0 path text-right text-sm">assets/js/thanks.js</p>
+                                            <pre><code>
+    <span class="declar">let</span> <span class="param">keyStorage</span> = <span class="param">localStorage</span>.<span class="nom">getItem</span>(<span class="text">"Order"</span>);
+    <span class="declar">let</span> <span class="param">products</span> = <span class="param">JSON</span>.<span class="nom">parse</span>(<span class="param">keyStorage</span>);
+    <span class="declar">let</span> <span class="param">urlcourante</span> = <span class="param">document</span>.<span class="param">location</span>.<span class="param">href</span>;
+    <span class="param">urlcourante</span> = <span class="param">urlcourante</span>.<span class="nom">replace</span>(<span class="text">/\/$/</span>, <span class="text">""</span>);
+    <span class="declar">let</span> <span class="param">queueUrl</span> = <span class="param">urlcourante</span>.<span class="nom">substring</span>(<span class="param">urlcourante</span>.<span class="nom">lastIndexOf</span>(<span class="text">"/"</span>) + <span class="num">1</span>);
+    <span class="declar">let</span> <span class="param">idResponse</span> = <span class="param">queueUrl</span>.<span class="nom">substring</span>(<span class="num">18</span>);
+    <span class="declar">const</span> <span class="nomf">section</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"container"</span>)
+
+    <span class="ier">if</span>(<span class="param">products</span> && <span class="param">products</span>.<span class="param">id</span> == <span class="param">idResponse</span>) {
+        <span class="declar">let</span> <span class="param">order</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"order"</span>)
+        <span class="declar">let</span> <span class="param">reboot</span> = <span class="param">document</span>.<span class="nom">querySelectorAll</span>(<span class="text">"a"</span>)
+        <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"title"</span>).<span class="param">innerHTML</span> = <span class="text">`Merci pour votre commande <span class="nomf">${</span><span class="param">products</span>.<span class="param">prenom</span><span class="nomf">}</span> .`</span>
+        <span class="ier">for</span>(<span class="declar">let</span> <span class="param">i</span> = <span class="num">0</span>; <span class="param">i</span> &lt <span class="param">reboot</span>.<span class="param">length</span>; <span class="param">i</span>++) {
+            <span class="param">reboot</span>[<span class="param">i</span>].<span class="nom">addEventListener</span>(<span class="text">"click"</span>, <span class="declar">function</span>() {
+                <span class="param">localStorage</span>.<span class="nom">removeItem</span>(<span class="text">"Order"</span>)
+            })
+        }
+    } <span class="ier">else if</span> (<span class="param">products</span> && <span class="param">products</span>.<span class="param">id</span> != <span class="param">idResponse</span> && <span class="class">Boolean</span>(<span class="param">idResponse</span>)) {
+        <span class="nomf">section</span>.<span class="param">innerHTML</span> = <span class="text">&ltp class='text-center mb-0'>Désolé mais ce numéro de commande ne vous appartient pas.&ltbr>Merci de &lta href='index.html'>retourner dans la boutique&lt/a> ou d'aller sur &lta href='http://127.0.0.1:5500/front-end/thanks.html?order=<span class="nomf">${</span><span class="param">products</span>.<span class="param">id</span><span class="nomf">}</span>'>votre numéro de commande&lt/a>&lt/p></span>
+    } <span class="ier">else if</span> (<span class="class">Boolean</span>(<span class="param">idResponse</span>) === <span class="declar">false</span>) {
+        <span class="ier">if</span>(<span class="param">products</span>) {
+            <span class="nomf">section</span>.<span class="param">innerHTML</span> = <span class="text">&ltp class='text-center mb-0'>Désolé, aucun numéro de commande est stipulé.&ltbr>Merci de &lta href='index.html'>retourner dans la boutique&lt/a> ou d'aller sur &lta href='http://127.0.0.1:5500/front-end/thanks.html?order=<span class="nomf">${</span><span class="param">products</span>.<span class="param">id</span><span class="nomf">}</span>'>votre numéro de commande&lt/a>&lt/p></span>
+        } <span class="ier">else</span> {
+            <span class="nomf">section</span>.<span class="param">innerHTML</span> = <span class="text">&ltp class='text-center mb-0'>Désolé, aucun numéro de commande est stipulé.&ltbr>Merci de &lta href='index.html'>retourner dans la boutique&lt/a></span>
+        }
+    } <span class="ier">else</span> {
+        <span class="nomf">section</span>.<span class="param">innerHTML</span> = <span class="text">&ltp class='text-center mb-0'>Aucune commande n'a été faite, merci de &lta href='index.html'>retourner dans la boutique&lt/a>&lt/p></span>
+    }
+                                            </code></pre>
+                                        </figure>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#top" class="btn btn-gray btn-top rounded-pill top-smooth" title="Haut de page"><em class="fas fa-angle-up"></em></a>
+                </div>
+            </section>
+        </main>
+        <footer class="bg-dark" itemscope="" itemtype="https://schema.org/WPFooter">
+            <div class="container py-5">
+                <div class="row text-center align-items-center">
+                    <div class="col-md-6 mb-3 my-3">
+                        <h2 class="text-left ml-5">
+                            <a class="navbar-brand h1 text-white text-left align-items-center" href="index.html">
+                                <svg width="1px" height="1em" viewBox="0 0 16 16" class="bi bi-camera2 text-white display-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 5C7.343 5 5 6.343 5 8a4 4 0 0 1 4-4v1z"/>
+                                    <path fill-rule="evenodd" d="M14.333 3h-2.015A5.97 5.97 0 0 0 9 2a5.972 5.972 0 0 0-3.318 1H1.667C.747 3 0 3.746 0 4.667v6.666C0 12.253.746 13 1.667 13h4.015c.95.632 2.091 1 3.318 1a5.973 5.973 0 0 0 3.318-1h2.015c.92 0 1.667-.746 1.667-1.667V4.667C16 3.747 15.254 3 14.333 3zM1.5 5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zM9 13A5 5 0 1 0 9 3a5 5 0 0 0 0 10z"/>
+                                    <path d="M2 3a1 1 0 0 1 1-1h1a1 1 0 0 1 0 2H3a1 1 0 0 1-1-1z"/>
+                                </svg>
+                                <span class="h1">OriCam</span>
+                            </a>
+                        </h2>
+                        <span class="lead" >Développeur web - Projet N°5 - OpenClassRooms</span>
+                    </div>
+                    <div class="col-md-6 mb-3 text-center my-3">
+                        <h3 class="text-white lead">Suivez-moi sur mes réseaux sociaux</h3>
+                        <nav class="nav justify-content-center" itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+                            <a class="nav-link text-white h3" href="https://www.facebook.com/M.Scroart" title="Lien vers Facebook"><em class="fa fa-facebook"></em></a>
+                            <a class="nav-link text-white h3" href="https://www.twitter.com/Mnsr_Graphiste" title="Lien vers Twitter"><em class="fa fa-twitter"></em></a>
+                            <a class="nav-link text-white h3" href="https://fr.linkedin.com/in/mndesiign" title="Lien vers Linkedin"><em class="fa fa-linkedin"></em></a>
+                            <a class="nav-link text-white h3" href="https://www.instagram.com/scroart/" title="Lien vers Instagram"><em class="fa fa-instagram"></em></a>
+                        </nav>
+                    </div>
+                </div>
+                <div class="row text-center mt-5">
+                    <p class="col-md-12 text-white">© 2020 <a href="index.html" title="Lien vers OriCam" class="text-light">OriCam</a>. Réalisation : <a href="mailto:mathieu.nesseir@gmail.com" title="Lien vers La Chouette Agence" class="text-light">Mathieu N.</a></p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head itemscope="" itemtype="https://schema.org/WebSite">
+    <meta charset="UTF-8" />
+    <meta name="google-site-verification" content="" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/purpose.css" />
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script defer src="https://kit.fontawesome.com/69d9156c55.js" crossorigin="anonymous"></script>
+
+    <script type="module" src="assets/js/cart.js"></script>
+
+    <title>Panier</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+        <a class="navbar-brand" href="index.html">
+          <svg width="1px" height="1em" viewBox="0 0 16 16" class="bi bi-camera2 text-dark h1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 5C7.343 5 5 6.343 5 8a4 4 0 0 1 4-4v1z" />
+            <path fill-rule="evenodd" d="M14.333 3h-2.015A5.97 5.97 0 0 0 9 2a5.972 5.972 0 0 0-3.318 1H1.667C.747 3 0 3.746 0 4.667v6.666C0 12.253.746 13 1.667 13h4.015c.95.632 2.091 1 3.318 1a5.973 5.973 0 0 0 3.318-1h2.015c.92 0 1.667-.746 1.667-1.667V4.667C16 3.747 15.254 3 14.333 3zM1.5 5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zM9 13A5 5 0 1 0 9 3a5 5 0 0 0 0 10z"/>
+            <path d="M2 3a1 1 0 0 1 1-1h1a1 1 0 0 1 0 2H3a1 1 0 0 1-1-1z" />
+          </svg>
+          OriCam
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav" >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="analyse.html">Analyse</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="cart.html" id="dropdown_large" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-basket h5" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M10.243 1.071a.5.5 0 0 1 .686.172l3 5a.5.5 0 1 1-.858.514l-3-5a.5.5 0 0 1 .172-.686zm-4.486 0a.5.5 0 0 0-.686.172l-3 5a.5.5 0 1 0 .858.514l3-5a.5.5 0 0 0-.172-.686z"/>
+                  <path fill-rule="evenodd" d="M1 7v1h14V7H1zM.5 6a.5.5 0 0 0-.5.5v2a.5.5 0 0 0 .5.5h15a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5H.5z"/>
+                  <path fill-rule="evenodd" d="M14 9H2v5a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V9zM2 8a1 1 0 0 0-1 1v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9a1 1 0 0 0-1-1H2z"/>
+                  <path fill-rule="evenodd" d="M4 10a.5.5 0 0 1 .5.5v3a.5.5 0 1 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 1 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 1 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 1 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 1 1-1 0v-3a.5.5 0 0 1 .5-.5z"/>
+                </svg>
+                <span class="badge badge-danger badge-circle badge-md badge-floating border-white badge-custom" id="badge"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="my-8">
+        <section>
+          <div class="container" id="cart-empty">
+            <div class="table-responsive">
+              <table class="table table-cards align-items-center">
+                <thead>
+                  <tr>
+                    <th scope="col" class="sort" data-sort="product">Produit</th>
+                    <th scope="col" class="sort text-right pr-5" data-sort="price">Prix</th>
+                    <th scope="col" class="sort text-center" data-sort="price">Quantité</th>
+                    <th scope="col" class="sort text-right pr-5" data-sort="price">Total</th>
+                    <th scope="col" class="sort text-right pr-5" data-sort="price"></th>
+                  </tr>
+                </thead>
+                <tbody class="list" id="list-array"></tbody>
+              </table>
+            </div>
+            <!-- Cart information -->
+            <div class="card mt-5 bg-secondary">
+              <div class="card-body">
+                <div class="row justify-content-between align-items-center">
+                  <div class="col-md-4 order-md-2 mb-4 mb-md-0">
+                    <div class="d-flex align-items-center justify-content-md-end">
+                      <span class="h6 text-muted d-inline-block mr-3 mb-0">Valeur total</span>
+                      <span class="h4 mb-0 total"></span>
+                    </div>
+                  </div>
+                  <div class="col-md-8 order-md-1 d-flex">
+                    <a href="checkout.html" class="btn btn-animated btn-primary btn-animated-y" >
+                      <span class="btn-inner--visible">Paiement</span>
+                      <span class="btn-inner--hidden">
+                        <svg class="text-white h4 m-0" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart-check" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M11.354 5.646a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                          <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                        </svg>
+                      </span>
+                    </a>
+                    <a href="index.html" class="btn btn-link text-sm text-dark font-weight-bold">retourner à la boutique</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    </main>
+
+    <section class="slice-sm bg-secondary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="px-4 py-3 text-lg-center">
+                        <h6 class="text-sm  text-uppercase ls-1">Retours sans frais</h6>
+                        <p class="">
+                            Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="px-4 py-3 text-lg-center">
+                        <h6 class="text-sm  text-uppercase ls-1">Paiement sécurisé</h6>
+                        <ul class="list-inline mt-3">
+                            <li class="list-inline-item">
+                                <img alt="Image placeholder" src="assets/img/icons/visa.png" width="50">
+                            </li>
+                            <li class="list-inline-item">
+                                <img alt="Image placeholder" src="assets/img/icons/mastercard.png" width="50">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-dark" itemscope="" itemtype="https://schema.org/WPFooter">
+        <div class="container py-5">
+            <div class="row text-center align-items-center">
+                <div class="col-md-6 mb-3 my-3">
+                    <h2 class="text-left ml-5">
+                        <a class="navbar-brand h1 text-white text-left align-items-center" href="index.html">
+                            <svg width="1px" height="1em" viewBox="0 0 16 16" class="bi bi-camera2 text-white display-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 5C7.343 5 5 6.343 5 8a4 4 0 0 1 4-4v1z"/>
+                                <path fill-rule="evenodd" d="M14.333 3h-2.015A5.97 5.97 0 0 0 9 2a5.972 5.972 0 0 0-3.318 1H1.667C.747 3 0 3.746 0 4.667v6.666C0 12.253.746 13 1.667 13h4.015c.95.632 2.091 1 3.318 1a5.973 5.973 0 0 0 3.318-1h2.015c.92 0 1.667-.746 1.667-1.667V4.667C16 3.747 15.254 3 14.333 3zM1.5 5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zM9 13A5 5 0 1 0 9 3a5 5 0 0 0 0 10z"/>
+                                <path d="M2 3a1 1 0 0 1 1-1h1a1 1 0 0 1 0 2H3a1 1 0 0 1-1-1z"/>
+                            </svg>
+                            <span class="h1">OriCam</span>
+                        </a>
+                    </h2>
+                    <span class="lead" >Développeur web - Projet N°5 - OpenClassRooms</span>
+                </div>
+                <div class="col-md-6 mb-3 text-center my-3">
+                    <h3 class="text-white lead">Suivez-moi sur mes réseaux sociaux</h3>
+                    <nav class="nav justify-content-center" itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+                        <a class="nav-link text-white h3" href="https://www.facebook.com/M.Scroart" title="Lien vers Facebook"><em class="fa fa-facebook"></em></a>
+                        <a class="nav-link text-white h3" href="https://www.twitter.com/Mnsr_Graphiste" title="Lien vers Twitter"><em class="fa fa-twitter"></em></a>
+                        <a class="nav-link text-white h3" href="https://fr.linkedin.com/in/mndesiign" title="Lien vers Linkedin"><em class="fa fa-linkedin"></em></a>
+                        <a class="nav-link text-white h3" href="https://www.instagram.com/scroart/" title="Lien vers Instagram"><em class="fa fa-instagram"></em></a>
+                    </nav>
+                </div>
+            </div>
+            <div class="row text-center mt-5">
+                <p class="col-md-12 text-white">© 2020 <a href="index.html" title="Lien vers OriCam" class="text-light">OriCam</a>. Réalisation : <a href="mailto:mathieu.nesseir@gmail.com" title="Lien vers La Chouette Agence" class="text-light">Mathieu N.</a></p>
+            </div>
+        </div>
+    </footer>
+  </body>
+</html>

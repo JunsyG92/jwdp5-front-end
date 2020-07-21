@@ -1,0 +1,100 @@
+body, html {
+    scroll-behavior: smooth;
+}
+.transition-smooth{
+    opacity:1;
+    transition-property:opacity;
+    transition-duration:.3s
+}
+.top-smooth{
+    display:flex;
+    opacity:0;
+    transition-property:opacity;
+    transition-duration:.3s;
+    z-index:9999
+}
+.transition-smooth{
+    opacity:1;
+    transition-property:opacity;
+    transition-duration:.3s
+}
+.btn-top {
+    position: fixed !important;
+    top: 90%;
+    right: 5%;
+}
+.btn-gray {
+    background-color: #485a70 !important;
+    color: white !important;
+}
+h2 a span {
+    position: relative;
+    top: 10px;
+    color: white !important;
+}
+.add-shop {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
+.badge-custom {
+    position: absolute;
+    top: 50%;
+    margin-left: 15px;
+    width: 1rem !important;
+    height: 1rem !important;
+}
+
+li.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.dropdown-custom {
+    top: 130% !important;
+    right: 0 !important;
+}
+.remove {
+    cursor: pointer;
+}
+#cart-dropdown{
+    margin-top: -17px !important;
+}
+.card {
+    margin-bottom: 0 !important;
+}
+.active {
+    color: #5800cc !important;
+}
+.path {
+    position: relative;
+    top: -35px;
+}
+.code {
+    background-color: #262626;
+}
+code {
+    color: white !important;
+}
+.declar{
+    color: #427ed8;
+}
+.param{
+    color: #84e6ff;
+}
+.nomf{
+    color: #2cceff;
+}
+.nom{
+    color: #f1ea88;
+}
+.class{
+    color: #5edd6f;
+}
+.num{
+    color: #acee77;
+}
+.ier{
+    color: #c982df;
+}
+.text {
+    color: #ff9d4d;
+}
