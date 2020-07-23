@@ -1,4 +1,5 @@
-// Création d'un classe pour l'affichage des caméra disponible dans l'api
+// Cette classe reprèsente la base de l'application.
+// Elle prend dans son constructeur tous les champs que l'api nous retourne (id, description, image, lentilles, nom et le prix).
 class Camera {
   constructor(id, description, imageUrl, lenses, name, price) {
     this.id = id;
@@ -10,7 +11,8 @@ class Camera {
   }
 }
 
-// Création d'un classe pour ajouter les produits dans le panier
+// La classe AddProduct permet de créer de nouveaux objets de produits pour, plus tard, l'ajout dans le panier. Dans son constructeur, on y retrouve :
+// l'id, le nom, l'image, le prix et sa quantité
 class AddProduct {
   constructor(id, name, imageUrl, price, add) {
     this.id = id;
@@ -21,6 +23,10 @@ class AddProduct {
   }
 }
 
+// NewForm est une classe qui créera de nouveaux objets pour l'envoie du formulaire.
+// Celui-ci fera des vérifications au niveau des données qu'on lui passera dans son constructeur
+// (Prénom, nom, email, N° de rue, adresse, code postal, ville, carte de crédit, date d'expiration et le code CVC).
+// On y retrouve aussi deux champs qui n'ont pas besoin de vérification : l'id et le prix.
 class NewForm {
     constructor(firstName, lastName, email, numberStreet, address, zipCoden, city, creditCard, date, cvc, price, id) {
         this.prenom = firstName;

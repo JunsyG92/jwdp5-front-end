@@ -1,4 +1,6 @@
-// Calcule le nombre de produit existant dans le Local Storage
+// Cette fonction permet d'afficher le nombre de produits existant dans le panier
+// (c'est à dire dans la clé "Product" du localStorage).
+// On y retrouve un aperçu dans toutes les pages du site.
 const badgeCount = () => {
     if(document.getElementById("badge")) {
         let badge = document.getElementById("badge");
@@ -14,13 +16,8 @@ const badgeCount = () => {
         }
     }
 };
-/**
- * [getJsonItems description]
- * Retourne en format JSON.parse les valeurs de la clé "Product" du localStrage
- *
- * @return  {[products]}  products récupère la clé "Product" du localStorage
- */
 
+// getJsonItems retroune un array JSON.parse des éléments se trouvant dans la clé "Product" du localStorage.
 const getJsonItems = () => {
     if (localStorage.getItem("Product")) {
         let keyStorage = localStorage.getItem("Product");
@@ -32,25 +29,32 @@ const getJsonItems = () => {
     }
 };
 
-// Ajouter un produit dans le Local Storage
+// Cette fonction créer une nouvelle clé qui se nomme "Product" et prend en valeur les données du produit ajouter au panier.
+// On y retrouve un aperçu dans la page produit
 const addProductLocalStorage = (data) => {
     localStorage.setItem("Product", JSON.stringify(data));
     badgeCount();
     cartDropdown();
 };
 
+
+// Cette fonction créer une nouvelle clé qui se nomme "Order" ou y on retrouve les informations de l'utilisateur transmise via le formulaire
+// et supprime la clé "Product" et ses valeurs. On y retrouve un aperçu dans la page de remerciement.
 const addOrderLocalStorage = (data) => {
     localStorage.setItem("Order", JSON.stringify(data));
-    localStorage.removeItem("Product", JSON.stringify(data));
+    localStorage.removeItem("Product");
 };
 
+// Cette fonction permet de mettre à jour le localStorage après modification
+// (par exemple, si on incrémente un produit à partir de la page panier, le localStorage, le prix totale et le nombre de produit dans le panier se met à jour).
 const updateLocalStorage = data => {
     localStorage.setItem("Product", JSON.stringify(data));
     listProductCartFunction();
     badgeCount();
 }
 
-// Supprimer un produit ou un ensemble de produit avec la même clé du Local    Storage
+// removeProductLocalStorage retire le produit du localStorage.
+// On y retrouve un aperçu de cette fonction dans la page du panier.
 const removeProductLocalStorage = () => {
     var arrayIds = []
     if(getJsonItems().length > 0) {
@@ -67,6 +71,9 @@ const removeProductLocalStorage = () => {
     }
 }
 
+
+// addMoreProduct s'occupe de l'incrémentation du produit qu'on retrouve dans le localStorage.
+// On y retrouve un aperçu de cette fonction dans la page du panier.
 const addMoreProduct = () => {
     var arrayIds = []
     if(getJsonItems().length > 0) {
@@ -80,6 +87,10 @@ const addMoreProduct = () => {
         })
     }
 }
+
+// removeMoreProduct s'occupe de la décrémentation du produit qu'on retrouve dans le localStorage.
+// Lorsque le produit posséde la valeur de "0" dans sa quantité, celui-ci est supprimer de la clé "Produit".
+// On y retrouve un aperçu de cette fonction dans la page du panier.
 const removeMoreProduct = () => {
     let arrayIds = []
     if(getJsonItems().length > 0) {
@@ -100,11 +111,17 @@ const removeMoreProduct = () => {
     }
 }
 
-const price = product => {
-    let price = Math.round(product / 100)
+
+// Price() divise la somme donnée par 100.
+const price = productPrice => {
+    let price = Math.round(productPrice / 100)
     return price
 }
 
+
+// Cette fonction calcule la valeur total du prix de tous les produits existant dans le localStorage.
+// Elle prend en compte la quantité d'un produit et le nombre total de produit.
+// On y retrouve un aperçu dans le dropdown de la barre de navigation, la page panier et la page checkout.
 const displayPrice = () => {
     let totalPrice = document.querySelector("span.total");
     let total = 0;
@@ -123,8 +140,8 @@ const displayPrice = () => {
     }
 }
 
-// Afficher la liste des produit du Local Storage dans le panier
-
+// listProductCartFunction permet d'afficher le contenu du panier à partir des valeurs existante de la clé "Produit" du localStorage.
+// On y retrouve un aperçu dans la page panier
 const listProductCartFunction = () => {
   if(getJsonItems()) {
     let listProductCart = document.getElementById("list-array");
@@ -180,7 +197,9 @@ const listProductCartFunction = () => {
   removeProductLocalStorage()
 };
 
-// Afficher la liste des produit du Local Storage dans le hover du panier
+// cartDropdown permet d'afficher le contenu du panier dans le hover (dropdown) à partir des valeurs existante dans la clé "Produit" du localStorage.
+// Celui-ci se trouve au niveau de la barre de navigation (l'icône panier).
+// On y retrouve un aperçu dans la page d'accueil et la page produit du site.
 const cartDropdown = () => {
   const listCart = document.getElementById("listCart");
   const table = document.getElementById('table-dropdown');
@@ -232,6 +251,9 @@ const cartDropdown = () => {
     }
 };
 
+
+// cartCheckout permet d'afficher le contenu du panier à partir des valeurs existante dans la clé "Produit" du localStorage.
+// On y retrouve un aperçu dans la page checkout
 const cartChekcout = () => {
     const listChekout = document.getElementById("listChekout");
     const quantityProduct = document.getElementById("quantityProduct");
@@ -281,6 +303,9 @@ const cartChekcout = () => {
     }
 }
 
+
+// errorMessage affiche les messages d'erreurs retourné par les vérifications de validation des champs de formulaire.
+// On y trouve un aperçu dans la page checkout.
 const errorMessage = (message) => {
     const info = document.getElementById('error');
     info.classList.remove('d-none')

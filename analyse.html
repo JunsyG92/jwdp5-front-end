@@ -7,10 +7,10 @@
         <meta name="description" content=""/>
         <meta name="robots" content="index, follow"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="assets/img/icons/icon.ico" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
-        <link rel="stylesheet" type="text/css" href="assets/css/purpose.css" />
+        <link rel="stylesheet" type="text/css" href="assets/bootstrap/purpose.css" />
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -37,7 +37,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav" >
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="mailto:athieu.nesseir@gmail.com">Contacter le développeur</a>
+                            <a class="nav-link" href="mailto:mathieu.nesseir@gmail.com">Contacter le développeur</a>
                         </li>
                     </ul>
                 </div>
@@ -45,8 +45,61 @@
         </header>
 
         <main class="py-5">
-            <section class="container" id="top">
-                <div class="row">
+            <section class="container">
+                <div class="row mb-8">
+                    <div class="col-lg-6">
+                        <div class="article-header mb-5">
+                            <h1 class="h1">Analyse</h1>
+                            <p class="text-muted lead mt-5">Sur cette page, vous trouverez l'ensemble des fonctionnalité qui permet au bon fonctionnement du projet.</p>
+                            <p>La colonne de droite explique la structure du dossier</p>
+                            <p>En dessous, vous trouverez l'ensemble des Classe et des Fonctions.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="article-body">
+                            <figure class="code rounded">
+                                <pre><code>
+        <span>front-end/</span>
+        <span>|--> </span><span>assets/</span>
+        <span>|</span>      <span>|--> </span><span>css/</span>
+        <span>|</span>      <span>|</span>    <span>|--> </span><span>main.css</span>
+        <span>|</span>      <span>|</span>
+        <span>|</span>      <span>|--> </span><span>img/</span>
+        <span>|</span>      <span>|</span>    <span>|--> </span><span>icons/</span>
+        <span>|</span>      <span>|</span>         <span>|--> </span><span>mastercard.png</span>
+        <span>|</span>      <span>|</span>         <span>|--> </span><span>visa.png</span>
+        <span>|</span>      <span>|</span>         <span>|--> </span><span>icon.ico</span>
+        <span>|</span>      <span>|</span>
+        <span>|</span>      <span>|--> </span><span>js/</span>
+        <span>|</span>      <span>|</span>    <span>|--> </span><span>util/</span>
+        <span>|</span>      <span>|</span>    <span>|</span>    <span>|--> </span><span>Api.js</span>
+        <span>|</span>      <span>|</span>    <span>|</span>    <span>|--> </span><span>Class.js</span>
+        <span>|</span>      <span>|</span>    <span>|</span>    <span>|--> </span><span>Function.js</span>
+        <span>|</span>      <span>|</span>    <span>|</span>
+        <span>|</span>      <span>|</span>    <span>|--> </span><span>analyse.js</span>
+        <span>|</span>      <span>|</span>    <span>|--> </span><span>cart.js</span>
+        <span>|</span>      <span>|</span>    <span>|--> </span><span>checkout.js</span>
+        <span>|</span>      <span>|</span>    <span>|--> </span><span>index.js</span>
+        <span>|</span>      <span>|</span>    <span>|--> </span><span>product.js</span>
+        <span>|</span>      <span>|</span>    <span>|--> </span><span>purpose.js</span>
+        <span>|</span>      <span>|</span>    <span>|--> </span><span>thanks.js</span>
+        <span>|</span>      <span>|</span>
+        <span>|</span>      <span>|--> </span><span>bootstrap/</span>
+        <span>|</span>      <span>|</span>    <span>|--> </span><span>bootstrap.min.js</span>
+        <span>|</span>      <span>|</span>    <span>|--> </span><span>purpose.css</span>
+        <span>|</span>
+        <span>|--> </span><span>analyse.html</span>
+        <span>|--> </span><span>cart.html</span>
+        <span>|--> </span><span>checkout.html</span>
+        <span>|--> </span><span>index.html</span>
+        <span>|--> </span><span>product.html</span>
+        <span>|--> </span><span>thanks.html</span>
+                                </code></pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="top">
                     <div class="col-lg-4 col-md-12 col-sm-12 mb-5">
                         <div id="accordion" class="sticky-top">
                             <div class="card border-0 shadow-none">
@@ -57,11 +110,11 @@
                                     </button>
                                 </h3>
                                 </div>
-                                <div id="collapseOne" class="collapse show ml-5" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div id="collapseOne" class="collapse ml-5" aria-labelledby="headingOne" data-parent="#accordion">
                                     <div class="card-body m-0 p-0">
                                         <ul class="nav nav-pills mb-3 flex-column" id="api-tab" role="tablist">
                                             <li class="nav-item">
-                                            <a class="nav-link active bg-transparent" id="pills-apiCamera-tab" data-toggle="pill" href="#pills-apiCamera" role="tab" aria-controls="pills-apiCamera" aria-selected="true">apiCamera( )</a>
+                                            <a class="nav-link active show bg-transparent" id="pills-apiCamera-tab" data-toggle="pill" href="#pills-apiCamera" role="tab" aria-controls="pills-apiCamera" aria-selected="true">apiCamera( )</a>
                                             </li>
                                             <li class="nav-item">
                                             <a class="nav-link bg-transparent" id="pills-sendForm-tab" data-toggle="pill" href="#pills-sendForm" role="tab" aria-controls="pills-sendForm" aria-selected="false">sendForm( )</a>
@@ -83,7 +136,7 @@
                                     <div class="card-body m-0 p-0">
                                         <ul class="nav nav-pills mb-3 flex-column" id="class-tab" role="tablist">
                                             <li class="nav-item">
-                                                <a class="nav-link bg-transparent" id="pills-Camera-tab" data-toggle="pill" href="#pills-Camera" role="tab" aria-controls="pills-Camera" aria-selected="true">Camera</a>
+                                                <a class="nav-link bg-transparent" id="pills-Camera-tab" data-toggle="pill" href="#pills-Camera" role="tab" aria-controls="pills-Camera" aria-selected="false">Camera</a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link bg-transparent" id="pills-AddProduct-tab" data-toggle="pill" href="#pills-AddProduct" role="tab" aria-controls="pills-AddProduct" aria-selected="false">AddProduct</a>
@@ -108,16 +161,16 @@
                                     <div class="card-body m-0 p-0">
                                         <ul class="nav nav-pills mb-3 flex-column" id="function-tab" role="tablist">
                                             <li class="nav-item">
-                                                <a class="nav-link bg-transparent" id="pills-addMoreProduct-tab" data-toggle="pill" href="#pills-addMoreProduct" role="tab" aria-controls="pills-addMoreProduct" aria-selected="true">addMoreProduct()</a>
+                                                <a class="nav-link bg-transparent" id="pills-addMoreProduct-tab" data-toggle="pill" href="#pills-addMoreProduct" role="tab" aria-controls="pills-addMoreProduct" aria-selected="false">addMoreProduct()</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link bg-transparent" id="pills-addOrderLocalStorage-tab" data-toggle="pill" href="#pills-addOrderLocalStorage" role="tab" aria-controls="pills-addOrderLocalStorage" aria-selected="true">addOrderLocalStorage()</a>
+                                                <a class="nav-link bg-transparent" id="pills-addOrderLocalStorage-tab" data-toggle="pill" href="#pills-addOrderLocalStorage" role="tab" aria-controls="pills-addOrderLocalStorage" aria-selected="false">addOrderLocalStorage()</a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link bg-transparent" id="pills-addProductLocalStorage-tab" data-toggle="pill" href="#pills-addProductLocalStorage" role="tab" aria-controls="pills-addProductLocalStorage" aria-selected="false">addProductLocalStorage()</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link bg-transparent" id="pills-badgeCount-tab" data-toggle="pill" href="#pills-badgeCount" role="tab" aria-controls="pills-badgeCount" aria-selected="true">badgeCount()</a>
+                                                <a class="nav-link bg-transparent" id="pills-badgeCount-tab" data-toggle="pill" href="#pills-badgeCount" role="tab" aria-controls="pills-badgeCount" aria-selected="false">badgeCount()</a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link bg-transparent" id="pills-cartChekcout-tab" data-toggle="pill" href="#pills-cartChekcout" role="tab" aria-controls="pills-cartChekcout" aria-selected="false">cartChekcout()</a>
@@ -132,7 +185,7 @@
                                                 <a class="nav-link bg-transparent" id="pills-getJsonItems-tab" data-toggle="pill" href="#pills-getJsonItems" role="tab" aria-controls="pills-getJsonItems" aria-selected="false">getJsonItems()</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link bg-transparent" id="pills-listProductCartFunction-tab" data-toggle="pill" href="#pills-listProductCartFunction" role="tab" aria-controls="pills-listProductCartFunction" aria-selected="true">listProductCartFunction()</a>
+                                                <a class="nav-link bg-transparent" id="pills-listProductCartFunction-tab" data-toggle="pill" href="#pills-listProductCartFunction" role="tab" aria-controls="pills-listProductCartFunction" aria-selected="false">listProductCartFunction()</a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link bg-transparent" id="pills-price-tab" data-toggle="pill" href="#pills-price" role="tab" aria-controls="pills-price" aria-selected="false">price()</a>
@@ -166,7 +219,7 @@
                                     <div class="card-body m-0 p-0">
                                         <ul class="nav nav-pills mb-3 flex-column" id="template-tab" role="tablist">
                                             <li class="nav-item">
-                                                <a class="nav-link bg-transparent" id="pills-Cart-tab" data-toggle="pill" href="#pills-Cart" role="tab" aria-controls="pills-Cart" aria-selected="true">Cart.js</a>
+                                                <a class="nav-link bg-transparent" id="pills-Cart-tab" data-toggle="pill" href="#pills-Cart" role="tab" aria-controls="pills-Cart" aria-selected="false">Cart.js</a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link bg-transparent" id="pills-Checkout-tab" data-toggle="pill" href="#pills-Checkout" role="tab" aria-controls="pills-Checkout" aria-selected="false">Checkout.js</a>
@@ -175,7 +228,7 @@
                                                 <a class="nav-link bg-transparent" id="pills-Index-tab" data-toggle="pill" href="#pills-Index" role="tab" aria-controls="pills-Index" aria-selected="false">Index.js</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link bg-transparent" id="pills-Product-tab" data-toggle="pill" href="#pills-Product" role="tab" aria-controls="pills-Product" aria-selected="true">Product.js</a>
+                                                <a class="nav-link bg-transparent" id="pills-Product-tab" data-toggle="pill" href="#pills-Product" role="tab" aria-controls="pills-Product" aria-selected="false">Product.js</a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link bg-transparent" id="pills-Thanks-tab" data-toggle="pill" href="#pills-Thanks" role="tab" aria-controls="pills-Thanks" aria-selected="false">Thanks.js</a>
@@ -188,9 +241,8 @@
                     </div>
                     <div class="col-lg-8 col-md-12 col-sm-12">
                         <div class="tab-content" id="pills-tabContent">
-
                             <!-- api-1 -->
-                            <div class="tab-pane fade show active" id="pills-apiCamera" role="tabpanel" aria-labelledby="pills-apiCamera-tab">
+                            <div class="tab-pane fade active show" id="pills-apiCamera" role="tabpanel" aria-labelledby="pills-apiCamera-tab">
                                 <article>
                                     <div class="article-header mb-5">
                                         <h3 class="h1">apiCamera( method, url )</h3>
@@ -211,6 +263,13 @@
     }
                                             </code></pre>
                                         </figure>
+                                        <div class=text-dark>
+                                            <p>ApiCamera retourne une nouvelle Promesse qui prendra en paramètre une méthode (de manière générale ce sera "GET") ainsi qu'une URL de l'API.</p>
+                                            <ul>
+                                                <li>En cas de succés: celui-ci retournera la réponse émise par l'API.</li>
+                                                <li>En cas d'erreur: on récupère un code d'état.</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </article>
                             </div>
@@ -237,6 +296,17 @@
     }
                                                 </code></pre>
                                         </figure>
+                                        <div class="text-dark">
+                                            <p>SendForm s'occupe de l'envoie du formulaire de la page checkout. La fonction prend 4 paramètres : la méthode (ici ce sera "POST", une URL, le corp des données à envoyer ainsi qu'une redirection. Elle retourne une nouvelle promesse.</p>
+                                            <p>Dans cette promesse , on y créer un objet "XMLHttpRequest" et on lui passe cinq méthode :</p>
+                                            <ul>
+                                                <li>Open : Prend en paramètre la méthode, l'url et un booléan true indiquant qu'il faut traiter la requête en asynchrone.</li>
+                                                <li>setRequestHeader : pour éditer le header de la requête</li>
+                                                <li>onload : retourne en cas de succés une redirection vers la page de remerciements</li>
+                                                <li>onerror : affiche un message dans la console en cas d'erreur</li>
+                                                <li>send : envoie le corp de la requête en format JSON</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </article> 
                             </div>
@@ -265,6 +335,17 @@
                                                 </code></pre>
                                         </figure>
                                     </div>
+                                    <div class="text-dark">
+                                        <p>La class Camera créer un nouvel objet et prend comme valeurs :</p>
+                                        <ul>
+                                            <li>L'id</li>
+                                            <li>La description</li>
+                                            <li>L'url d'une image</li>
+                                            <li>Un objet qui contient toutes les valeurs de lentilles pour caméra</li>
+                                            <li>Le nom de la caméra</li>
+                                            <li>Son prix</li>
+                                        </ul>
+                                    </div>
                                 </article>
                             </div>
                             <!-- classe-2 -->
@@ -289,6 +370,16 @@
     }
                                                 </code></pre>
                                         </figure>
+                                        <div class="text-dark">
+                                            <p>La class AddProduct créer un nouvel objet pour l'ajout dans le panier. Il prend comme valeurs :</p>
+                                            <ul>
+                                                <li>L'id</li>
+                                                <li>Le nom de la caméra</li>
+                                                <li>L'url de l'image</li>
+                                                <li>Son prix</li>
+                                                <li>Sa quantité</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </article>
                             </div>
@@ -361,6 +452,34 @@
     }
                                                 </code></pre>
                                         </figure>
+                                        <div class="text-dark">
+                                            <p>La class NewForm créer un nouvel objet qui prend en valeur :
+                                                <ul>
+                                                    <li>Le prénom</li>
+                                                    <li>Le nom</li>
+                                                    <li>L'adresse email</li>
+                                                    <li>Le numéro de rue</li>
+                                                    <li>L'adresse</li>
+                                                    <li>Le code postal</li>
+                                                    <li>La ville</li>
+                                                    <li>Le numéro de carte de crédit</li>
+                                                    <li>La date d'expiration</li>
+                                                    <li>Le code CVC</li>
+                                                    <li>Le prix total</li>
+                                                    <li>Un id</li>
+                                                </ul>
+                                            </p>
+                                            <p>En plus de cette création d'objet, on y retrouve sept fonction qui testera les valeurs données avec du regex :</p>
+                                            <ul>
+                                                <li>isValidCharacter : Vérifie si l'élément possède uniquement des lettres et pas des chiffres ou des caractères spéciaux.</li>
+                                                <li>isValidNumber : Vérifie si l'élément est bien un nombre</li>
+                                                <li>isValidCreditCard : Vérifie si l'élémentsest bien un numéro de carte de crédit et qui commence par le chiffre 4 ou 5 pour les numéro de carte masterCard et Visa</li>
+                                                <li>isValidDate : Vérifie si l'élément est bien une date (data qui serait au minimum en 2020)</li>
+                                                <li>isValidMail : Vérifie si l'élément est bien une adresse mail</li>
+                                                <li>isValidCVC : Vérifie si l'élément possède uniqument des chiffres (3 chiffres maximum).</li>
+                                                <li>isEmpty : Vérifie si l'élément n'est pas vide</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </article>
                             </div>
@@ -369,7 +488,7 @@
                             <div class="tab-pane fade" id="pills-addMoreProduct" role="tabpanel" aria-labelledby="pills-addMoreProduct-tab">
                                 <article>
                                     <div class="article-header mb-5">
-                                        <h3 class="h1">addMoreProduct</h3>
+                                        <h3 class="h1">addMoreProduct( )</h3>
                                         <p class="text-muted lead mt-5">addMoreProduct s'occupe de l'incrémentation du produit qu'on retrouve dans le localStorage. On y retrouve un aperçu de cette fonction dans la page du panier.</p>
                                     </div>
                                     <div class="article-body">
@@ -391,6 +510,13 @@
     }
                                                 </code></pre>
                                         </figure>
+                                        <div class="text-dark">
+                                            <p class="font-weight-bold lead">Explication de la fonction addMoreProduct :</p>
+                                            <p>J'initialise un array vide qui s'appelle "<b>arrayIds</b>". Je fais une condition qui vérifie si la longueur de "<b class="text-primary">getJsonItems()</b>" est supérieur à 0.</p>
+                                            <p>Si oui, je créer un nouveau tableau avec les résultats de l'appel de la fonction et je push chaque résultat dans l'array "<b>arrayIds</b>".</p>
+                                            <p>J'initialise "<b>removeProduct</b>" qui récupére l'élément chaque élément html qui à pour id "<b>more-</b>" + l'id du produit.</p>
+                                            <p>Au click sur ces éléments html, j'incrémente la valeur de "<b>add</b>" du produit et j'appelle la fonction "<b class="text-primary">updateLocalStorage()</b>"" auquel je passe en paramètre "<b>arrayIds</b>".</p>
+                                        </div>
                                     </div>
                                 </article>
                             </div>
@@ -398,7 +524,7 @@
                             <div class="tab-pane fade" id="pills-addOrderLocalStorage" role="tabpanel" aria-labelledby="pills-addOrderLocalStorage-tab">
                                 <article>
                                     <div class="article-header mb-5">
-                                        <h3 class="h1">addOrderLocalStorage</h3>
+                                        <h3 class="h1">addOrderLocalStorage( data )</h3>
                                         <p class="text-muted lead mt-5">Cette fonction créer une nouvelle clé qui se nomme "Order" ou y on retrouve les informations de l'utilisateur transmise via le formulaire et supprime la clé "Product" et ses valeurs. On y retrouve un aperçu dans la page de remerciement.</p>
                                     </div>
                                     <div class="article-body">
@@ -407,10 +533,16 @@
                                             <pre><code>
     <span class="declar">const</span> <span class="nom">addOrderLocalStorage</span> = (<span class="param">data</span>) <span class="nomf">=></span> {
         <span class="param">localStorage</span>.<span class="nom">setItem</span>(<span class="text">"Order"</span>, <span class="param">JSON</span>.<span class="nom">stringify</span>(<span class="param">data</span>))
-        <span class="param">localStorage</span>.<span class="nom">removeItem</span>(<span class="text">"Product"</span>, <span class="param">JSON</span>.<span class="nom">stringify</span>(<span class="param">data</span>))
+        <span class="param">localStorage</span>.<span class="nom">removeItem</span>(<span class="text">"Product"</span>)
     }
                                                 </code></pre>
                                         </figure>
+                                        <div class="text-dark">
+                                            <p class="font-weight-bold lead">Explication de la fonction addOrderLocalStorage :</p>
+                                            <p>La fonction prend un paramètre nommé : "<b>data</b>".</p>
+                                            <p>J'ajoute dans le localStorage une nouvelle clé nommé "<b>Order</b>" et prend comme valeur le paramètre "<b>data</b>" convertit en chaîne JSON.</p>
+                                            <p>Je supprime ensuite la clé "<b>Product</b>" afin de vider le panier.</p>
+                                        </div>
                                     </div>
                                 </article>
                             </div>
@@ -418,7 +550,7 @@
                             <div class="tab-pane fade" id="pills-addProductLocalStorage" role="tabpanel" aria-labelledby="pills-addProductLocalStorage-tab">
                                 <article>
                                     <div class="article-header mb-5">
-                                        <h3 class="h1">addProductLocalStorage</h3>
+                                        <h3 class="h1">addProductLocalStorage( data )</h3>
                                         <p class="text-muted lead mt-5">Cette fonction créer une nouvelle clé qui se nomme "Product" et prend en valeur les données du produit ajouter au panier. On y retrouve un aperçu dans la page produit</p>
                                     </div>
                                     <div class="article-body">
@@ -432,6 +564,12 @@
     }
                                                 </code></pre>
                                         </figure>
+                                        <div class="text-dark">
+                                            <p class="font-weight-bold lead">Explication de la fonction addProductLocalStorage :</p>
+                                            <p>La fonction prend un paramètre nommé : "<b>data</b>".</p>
+                                            <p>J'ajoute dans le localStorage une nouvelle clé nommé "<b>Product</b>" et prend comme valeur le paramètre "<b>data</b>" convertit en chaîne JSON.</p>
+                                            <p>Je fais appel à la fonction "<b class="text-primary">badgeCount()</b>" et "<b class="text-primary">cartDropdown()</b>" pour mettre à jour le nombre de produit dans le panier et son dropdown.</p>
+                                        </div>
                                     </div>
                                 </article>
                             </div>
@@ -439,7 +577,7 @@
                             <div class="tab-pane fade" id="pills-badgeCount" role="tabpanel" aria-labelledby="pills-badgeCount-tab">
                                 <article>
                                     <div class="article-header mb-5">
-                                        <h3 class="h1">badgeCount</h3>
+                                        <h3 class="h1">badgeCount( )</h3>
                                         <p class="text-muted lead mt-5">Cette fonction permet d'afficher le nombre de produits existant dans le panier (c'est à dire dans la clé "Product" du localStorage). On y retrouve un aperçu dans toutes les pages du site.</p>
                                     </div>
                                     <div class="article-body">
@@ -462,6 +600,14 @@
     }
                                                 </code></pre>
                                         </figure>
+                                        <div class="text-dark">
+                                            <p class="font-weight-bold lead">Explication de la fonction badgeCount :</p>
+                                            <p>D'abord je vérifie si l'élément html avec l'id "<b>badge</b>" existe bien.</p>
+                                            <p>Si oui, je l'initialise dans une variable "<b>let</b>".</p>
+                                            <p>Je vérifie ensuite si aucun élément existe avec la fonction "<b class="text-primary">getJsonItems()</b>".</p>
+                                            <p>Si oui, j'ajoute la class "<b>d-none</b>" à "<b>badge</b>"</p>
+                                            <p>Sinon, j'initalise une variable "<b>quantityCart</b>" avec comme valeur "<b>0</b>" puis je fais une boucle "<b>for</b>" ou je récupère l'index des éléments dans "<b class="text-primary">getJsonItems()</b>". J'incrémente ensuite "<b>quantityCart</b>" de la valeur de "<b>add</b>" de chaque produit existant dans "<b class="text-primary">getJsonItems()</b>" et je définit la syntaxe HTML de l'élément "<b>badge</b>" avec "<b>quantityCart</b>".</p>
+                                        </div>
                                     </div>
                                 </article>
                             </div>
@@ -469,7 +615,7 @@
                             <div class="tab-pane fade" id="pills-cartChekcout" role="tabpanel" aria-labelledby="pills-cartChekcout-tab">
                                 <article>
                                     <div class="article-header mb-5">
-                                        <h3 class="h1">cartChekcout</h3>
+                                        <h3 class="h1">cartChekcout( )</h3>
                                         <p class="text-muted lead mt-5">cartCheckout permet d'afficher le contenu du panier à partir des valeurs existante dans la clé "Produit" du localStorage. On y retrouve un aperçu dans la page checkout</p>
                                     </div>
                                     <div class="article-body">
@@ -517,12 +663,31 @@
                 <span class="nom">getJsonItems</span>().<span class="nom">map</span>(<span class="param">product</span> <span class="nomf">=></span> {
                     <span class="param">total</span> += <span class="nom">price</span>(<span class="param">product</span>.<span class="param">price</span>) * <span class="param">product</span>.<span class="param">add</span>
                     <span class="nomf">getTotal</span>.<span class="param">innerHTML</span> = <span class="text">"<span class="nomf">${</span><span class="param">total</span> + <span class="param">deliveryPrice</span><span class="nomf">}</span> €"</span>
-                })<span class="nom">join</span>(<span class="text">""</span>);
+                }).<span class="nom">join</span>(<span class="text">""</span>);
             }
         }
     }
                                                 </code></pre>
                                         </figure>
+                                        <div class="text-dark">
+                                            <p class="font-weight-bold lead">Explication de la fonction cartChekcout :</p>
+                                            <p>J'initialise quatre variable qui récupère des éléments html :</p>
+                                            <ul>
+                                                <li>"<b>listChekout</b>" récupère l'élément html qui possède l'id : "<b>listChekout</b>"</li>
+                                                <li>"<b>quantityProduct</b>" récupère l'élément html qui possède l'id : "<b>quantityProduct</b>"</li>
+                                                <li>"<b>delivery</b>" récupère l'élément html qui possède l'id : "<b>delivery</b>"</li>
+                                                <li>"<b>getTotal</b>" récupère l'élément html qui possède l'id : "<b>getTotal</b>"</li>
+                                            </ul>
+                                            <p>Je vérifie si "<b class="text-primary">getJsonItems()</b>" me retourne "<b>true</b>".</p>
+                                            <p>Si c'est le cas, j'initialise une variable "<b>productNumber</b>" qui à pour valeur "<b>0</b>"</p>
+                                            <p>J'initialise une seconde variable qui va créer un nouveau tableau avec les résultats de l'appel de la fonction "<b class="text-primary">getJsonItems()</b>" et je lui passe la méthode "<b>join('')</b>" afin de supprimer les ",".</p>
+                                            <p>J'incrément "<b>productNumber</b>" par rapport aux quantité de chaque produits</p>
+                                            <p>Pour l'affichage du mot "produit" en HTML, je vérifie si la longueur de "<b class="text-primary">getJsonItems()</b>" est de "<b>1</b>" et que la quantité du produit en question est aussi de "<b>1</b>". Si c'est le cas j'affiche le mot "<b>produit</b>" au singulier, sinon je l'affiche au pluriel.</p>
+                                            <p>Je retourne ensuite un block html qui affichera les produits en question dans la page checkout côté "Résumé".</p>
+                                            <p>J'initialise un prix de livraison ("<b>deliveryPrice</b>") à "<b>250</b>".</p>
+                                            <p>Je modifie la syntaxe de "<b>listChekout</b>" et "<b>delivery</b>" avec les valeurs de "<b>checkoutProduct</b>" et "<b>deliveryPrice</b> €".</p>
+                                            <p>Je vérifie que "<b class="text-primary">getJsonItems()</b>" existe bien pour éviter les message d'erreur en console et je modifie la syntaxe de "<b>getTotal</b>" avec la valeur de "<b>total</b>" + "<b>deliveryPrice</b>".</p>
+                                        </div>
                                     </div>
                                 </article>
                             </div>
@@ -530,7 +695,7 @@
                             <div class="tab-pane fade" id="pills-cartDropdown" role="tabpanel" aria-labelledby="pills-cartDropdown-tab">
                                 <article>
                                     <div class="article-header mb-5">
-                                        <h3 class="h1">cartDropdown</h3>
+                                        <h3 class="h1">cartDropdown( )</h3>
                                         <p class="text-muted lead mt-5">cartDropdown permet d'afficher le contenu du panier dans le hover (dropdown) à partir des valeurs existante dans la clé "Produit" du localStorage. Celui-ci se trouve au niveau de la barre de navigation (l'icône panier). On y retrouve un aperçu dans la page d'accueil et la page produit du site.</p>
                                     </div>
                                     <div class="article-body">
@@ -588,8 +753,27 @@
             <span class="nomf">noProducts</span>.<span class="param">innerHTML</span> = <span class="text">"&ltp class='text-center mb-0'>Vous n'avez aucun produit dans votre panier&lt/p>"</span>
         }
     }
-                                        </code></pre>
-                                    </figure>
+                                            </code></pre>
+                                        </figure>
+                                        <div class="text-dark">
+                                            <p class="font-weight-bold lead">Explication de la fonction cartDropdown :</p>
+                                            <p>J'initialise quatre variable qui récupère des éléments html :</p>
+                                            <ul>
+                                                <li>"<b>listCart</b>" récupère l'élément html qui possède l'id : "<b>listCart</b>"</li>
+                                                <li>"<b>table</b>" récupère l'élément html qui possède l'id : "<b>table-dropdown</b>"</li>
+                                                <li>"<b>noProducts</b>" récupère l'élément html qui possède l'id : "<b>not-products</b>"</li>
+                                                <li>"<b>priceDropdown</b>" récupère l'élément html qui possède l'id : "<b>price-dropdown</b>"</li>
+                                            </ul>
+                                            <p>Je vérifie si "<b class="text-primary">getJsonItems()</b>" n'est pas égale à "<b>null</b>".</p>
+                                            <p>Si c'est le cas ,J'initialise une variable "<b>productCart</b>" qui va créer un nouveau tableau avec les résultats de l'appel de la fonction "<b class="text-primary">getJsonItems()</b>" et je lui passe la méthode "join('')" afin de supprimer les ","</p>
+                                            <p>Je retourne un block HTML contenant les lignes du tableau qu'on retrouve dans le hover du panier avec les valeurs de chaque produits.</p>
+                                            <p>Je rajoute une class "<b>d-none</b>" à "<b>noProducts</b>" et je lui retire la class "<b>d-block</b>".</p>
+                                            <p>Je rajoute une class "<b>d-block</b>" à "<b>table</b>".</p>
+                                            <p>Je retire la class "<b>d-none</b>" à "<b>priceDropdown</b>" et je définit la syntaxe "<b>productCart</b>" à "<b>listCart</b>". J'appel ensuite la fonction "<b class="text-primary">displayPrice()</b>".</p>
+
+                                            <p>En dehors de la première condition, j'en initialise une nouvelle en vérifiant si la longueur de "<b class="text-primary">getJsonItems()</b>" est strictement égale à "<b>0</b>".</p>
+                                            <p>Si c'est le cas, j'ajoute la class "<b>d-none</b>" à "<b>table</b>" et "<b>priceDropdown</b>" et la class "<b>d-block</b>" à "<b>noProducts</b>". Je retire la class "<b>d-block</b>" à "<b>table</b>" et je définit une syntaxe "<b>Vous n'avez aucun produit dans votre panier</b>" à "<b>noProducts</b>"</p>                                       
+                                        </div>
                                     </div>
                                 </article>
                             </div>
@@ -597,8 +781,8 @@
                             <div class="tab-pane fade" id="pills-errorMessage" role="tabpanel" aria-labelledby="pills-errorMessage-tab">
                                 <article>
                                     <div class="article-header mb-5">
-                                        <h3 class="h1">errorMessage</h3>
-                                        <p class="text-muted lead mt-5">errorMessage affiche les messages d'erreurs retourn" par les vérifications de validation des champs de formulaire. On y trouve un aperçu dans la page checkout.</p>
+                                        <h3 class="h1">errorMessage( message )</h3>
+                                        <p class="text-muted lead mt-5">errorMessage affiche les messages d'erreurs retourné par les vérifications de validation des champs de formulaire. On y trouve un aperçu dans la page checkout.</p>
                                     </div>
                                     <div class="article-body">
                                         <figure class="code rounded">
@@ -612,6 +796,13 @@
     }
                                                 </code></pre>
                                         </figure>
+                                        <div class="text-dark">
+                                            <p class="font-weight-bold lead">Explication de la fonction errorMessage :</p>
+                                            <p>La fonction prend en paramètre les "<b>messages</b>" d'erreur.</p>
+                                            <p>Je récupère l'élément html qui à pour id "<b>error</b>" que j'initialise dans une constante "<b>info</b>".</p>
+                                            <p>Je retire le class "<b>d-none</b>" à "<b>info</b>" et je lui ajoute la classe "<b>d-block</b>".</p>
+                                            <p>Je définit ensuite la syntaxte de "<b>info</b>" avec le paramètre "<b>message</b>"</p>
+                                        </div>
                                     </div>
                                 </article>
                             </div>
@@ -619,7 +810,7 @@
                             <div class="tab-pane fade" id="pills-getJsonItems" role="tabpanel" aria-labelledby="pills-getJsonItems-tab">
                                 <article>
                                     <div class="article-header mb-5">
-                                        <h3 class="h1">getJsonItems</h3>
+                                        <h3 class="h1">getJsonItems( )</h3>
                                         <p class="text-muted lead mt-5">getJsonItems retroune un array JSON.parse des éléments se trouvant dans la clé "Product" du localStorage.</p>
                                     </div>
                                     <div class="article-body">
@@ -638,6 +829,14 @@
     }
                                                 </code></pre>
                                         </figure>
+                                        <div class="text-dark">
+                                            <p class="font-weight-bold lead">Explication de la fonction getJsonItems :</p>
+                                            <p>Je vérifie si une clé nommé "<b>Product</b>" existe dans le localStorage</p>
+                                            <p>Si c'est le cas, j'initalise une variable nommé "<b>keyStorage</b>" où je stock les valeurs de la clé "<b>Product</b>" du localStorage.</p>
+                                            <p>J'initialise une seconde variable nommé "<b>products</b>" qui prend en valeur "<b>keyStorage</b>" en format "<b>JSON</b>".</p>
+                                            <p>Je retourne ensuite "<b>products</b>".</p>
+                                            <p>Si la clé "<b>Products</b>" n'existe pas dans le localStorage, je retourne un array vide que j'ai initialisé dans une variable "<b>products</b>".</p>
+                                        </div>
                                     </div>
                                 </article>
                             </div>
@@ -645,7 +844,7 @@
                             <div class="tab-pane fade" id="pills-listProductCartFunction" role="tabpanel" aria-labelledby="pills-listProductCartFunction-tab">
                                 <article>
                                     <div class="article-header mb-5">
-                                        <h3 class="h1">listProductCartFunction</h3>
+                                        <h3 class="h1">listProductCartFunction( )</h3>
                                         <p class="text-muted lead mt-5">listProductCartFunction permet d'afficher le contenu du panier à partir des valeurs existante de la clé "Produit" du localStorage. On y retrouve un aperçu dans la page panier</p>
                                     </div>
                                     <div class="article-body">
@@ -705,6 +904,14 @@
     }
                                             </code></pre>
                                         </figure>
+                                        <div class="text-dark">
+                                            <p class="font-weight-bold lead">Explication de la fonction listProductCartFunction :</p>
+                                            <p>Je vérifie si "<b class="text-primary">getJsonItems()</b>" me retourne une valeur true</p>
+                                            <p>Si c'est le cas, j'initialise dans une variable "<b>listProductCart</b>" l'élément html qui possède l'id "<b>list-array</b>"</p>
+                                            <p>J'initialise ensuite une variable "<b>productCart</b>" qui va créer un nouveau tableau avec les résultats de l'appel de la fonction "<b class="text-primary">getJsonItems()</b>" où je lui retourne un block HTML qui correspond au ligne du tableau de la page panier et je lui passe la méthode "join('')" afin de supprimer les ","</p>
+                                            <p>Je modifie ensuite la syntaxe de "<b>listProductCart</b>" avec le retour de "<b>productCart</b>"</p>
+                                            <p>Je fais ensuite appel aux fonctions "<b class="text-primary">displayPrice()</b>", "<b class="text-primary">addMoreProduct()</b>", "<b class="text-primary">removeMoreProduct()</b>" et "<b class="text-primary">removeProductLocalStorage()</b>"</p>
+                                        </div>
                                     </div>
                                 </article>
                             </div>
@@ -712,27 +919,33 @@
                             <div class="tab-pane fade" id="pills-price" role="tabpanel" aria-labelledby="pills-price-tab">
                                 <article>
                                     <div class="article-header mb-5">
-                                        <h3 class="h1">price</h3>
+                                        <h3 class="h1">price( productPrice )</h3>
                                         <p class="text-muted lead mt-5">Price() divise la somme donnée par 100.</p>
                                     </div>
                                     <div class="article-body">
                                         <figure class="code rounded">
                                             <p class="font-weight-light m-0 path text-right text-sm">assets/js/util/Function.js</p>
                                             <pre><code>
-    <span class="declar">const</span> <span class="nom">price</span> = <span class="param">product</span> <span class="nomf">=></span> {
-        <span class="declar">let</span> <span class="param">price</span> = <span class="param">Math</span>.<span class="nom">round</span>(<span class="param">product</span> / <span class="num">100</span>);
+    <span class="declar">const</span> <span class="nom">price</span> = <span class="param">productPrice</span> <span class="nomf">=></span> {
+        <span class="declar">let</span> <span class="param">price</span> = <span class="param">Math</span>.<span class="nom">round</span>(<span class="param">productPrice</span> / <span class="num">100</span>);
         <span class="ier">return</span> <span class="param">price</span>;
         }
     }
                                                 </code></pre>
                                         </figure>
+                                        <div class="text-dark">
+                                            <p class="font-weight-bold lead">Explication de la fonction Price :</p>
+                                            <p>La fonction prend en paramètre "<b>productPrice</b>".</p>
+                                            <p>J'initialise ensuite une variable "<b>price</b>" qui retourne la division du prix arrondi. La division prend le paramètre "<b>productPrice</b>" et le divise par "<b>100</b>".</p>
+                                            <p>Je retourne ensuite "<b>price</b>".</p>
+                                        </div>
                                     </div>
                                 </article>
                             </div>
                             <div class="tab-pane fade" id="pills-removeMoreProduct" role="tabpanel" aria-labelledby="pills-removeMoreProduct-tab">
                                 <article>
                                     <div class="article-header mb-5">
-                                        <h3 class="h1">removeMoreProduct</h3>
+                                        <h3 class="h1">removeMoreProduct( )</h3>
                                         <p class="text-muted lead mt-5">removeMoreProduct s'occupe de la décrémentation du produit qu'on retrouve dans le localStorage. Lorsque le produit posséde la valeur de "0" dans sa quantité, celui-ci est supprimer de la clé "Produit". On y retrouve un aperçu de cette fonction dans la page du panier.</p>
                                     </div>
                                     <div class="article-body">
@@ -760,6 +973,18 @@
     }
                                             </code></pre>
                                         </figure>
+                                        <div class="text-dark">
+                                            <p class="font-weight-bold lead">Explication de la fonction removeMoreProduct :</p>
+                                            <p>J'initialise une variable "<b>arrayIds</b>" qui possède un array vide.</p>
+                                            <p>Je vérifie ensuite si la longueur de la fonction "<b>getJsonItems()</b>" est supérieur à "<b>0</b>".</p>
+                                            <p>Si oui, je créer un nouveau tableau avec les résultats de l'appel de la fonction et je push chaque résultat dans l'array <b>"arrayIds"</b></p>
+                                            <p>J'initialise "<b>removeProduct</b>" qui récupére l'élément chaque élément html qui à pour id "<b>less-</b>" + l'id du produit.</p>
+                                            <p>Au click sur ces éléments html, je décrémente la valeur de "<b>add</b>" du produit et j'appelle la fonction "<b class="text-primary">updateLocalStorage()</b>"" auquel je passe en paramètre "<b>arrayIds</b>".</p>
+                                            <p>Pour mettre fin à cette décrémentation, je vérifie si la partie "<b>add</b>" du produit est à "<b>0</b>".</p>
+                                            <p>Si c'est le cas, j'initialise une variable nommé "<b>findObject</b>" je récupère le premier élément trouvé qui possède le même id que l'id du produit</p>
+                                            <p>Je récupère ensuite son index dans le tableau que j'initialise dans une variable nommé "<b>keyObject</b>".</p>
+                                            <p>Je modifie ensuite l'array "<b>arrayIds</b>" en retirant uniquement la valeur concerné et je fais appel à la fonction "<b class="text-primary">updateLocalStorage</b>" en lui passant en paramètre "<b>arrayIds</b>"</p>
+                                        </div>
                                     </div>
                                 </article>
                             </div>
@@ -767,7 +992,7 @@
                             <div class="tab-pane fade" id="pills-removeProductLocalStorage" role="tabpanel" aria-labelledby="pills-removeProductLocalStorage-tab">
                                 <article>
                                     <div class="article-header mb-5">
-                                        <h3 class="h1">removeProductLocalStorage</h3>
+                                        <h3 class="h1">removeProductLocalStorage( )</h3>
                                         <p class="text-muted lead mt-5">removeProductLocalStorage retire le produit du localStorage. On y retrouve un aperçu de cette fonction dans la page du panier.</p>
                                     </div>
                                     <div class="article-body">
@@ -792,6 +1017,16 @@
     }
                                             </code></pre>
                                         </figure>
+                                        <div class="text-dark">
+                                            <p class="font-weight-bold lead">Explication de la fonction removeProductLocalStorage :</p>
+                                            <p>J'initialise une variable "<b>arrayIds</b>" qui possède un array vide.</p>
+                                            <p>Je vérifie ensuite si la longueur de la fonction "<b>getJsonItems()</b>" est supérieur à "<b>0</b>".</p>
+                                            <p>Si oui, je créer un nouveau tableau avec les résultats de l'appel de la fonction et je push chaque résultat dans l'array <b>"arrayIds"</b></p>
+                                            <p>J'initialise "<b>removeProduct</b>" qui récupére l'élément chaque élément html qui à pour id "<b>product-</b>" + l'id du produit.</p>
+                                            <p>Au click de "<b>removeProduct</b>", j'initialise une variable nommé "<b>findObject</b>" je récupère le premier élément trouvé qui possède le même id que l'id du produit</p>
+                                            <p>Je récupère ensuite son index dans le tableau que j'initialise dans une variable nommé "<b>keyObject</b>".</p>
+                                            <p>Je modifie ensuite l'array "<b>arrayIds</b>" en retirant uniquement la valeur concerné et je fais appel à la fonction "<b class="text-primary">updateLocalStorage</b>" en lui passant en paramètre "<b>arrayIds</b>"</p>
+                                        </div>
                                     </div>
                                 </article>
                             </div>
@@ -799,7 +1034,7 @@
                             <div class="tab-pane fade" id="pills-displayPrice" role="tabpanel" aria-labelledby="pills-displayPrice-tab">
                                 <article>
                                     <div class="article-header mb-5">
-                                        <h3 class="h1">displayPrice</h3>
+                                        <h3 class="h1">displayPrice( )</h3>
                                         <p class="text-muted lead mt-5">Cette fonction calcule la valeur total du prix de tous les produits existant dans le localStorage. Elle prend en compte la quantité d'un produit et le nombre total de produit. On y retrouve un aperçu dans le dropdown de la barre de navigation, la page panier et la page checkout.</p>
                                     </div>
                                     <div class="article-body">
@@ -818,7 +1053,7 @@
         } <span class="ier">else</span> {
             <span class="ier">if</span>(<span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"cart-empty"</span>)) {
                 <span class="declar">let</span> <span class="param">badge</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"badge"</span>)
-                <span class="declar">let</span> <span class="param">container</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"badge"</span>)
+                <span class="declar">let</span> <span class="param">container</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"container"</span>)
                 <span class="param">container</span>.<span class="param">innerHTML</span> = <span class="text">"&ltp class='text-center mb-0'>Vous n'avez aucun produit dans votre panier. &lta href='index.html'>Retourner dans la boutique&lt/a>&lt/p>"</span>
                 <span class="param">badge</span>.<span class="nomf">classList</span>.<span class="nom">add</span>(<span class="text">"d-none"</span>)
             }
@@ -826,6 +1061,15 @@
     }
                                             </code></pre>
                                         </figure>
+                                        <div class="text-dark">
+                                            <p class="font-weight-bold lead">Explication de la fonction displayPrice :</p>
+                                            <p>Pour commencer, j'initialise deux variable nommé "<b>totalPrice</b>" et "<b>total</b>". Dans la première variable, je récupère tous les éléments html "<b>span</b>" qui possèdent une class "<b>total</b>" avec "<b>querySelector</b>" et la seconde variable je lui met une valeur de "<b>0</b>".</p>
+                                            <p>Je vérifie si la longueur de "<b class="text-primary">getJsonItems()</b>" est supérieur à "<b>0</b>".</p>
+                                            <p>Si oui, je créer un nouveau tableau avec les résultats de l'appel de la fonction (je rajoute la méthode "<b>join('')</b>" afin de supprimer les virgules). J'incrément ensuite la variable "<b>total</b>" avec la fonction "<b class="text-primary">price()</b>" à qui je passe en paramètre le prix de chaque produit que je multiplie par sa quantité.</p>
+                                            <p>Je définit ensuite la syntaxe des élément html "<b>totalPrice</b>" par la valeur de "<b>total</b>".</p>
+                                            <p>Si la condition est fausse, je vérifie qu'un élément html avec un id "<b>cart-empty</b>" existe, et si c'est le cas, j'initialise deux variable ("<b>badge</b>" et "<b>container</b>") qui récupère les éléments html qui possède l'id "<b>badge</b>" et "<b>container</b>".</p>
+                                            <p>Je modifie la syntaxe de "<b>container</b>" et je rajoute une class "<b>d-none</b>" à "<b>badge</b>".</p>
+                                        </div>
                                     </div>
                                 </article>
                             </div>
@@ -833,7 +1077,7 @@
                             <div class="tab-pane fade" id="pills-updateLocalStorage" role="tabpanel" aria-labelledby="pills-updateLocalStorage-tab">
                                 <article>
                                     <div class="article-header mb-5">
-                                        <h3 class="h1">updateLocalStorage</h3>
+                                        <h3 class="h1">updateLocalStorage( data )</h3>
                                         <p class="text-muted lead mt-5">Cette fonction permet de mettre à jour le localStorage après modification (par exemple, si on incrémente un produit à partir de la page panier, le localStorage, le prix totale et le nombre de produit dans le panier se met à jour).</p>
                                     </div>
                                     <div class="article-body">
@@ -847,6 +1091,12 @@
     }
                                                 </code></pre>
                                         </figure>
+                                        <div class="text-dark">
+                                            <p class="font-weight-bold lead">Explication de la fonction updateLocalStorage :</p>
+                                            <p>La fonction prend un paramètre nommé : "<b>data</b>".</p>
+                                            <p>Je met à jour dans le localStorage la clé nommé "<b>Product</b>" et prend comme valeur le paramètre "<b>data</b>" convertit en chaîne JSON.</p>
+                                            <p>Je fais appel à la fonction "<b class="text-primary">listProductCartFunction()</b>" et "<b class="text-primary">badgeCount()</b>" pour mettre à jour la liste de produit du panier et le nombre de produit dans le badge du panier.</p>
+                                        </div>
                                     </div>
                                 </article>
                             </div>

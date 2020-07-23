@@ -7,6 +7,7 @@ urlcourante  = urlcourante.replace(/\/$/, "");
 // Gardons dans la variable queue_url uniquement la portion derrière le dernier slash de urlcourante
 let queueUrl = urlcourante.substring(urlcourante.lastIndexOf("/") + 1);
 let idResponse = queueUrl.substring(18);
+const section = document.getElementById("container")
 
 if (products && products.id == idResponse) {
     let order = document.getElementById("order")
@@ -24,17 +25,13 @@ if (products && products.id == idResponse) {
         });
     }
 } else if (products && products.id != idResponse && Boolean(idResponse)) {
-    const section = document.getElementById('container');
     section.innerHTML =  `<p class='text-center mb-0'>Désolé mais ce numéro de commande ne vous appartient pas.<br>Merci de <a href='index.html'>retourner dans la boutique</a> ou d'aller sur <a href='http://127.0.0.1:5500/front-end/thanks.html?order=${products.id}'>votre numéro de commande</a></p>`;
 } else if (Boolean(idResponse) === false) {
     if(products) {
-        const section = document.getElementById('container');
         section.innerHTML =  `<p class='text-center mb-0'>Désolé, aucun numéro de commande est stipulé.<br>Merci de <a href='index.html'>retourner dans la boutique</a> ou d'aller sur <a href='http://127.0.0.1:5500/front-end/thanks.html?order=${products.id}'>votre numéro de commande</a></p>`;
     } else {
-        const section = document.getElementById('container');
         section.innerHTML = "<p class='text-center mb-0'>Désolé, aucun numéro de commande est stipulé.<br>Merci de <a href='index.html'>retourner dans la boutique</a>";
     }
 } else {
-    const section = document.getElementById('container');
     section.innerHTML = "<p class='text-center mb-0'>Aucune commande n'a été faite, merci de <a href='index.html'>retourner dans la boutique</a></p>";
 }

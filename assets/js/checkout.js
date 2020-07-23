@@ -2,22 +2,30 @@ import { sendForm } from './util/Api.js'
 import { badgeCount, cartChekcout, displayPrice, addOrderLocalStorage, getJsonItems } from './util/Function.js';
 import { NewForm } from './util/Class.js'
 
+// Je vérifie si la longueur de getJsonItems() est égale à 0
 if(getJsonItems().length == 0) {
+    // Si c'est le cas je modifie la syntaxe de l'élément HTML qui possède l'id "container" par un message
     const section = document.getElementById('container');
     section.innerHTML = "<p class='text-center mb-0'>Vous n'avez aucun produit dans votre panier. <a href='index.html'>Retourner dans la boutique</a></p>";
 } else {
+    // Je fais appel aux fonctions suivante :
     badgeCount();
     cartChekcout();
     displayPrice();
     
+    // Je récupère différents éléments HTML
     const formCheckout = document.forms['paiement'];
     const button = document.getElementById('button');
     const errorHtml = document.getElementById('error');
     const totalPriceSpan = document.querySelector('span.total')
     
+
+    // Au click de l'élément "Button"
     button.addEventListener('click', function () {
+        // J'annule l'événement par défaut
         event.preventDefault()
     
+        // Je supprime une class puis j'initialise dans différente variable les valeur des inputs du formulaire
         errorHtml.classList.remove('d-none')
         const firstName = formCheckout['firstName'].value;
         const lastName = formCheckout['lastName'].value;
@@ -30,10 +38,12 @@ if(getJsonItems().length == 0) {
         const email = formCheckout['email'].value;
         const cvc = formCheckout['cvc'].value;
     
+        // Je récupère le prix de l'élément html que je multiplie pour créer un id aléatoire
         const price = totalPriceSpan.textContent
         price.substring(0, price.length -1)
         const id = Math.floor(Math.random() * 999 + Math.random() * 9999)
         
+        // Je créer une nouvelle instance newDataForm avec la class New Form
         const newDataFrom = new NewForm(
             firstName,
             lastName,
@@ -48,6 +58,9 @@ if(getJsonItems().length == 0) {
             price,
             id
         )
+
+        // J'initialise un objet vide ainsi qu'un array qui possède tous les noms des inputs présent dans le formulaire
+        // Je vérifie si chaque formulaire répond aux attentes des données transmises
         let errors = {};
         let arrayError = ['firstName', 'lastName', 'email', 'numberStreet', 'address', 'zipCode', 'city', 'creditCard', 'date', 'cvc']
         if (!newDataFrom.isValidCharacter(firstName) && !newDataFrom.isEmpty(firstName)) errors.firstName = 'Une erreur est survenue dans le champ de votre prénom. Vérifiez à ne pas utiliser des caractère spéciaux ou des nombres.'
@@ -61,6 +74,7 @@ if(getJsonItems().length == 0) {
         if (!newDataFrom.isValidMail(email) && !newDataFrom.isEmpty(email)) errors.email = "Veuillez remplir le champ d'une adresse mail valide"
         if (!newDataFrom.isValidCVC(cvc) && !newDataFrom.isEmpty(cvc)) errors.cvc = 'Veuillez renseigner un code cvc valide'
 
+        // Si la longueur de l'objet errors n'est pas égale à 0 on affiche les message d'erreurs avec le changement des class des inputs
         if (Object.keys(errors).length != 0) {
             errorHtml.innerHTML = ""
             errorHtml.classList.add('alert-danger')
@@ -72,6 +86,9 @@ if(getJsonItems().length == 0) {
                 errorHtml.innerHTML += `<li class="ml-5">${errors[error]}</li>`
             }
         } else {
+            // sinon on boucle dans l'array arrayError afin de retirer la class "is-invalid" des inputs qui l'a possède et on rajoute a la place la 
+            // class "is-valid"
+            // Idem pour la class "alert-danger"
             arrayError.map(value => {
                 if(formCheckout[value].classList.contains("is-invalid")) {
                     formCheckout[value].classList.remove("is-invalid")
@@ -81,8 +98,10 @@ if(getJsonItems().length == 0) {
             if(errorHtml.classList.contains("alert-danger")) {
                 errorHtml.classList.remove("alert-danger")
             }
+            // On appel la fonction addOrderLocalStorage et on lui passe en paramètre newDataForm
             addOrderLocalStorage(newDataFrom)
             setTimeout(
+                // Appel de la fonction sendform avec les paramètres attendu et affiche un message en cas de succés ou d'erreur
                 sendForm('POST', "http://localhost:3000/order", newDataFrom, `http://127.0.0.1:5500/front-end/thanks.html?order=${id}`)
                   .then(res => {
                     errorHtml.classList.add('alert-success')

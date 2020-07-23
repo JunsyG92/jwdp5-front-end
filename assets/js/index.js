@@ -2,10 +2,13 @@ import { apiCamera } from "./util/Api.js";
 import { Camera } from "./util/Class.js";
 import { badgeCount, cartDropdown, price } from "./util/Function.js";
 
+// Appel des fonction badgeCount(), cartDropdown() et apiCamera() avec les paramètres attendu
 badgeCount();
 cartDropdown();
+
 apiCamera("GET", "http://localhost:3000/")
     .then(res => {
+        // J'initialise un array vide afin de pushé par la suite chaque caméra donnée par l'api
         let newCamera = [];
         let cameraObject = res.map((camera) => {
           newCamera.push(
@@ -20,8 +23,9 @@ apiCamera("GET", "http://localhost:3000/")
           );
         });
 
-        let cardView = res
-          .map((camera) => {
+        // Je retourne un block HTML avec l'affichage de chaque appareil photo dans cardProduct
+        const cardProduct = document.getElementById('cardProduct')
+        let cardView = res.map((camera) => {
             return `
                 <div class="d-flex align-items-center mb-5">
                     <div class="col-md-8">
@@ -43,9 +47,9 @@ apiCamera("GET", "http://localhost:3000/")
                  `;
           })
           .join("");
-    
         cardProduct.innerHTML = cardView;
     })
     .catch(err => {
+        // affiche dans la console le message d'erreur
         console.log(err)
     })

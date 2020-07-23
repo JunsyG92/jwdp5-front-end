@@ -1,4 +1,5 @@
-// Promise de l'api
+// La fonction qui représente la base de l'application.
+// Elle prend en paramètre une méthode ainsi qu'une URL et retourne une nouvelle Promesse
 function apiCamera(method, url) {
     return new Promise((resolve, reject) => {
       const xhr = new XMLHttpRequest();
@@ -9,6 +10,8 @@ function apiCamera(method, url) {
     });
 }
 
+// L'envoie du formulaire passe par une fonction qui prend quatre paramètres :
+// une méthode, une URL, un corp de body et une redirection. Elle retourne une nouvelle Promesse.
 function sendForm (method, url, jsonBody, redirection) {
     return new Promise((resolve, reject) => {
       const xhr = new XMLHttpRequest();

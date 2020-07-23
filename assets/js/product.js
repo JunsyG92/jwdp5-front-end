@@ -35,7 +35,7 @@ apiCamera("GET", `http://localhost:3000/${idResponse}`)
     let lenseShow = res.lenses.map((lense) => {
       return `
                 <label class="btn btn-lg btn-neutral col-12 mb-2 text-left text-sm">
-                    <input type="radio" name="radio-memory" value="1" checked="">
+                    <input type="checkbox" name="radio-memory" value="1" checked="" />
                     ${lense}
                 </label>
             `;
