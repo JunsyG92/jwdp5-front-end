@@ -50,7 +50,7 @@ class NewForm {
     }
     
     isValidNumber(element) {
-        const regExZipCode = /^(?:[0-8]\d|9[0-8])\d{3}$/;
+        const regExZipCode = /^([0-9]{1,5}$)/;
         if (regExZipCode.test(element)) return true
         else return false
     }

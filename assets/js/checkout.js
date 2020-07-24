@@ -63,16 +63,16 @@ if(getJsonItems().length == 0) {
         // Je vérifie si chaque formulaire répond aux attentes des données transmises
         let errors = {};
         let arrayError = ['firstName', 'lastName', 'email', 'numberStreet', 'address', 'zipCode', 'city', 'creditCard', 'date', 'cvc']
-        if (!newDataFrom.isValidCharacter(firstName) && !newDataFrom.isEmpty(firstName)) errors.firstName = 'Une erreur est survenue dans le champ de votre prénom. Vérifiez à ne pas utiliser des caractère spéciaux ou des nombres.'
-        if (!newDataFrom.isValidCharacter(lastName) && !newDataFrom.isEmpty(lastName)) errors.lastName = 'Une erreur est survenue dans le champ de votre nom. Vérifiez à ne pas utiliser des caractère spéciaux ou des nombres.'
-        if (!newDataFrom.isValidCharacter(address) && !newDataFrom.isEmpty(address)) errors.address = 'Une erreur est survenue dans le champ de votre adresse. Vérifiez à ne pas utiliser des caractère spéciaux ou des nombres.'
-        if (!newDataFrom.isValidNumber(numberStreet) && !newDataFrom.isEmpty(numberStreet)) errors.numberStreet = 'Une erreur est survenue dans le numéro de votre rue. Vérifiez à utiliser uniquement des nombres.'
-        if (!newDataFrom.isValidCharacter(city) && !newDataFrom.isEmpty(city)) errors.city = 'Une erreur est survenue dans le champ de votre ville. Vérifiez à ne pas utiliser des caractère spéciaux ou des nombres.'
-        if (!newDataFrom.isValidNumber(zipCode) && !newDataFrom.isEmpty(zipCode)) errors.zipCode = 'Une erreur est survenue dans le numéro de votre code postale. Vérifiez à utiliser uniquement des nombres.'
-        if (!newDataFrom.isValidCreditCard(creditCard) && !newDataFrom.isEmpty(creditCard)) errors.creditCard = 'Veuillez remplir le champ d\'un numéro de carte valide (Celui-ci doit commencer par "4").'
-        if (!newDataFrom.isValidDate(date) && !newDataFrom.isEmpty(date)) errors.date = 'Veuillez remplir le champ d\'une date valide (De 01/2020 au 12/2039).'
-        if (!newDataFrom.isValidMail(email) && !newDataFrom.isEmpty(email)) errors.email = "Veuillez remplir le champ d'une adresse mail valide"
-        if (!newDataFrom.isValidCVC(cvc) && !newDataFrom.isEmpty(cvc)) errors.cvc = 'Veuillez renseigner un code cvc valide'
+        if (!newDataFrom.isValidCharacter(firstName) || !newDataFrom.isEmpty(firstName)) errors.firstName = 'Une erreur est survenue dans le champ de votre prénom. Vérifiez à ne pas utiliser des caractère spéciaux ou des nombres.'
+        if (!newDataFrom.isValidCharacter(lastName) || !newDataFrom.isEmpty(lastName)) errors.lastName = 'Une erreur est survenue dans le champ de votre nom. Vérifiez à ne pas utiliser des caractère spéciaux ou des nombres.'
+        if (!newDataFrom.isValidCharacter(address) || !newDataFrom.isEmpty(address)) errors.address = 'Une erreur est survenue dans le champ de votre adresse. Vérifiez à ne pas utiliser des caractère spéciaux ou des nombres.'
+        if (!newDataFrom.isValidNumber(numberStreet) || !newDataFrom.isEmpty(numberStreet)) errors.numberStreet = 'Une erreur est survenue dans le numéro de votre rue. Vérifiez à utiliser uniquement des nombres.'
+        if (!newDataFrom.isValidCharacter(city) || !newDataFrom.isEmpty(city)) errors.city = 'Une erreur est survenue dans le champ de votre ville. Vérifiez à ne pas utiliser des caractère spéciaux ou des nombres.'
+        if (!newDataFrom.isValidNumber(zipCode) || !newDataFrom.isEmpty(zipCode)) errors.zipCode = 'Une erreur est survenue dans le numéro de votre code postale. Vérifiez à utiliser uniquement des nombres.'
+        if (!newDataFrom.isValidCreditCard(creditCard) || !newDataFrom.isEmpty(creditCard)) errors.creditCard = 'Veuillez remplir le champ d\'un numéro de carte valide (Celui-ci doit commencer par "4").'
+        if (!newDataFrom.isValidDate(date) || !newDataFrom.isEmpty(date)) errors.date = 'Veuillez remplir le champ d\'une date valide (De 01/2020 au 12/2039).'
+        if (!newDataFrom.isValidMail(email) || !newDataFrom.isEmpty(email)) errors.email = "Veuillez remplir le champ d'une adresse mail valide"
+        if (!newDataFrom.isValidCVC(cvc) || !newDataFrom.isEmpty(cvc)) errors.cvc = 'Veuillez renseigner un code cvc valide'
 
         // Si la longueur de l'objet errors n'est pas égale à 0 on affiche les message d'erreurs avec le changement des class des inputs
         if (Object.keys(errors).length != 0) {
@@ -112,5 +112,8 @@ if(getJsonItems().length == 0) {
                   })
                 , 1000)
         }
+    })
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
     })
 }
