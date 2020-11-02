@@ -117,10 +117,7 @@
                                     <div class="card-body m-0 p-0">
                                         <ul class="nav nav-pills mb-3 flex-column" id="api-tab" role="tablist">
                                             <li class="nav-item">
-                                            <a class="nav-link active show bg-transparent" id="pills-apiCamera-tab" data-toggle="pill" href="#pills-apiCamera" role="tab" aria-controls="pills-apiCamera" aria-selected="true">apiCamera( )</a>
-                                            </li>
-                                            <li class="nav-item">
-                                            <a class="nav-link bg-transparent" id="pills-sendForm-tab" data-toggle="pill" href="#pills-sendForm" role="tab" aria-controls="pills-sendForm" aria-selected="false">sendForm( )</a>
+                                                <a class="nav-link active show bg-transparent" id="pills-apiCamera-tab" data-toggle="pill" href="#pills-apiCamera" role="tab" aria-controls="pills-apiCamera" aria-selected="true">apiCamera( )</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -240,6 +237,37 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="card border-0 shadow-none">
+                                <div class="card-header border-0 py-0" id="headingFour">
+                                    <h3 class="mb-0">
+                                        <button class="btn btn-link collapsed text-dark text-uppercase font-weight-bold h1" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                        Plan de tests
+                                        </button>
+                                    </h3>
+                                </div>
+                                <div id="collapseFive" class="collapse ml-5" aria-labelledby="headingFive" data-parent="#accordion">
+                                    <div class="card-body m-0 p-0">
+                                        <ul class="nav nav-pills mb-3 flex-column" id="plan-de-tests-tab" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link bg-transparent" id="pills-cartTest-tab" data-toggle="pill" href="#pills-cartTest" role="tab" aria-controls="pills-Cart" aria-selected="false">Plan de test : Cart</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link bg-transparent" id="pills-checkoutTest-tab" data-toggle="pill" href="#pills-checkoutTest" role="tab" aria-controls="pills-Checkout" aria-selected="false">Plan de test : Checkout</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link bg-transparent" id="pills-indexTest-tab" data-toggle="pill" href="#pills-indexTest" role="tab" aria-controls="pills-Index" aria-selected="false">Plan de test : Index</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link bg-transparent" id="pills-productTest-tab" data-toggle="pill" href="#pills-productTest" role="tab" aria-controls="pills-Product" aria-selected="false">Plan de test : Product</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link bg-transparent" id="pills-thanksTest-tab" data-toggle="pill" href="#pills-thanksTest" role="tab" aria-controls="pills-Thanks" aria-selected="false">Plan de test : Thanks</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-8 col-md-12 col-sm-12">
@@ -275,43 +303,6 @@
                                         </div>
                                     </div>
                                 </article>
-                            </div>
-                            <!-- api-2 -->
-                            <div class="tab-pane fade" id="pills-sendForm" role="tabpanel" aria-labelledby="pills-sendForm-tab">
-                                <article>
-                                    <div class="article-header mb-5">
-                                        <h3 class="h1">sendForm( method, url, jsonBody, redirection )</h3>
-                                        <p class="text-muted lead mt-5">L'envoie du formulaire passe par une fonction qui prend quatre paramètres : une méthode, une URL, un corp de body et une redirection. Elle retourne une nouvelle Promesse.</p>
-                                    </div>
-                                    <div class="article-body">
-                                        <figure class="code rounded">
-                                            <p class="font-weight-light m-0 path text-right text-sm">assets/js/util/Api.js</p>
-                                            <pre><code>
-    <span class="declar">function</span> <span class="nom">sendForm</span>(<span class="param">method</span>, <span class="param">url</span>, <span class="param">jsonBody</span>, <span class="param">redirection</span>) {
-        <span class="ier">return</span> <span class="declar">new</span> <span class="class">Promise</span>((<span class="nom">resolve</span>, <span class="nom">reject</span>) <span class="declar">=></span> {
-            <span class="declar">const</span> <span class="nomf">xhr</span> = <span class="declar">new</span> <span class="class">XMLHttpRequest</span>();
-            <span class="nomf">xhr</span>.<span class="nom">open</span>(<span class="param">method</span>, <span class="param">url</span>, <span class="declar">true</span>);
-            <span class="nomf">xhr</span>.<span class="nom">setRequestHeader</span>(<span class="text">"Content-type"</span> ,<span class="text">"application/json"</span>);
-            <span class="nomf">xhr</span>.<span class="nom">onload</span> = () <span class="declar">=></span> <span class="nom">resolve</span>(<span class="param">window</span>.<span class="param">location</span>.<span class="param">href</span> = <span class="param">redirection</span>);
-            <span class="nomf">xhr</span>.<span class="nom">onerror</span> = () <span class="declar">=></span> <span class="nom">reject</span>(<span class="param">console</span>.<span class="nom">log</span>(<span class="text">"Une erreur est survenue"</span>));
-            <span class="nomf">xhr</span>.<span class="nom">send</span>(<span class="param">JSON</span>.<span class="nom">stringify</span>(<span class="param">jsonBody</span>);
-        });
-    }
-                                                </code></pre>
-                                        </figure>
-                                        <div class="text-dark">
-                                            <p>SendForm s'occupe de l'envoie du formulaire de la page checkout. La fonction prend 4 paramètres : la méthode (ici ce sera "POST", une URL, le corp des données à envoyer ainsi qu'une redirection. Elle retourne une nouvelle promesse.</p>
-                                            <p>Dans cette promesse , on y créer un objet "XMLHttpRequest" et on lui passe cinq méthode :</p>
-                                            <ul>
-                                                <li>Open : Prend en paramètre la méthode, l'url et un booléan true indiquant qu'il faut traiter la requête en asynchrone.</li>
-                                                <li>setRequestHeader : pour éditer le header de la requête</li>
-                                                <li>onload : retourne en cas de succés une redirection vers la page de remerciements</li>
-                                                <li>onerror : affiche un message dans la console en cas d'erreur</li>
-                                                <li>send : envoie le corp de la requête en format JSON</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </article> 
                             </div>
 
                             <!-- classe-1 -->
@@ -398,42 +389,17 @@
                                             <p class="font-weight-light m-0 path text-right text-sm">assets/js/util/Class.js</p>
                                             <pre><code>
     <span class="declar">class</span> <span class="class">NewForm</span> {
-        <span class="declar">constructor</span> (<span class="param">firstName</span>, <span class="param">lastName</span>, <span class="param">email</span>, <span class="param">numberStreet</span>, <span class="param">address</span>, <span class="param">zipCoden</span>, <span class="param">city</span>, <span class="param">creditCard</span>, <span class="param">date</span>, <span class="param">cvc</span>, <span class="param">price</span>, <span class="param">id</span>) {
+        <span class="declar">constructor</span> (<span class="param">firstName</span>, <span class="param">lastName</span>, <span class="param">address</span>, <span class="param">city</span>, <span class="param">email</span>) {
             <span class="declar">this</span>.<span class="param">prenom</span> = <span class="param">firstName</span>;
             <span class="declar">this</span>.<span class="param">nom</span> = <span class="param">lastName</span>;
-            <span class="declar">this</span>.<span class="param">email</span> = <span class="param">email</span>;
-            <span class="declar">this</span>.<span class="param">numero_de_rue</span> = <span class="param">numberStreet</span>;
             <span class="declar">this</span>.<span class="param">adresse</span> = <span class="param">address</span>;
-            <span class="declar">this</span>.<span class="param">code_postale</span> = <span class="param">zipCoden</span>;
             <span class="declar">this</span>.<span class="param">ville</span> = <span class="param">city</span>;
-            <span class="declar">this</span>.<span class="param">carte_de_credit</span> = <span class="param">creditCard</span>;
-            <span class="declar">this</span>.<span class="param">date_d_expiration</span> = <span class="param">date</span>;
-            <span class="declar">this</span>.<span class="param">cvc</span> = <span class="param">cvc</span>;
-            <span class="declar">this</span>.<span class="param">price</span> = <span class="param">price</span>;
-            <span class="declar">this</span>.<span class="param">id</span> = <span class="param">id</span>;
+            <span class="declar">this</span>.<span class="param">email</span> = <span class="param">email</span>;
         });
 
         <span class="nom">isValidCharacter</span>(<span class="param">element</span>) {
             <span class="declar">const</span> <span class="nomf">regExCharacter</span> = <span class="text">/^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/</span>;
             <span class="ier">if</span> (<span class="nomf">regExCharacter</span>).<span class="nom">test</span>(<span class="param">element</span>)) <span class="ier">return</span> <span class="declar">true</span>
-            <span class="ier">else</span> <span class="ier">return</span> <span class="declar">false</span>
-        }
-
-        <span class="nom">isValidNumber</span>(<span class="param">element</span>) {
-            <span class="declar">const</span> <span class="nomf">regExNumber</span> = <span class="text">/^([0-9]{1,5}$)/</span>;
-            <span class="ier">if</span> (<span class="nomf">regExNumber</span>).<span class="nom">test</span>(<span class="param">element</span>)) <span class="ier">return</span> <span class="declar">true</span>
-            <span class="ier">else</span> <span class="ier">return</span> <span class="declar">false</span>
-        }
-
-        <span class="nom">isValidCreditCard</span>(<span class="param">element</span>) {
-            <span class="declar">const</span> <span class="nomf">regExCreditCard</span> = <span class="text">/^((4\d{3})|(5[1-5]\d{2})|(6011))-?\d{4}-?\d{4}-?\d{4}|3[4,7]\d{13}$/</span>;
-            <span class="ier">if</span> (<span class="nomf">regExCreditCard</span>).<span class="nom">test</span>(<span class="param">element</span>)) <span class="ier">return</span> <span class="declar">true</span>
-            <span class="ier">else</span> <span class="ier">return</span> <span class="declar">false</span>
-        }
-
-        <span class="nom">isValidDate</span>(<span class="param">element</span>) {
-            <span class="declar">const</span> <span class="nomf">regExDate</span> = <span class="text">/^(0[1-9]|1[0-2])\/(2[0-9]|20[2-3][0-9])$/</span>;
-            <span class="ier">if</span> (<span class="nomf">regExDate</span>).<span class="nom">test</span>(<span class="param">element</span>)) <span class="ier">return</span> <span class="declar">true</span>
             <span class="ier">else</span> <span class="ier">return</span> <span class="declar">false</span>
         }
 
@@ -443,9 +409,9 @@
             <span class="ier">else</span> <span class="ier">return</span> <span class="declar">false</span>
         }
 
-        <span class="nom">isValidCVC</span>(<span class="param">element</span>) {
-            <span class="declar">const</span> <span class="nomf">regExCVC</span> = <span class="text">/^[0-9]{3}$/</span>;
-            <span class="ier">if</span> (<span class="nomf">regExCVC</span>).<span class="nom">test</span>(<span class="param">element</span>)) <span class="ier">return</span> <span class="declar">true</span>
+        <span class="nom">isValidAddress</span>(<span class="param">element</span>) {
+            <span class="declar">const</span> <span class="nomf">regExAddress</span> = <span class="text">/([a-zA-Zà-ÿ0-9\s]{2,})+$/</span>;
+            <span class="ier">if</span> (<span class="nomf">regExAddress</span>).<span class="nom">test</span>(<span class="param">element</span>)) <span class="ier">return</span> <span class="declar">true</span>
             <span class="ier">else</span> <span class="ier">return</span> <span class="declar">false</span>
         }
         <span class="nom">isEmpty</span>(<span class="param">element</span>) {
@@ -535,8 +501,9 @@
                                             <p class="font-weight-light m-0 path text-right text-sm">assets/js/util/Function.js</p>
                                             <pre><code>
     <span class="declar">const</span> <span class="nom">addOrderLocalStorage</span> = (<span class="param">data</span>) <span class="nomf">=></span> {
-        <span class="param">localStorage</span>.<span class="nom">setItem</span>(<span class="text">"Order"</span>, <span class="param">JSON</span>.<span class="nom">stringify</span>(<span class="param">data</span>))
-        <span class="param">localStorage</span>.<span class="nom">removeItem</span>(<span class="text">"Product"</span>)
+        <span class="param">localStorage</span>.<span class="nom">setItem</span>(<span class="text">"Order"</span>, <span class="param">JSON</span>.<span class="nom">stringify</span>(<span class="param">data</span>));
+        <span class="param">localStorage</span>.<span class="nom">removeItem</span>(<span class="text">"Product"</span>);
+        <span class="param">window</span>.<span class="param">location</span>.<span class="param">href</span> = <span class="text">`thanks.html?order=<span class="declar">${</span><span class="param">id</span><span class="declar">}</span>`</span>
     }
                                                 </code></pre>
                                         </figure>
@@ -545,6 +512,7 @@
                                             <p>La fonction prend un paramètre nommé : "<b>data</b>".</p>
                                             <p>J'ajoute dans le localStorage une nouvelle clé nommé "<b>Order</b>" et prend comme valeur le paramètre "<b>data</b>" convertit en chaîne JSON.</p>
                                             <p>Je supprime ensuite la clé "<b>Product</b>" afin de vider le panier.</p>
+                                            <p>Cette fonction redirige vers la page <b>thanks.html</b> avec l'id de la commande en paramètre.</p>
                                         </div>
                                     </div>
                                 </article>
@@ -729,13 +697,6 @@
                         &lttd class="price text-right pr-5"><span class="nomf">${</span><span class="nom">price</span>(<span class="param">product</span>.<span class="param">price</span>)<span class="nomf">}</span> €&lt/td>
                         &lttd class="price text-right pr-5"><span class="nomf">${</span><span class="param">product</span>.<span class="param">add</span><span class="nomf">}</span>&lt/td>
                         &lttd class="price text-right pr-5"><span class="nomf">${</span><span class="nom">price</span>(<span class="param">product</span>.<span class="param">price</span>) * <span class="param">product</span>.<span class="param">add</span><span class="nomf">}</span> €&lt/td>
-                        &lttd class="text-right">
-                            &ltbutton class="remove bg-transparent border-0" id="product-<span class="nomf">${</span><span class="param">product</span>.<span class="param">id</span><span class="nomf">}</span>" >
-                                &ltsvg width="1.3em" height="1.3em" viewBox="0 0 16 16" class="bi bi-x-circle-fill text-danger" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    &ltpath fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.146-3.146a.5.5 0 0 0-.708-.708L8 7.293 4.854 4.146a.5.5 0 1 0-.708.708L7.293 8l-3.147 3.146a.5.5 0 0 0 .708.708L8 8.707l3.146 3.147a.5.5 0 0 0 .708-.708L8.707 8l3.147-3.146z"/>
-                                &lt/svg>
-                            &lt/button>
-                        &lt/td>
                     &lt/tr>
                     `</span>
             }).<span class="nom">join</span>(<span class="text">""</span>)
@@ -1056,7 +1017,7 @@
         } <span class="ier">else</span> {
             <span class="ier">if</span>(<span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"cart-empty"</span>)) {
                 <span class="declar">let</span> <span class="param">badge</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"badge"</span>)
-                <span class="declar">let</span> <span class="param">container</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"container"</span>)
+                <span class="declar">let</span> <span class="param">container</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"cart-empty"</span>)
                 <span class="param">container</span>.<span class="param">innerHTML</span> = <span class="text">"&ltp class='text-center mb-0'>Vous n'avez aucun produit dans votre panier. &lta href='index.html'>Retourner dans la boutique&lt/a>&lt/p>"</span>
                 <span class="param">badge</span>.<span class="nomf">classList</span>.<span class="nom">add</span>(<span class="text">"d-none"</span>)
             }
@@ -1134,7 +1095,6 @@
                                         <figure class="code rounded">
                                             <p class="font-weight-light m-0 path text-right text-sm">assets/js/checkout.js</p>
                                             <pre><code>
-    <span class="ier">import</span> { <span class="param">sendForm</span> } <span class="ier">from</span> <span class="text">"./util/Api.js"</span>;
     <span class="ier">import</span> { <span class="param">badgeCount</span>, <span class="param">cartChekcout</span>, <span class="param">displayPrice</span>, <span class="param">addOrderLocalStorage</span>, <span class="param">getJsonItems</span> } <span class="ier">from</span> <span class="text">"./util/Function.js"</span>;
     <span class="ier">import</span> { <span class="param">NewForm</span> } <span class="ier">from</span> <span class="text">"./util/Class.js"</span>;
 
@@ -1145,47 +1105,94 @@
         <span class="nom">badgeCount</span>()
         <span class="nom">cartChekcout</span>()
         <span class="nom">displayPrice</span>()
+
+        <span class="declar">let</span> <span class="nomf">errors</span> = {};
         
         <span class="declar">const</span> <span class="nomf">formCheckout</span> = <span class="param">document</span>.<span class="nomf">forms</span>[<span class="text">"paiement"</span>]
         <span class="declar">const</span> <span class="nomf">button</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"button"</span>)
         <span class="declar">const</span> <span class="nomf">errorHtml</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"error"</span>)
-        <span class="declar">const</span> <span class="nomf">totalPriceSpan</span> = <span class="param">document</span>.<span class="nom">querySelector</span>(<span class="text">"span.total"</span>)
+
+        <span class="nomf">errorHtml</span>.<span class="nomf">classList</span>.<span class="nom">remove</span>(<span class="text">'d-none'</span>);
 
         <span class="nomf">button</span>.<span class="nom">addEventListener</span>(<span class="text">"click"</span>, <span class="declar">function</span>() {
             <span class="param">event</span>.<span class="nom">preventDefault</span>()
 
             <span class="nomf">errorHtml</span>.<span class="nomf">classList</span>.<span class="nom">remove</span>(<span class="text">"d-none"</span>)
+            <span class="declar">const</span> <span class="nomf">products</span> = []
             <span class="declar">const</span> <span class="nomf">firstName</span> = <span class="nomf">formCheckout</span>[<span class="text">"firstName"</span>].<span class="param">value</span>
             <span class="declar">const</span> <span class="nomf">lastName</span> = <span class="nomf">formCheckout</span>[<span class="text">"lastName"</span>].<span class="param">value</span>
             <span class="declar">const</span> <span class="nomf">address</span> = <span class="param">formCheckout</span>[<span class="text">"address"</span>].<span class="param">value</span>
-            <span class="declar">const</span> <span class="nomf">numberStreet</span> = <span class="nomf">formCheckout</span>[<span class="text">"numberStreet"</span>].<span class="param">value</span>
-            <span class="declar">const</span> <span class="nomf">zipCode</span> = <span class="nomf">formCheckout</span>[<span class="text">"zipCode"</span>].<span class="param">value</span>
             <span class="declar">const</span> <span class="nomf">city</span> = <span class="nomf">formCheckout</span>[<span class="text">"city"</span>].<span class="param">value</span>
-            <span class="declar">const</span> <span class="nomf">creditCard</span> = <span class="nomf">formCheckout</span>[<span class="text">"creditCard"</span>].<span class="param">value</span>
-            <span class="declar">const</span> <span class="nomf">date</span> = <span class="nomf">formCheckout</span>[<span class="text">"date"</span>].<span class="param">value</span>
             <span class="declar">const</span> <span class="nomf">email</span> = <span class="nomf">formCheckout</span>[<span class="text">"email"</span>].<span class="param">value</span>
-            <span class="declar">const</span> <span class="nomf">cvc</span> = <span class="nomf">formCheckout</span>[<span class="text">"cvc"</span>].<span class="param">value</span>
 
-            <span class="declar">const</span> <span class="nomf">price</span> = <span class="nomf">totalPriceSpan</span>.<span class="param">textContent</span>
-            <span class="nomf">price</span>.<span class="nom">substring</span>(<span class="num">0</span>, <span class="nomf">price</span>.<span class="nomf">length</span> <span class="num">-1</span>)
-            <span class="declar">const</span> <span class="nomf">id</span> = <span class="param">Math</span>.<span class="nom">floor</span>(<span class="param">Math</span>.<span class="nom">random</span>() * <span class="num">999</span> + <span class="param">Math</span>.<span class="nom">random</span>() * <span class="num">9999</span>)
+            <span class="nom">getJsonItems</span>().<span class="nom">map</span>(<span class="param">product</span> <span class="declar">=></span> {
+                <span class="nomf">products</span>.<span class="nom">push</span>(<span class="param">product</span>.<span class="param">id</span>)
+            })
 
-            <span class="declar">const</span> <span class="nomf">newDataFrom</span> = <span class="declar">new</span> <span class="class">NewForm</span> (<span class="nomf">firstName</span>, <span class="nomf">lastName</span>, <span class="nomf">email</span>, <span class="nomf">numberStreet</span>, <span class="nomf">address</span>, <span class="nomf">zipCode</span>, <span class="nomf">city</span>, <span class="nomf">creditCard</span>, <span class="nomf">date</span>, <span class="nomf">cvc</span>, <span class="nomf">price</span>, <span class="nomf">id</span>)
+            <span class="declar">const</span> <span class="nomf">newDataFrom</span> = <span class="declar">new</span> <span class="class">NewForm</span> (
+                <span class="nomf">firstName</span>,
+                <span class="nomf">lastName</span>,
+                <span class="nomf">address</span>,
+                <span class="nomf">city</span>,
+                <span class="nomf">email</span>
+            )
 
-            <span class="declar">let</span> <span class="param">errors</span> = {}
-            <span class="declar">let</span> <span class="param">arrayError</span> = [<span class="text">"firstName"</span>, <span class="text">"lastName"</span>, <span class="text">"email"</span>, <span class="text">"numberStreet"</span>, <span class="text">"address"</span>, <span class="text">"zipCode"</span>, <span class="text">"city"</span>, <span class="text">"creditCard"</span>, <span class="text">"date"</span>, <span class="text">"cvc"</span>]
+            <span class="declar">const</span> <span class="nom">validationInput</span> = (<span class="param">array</span>) <span class="declar">=></span> {
+                <span class="param">array</span>.<span class="nom">map</span>(<span class="param">inputValue</span> <span class="declar">=></span> {
+                    <span class="nomf">formCheckout</span>[<span class="param">inputValue</span>].<span class="param">classList</span>.<span class="nom">remove</span>(<span class="text">'is-invalid'</span>)
+                    <span class="nomf">formCheckout</span>[<span class="param">inputValue</span>].<span class="nom">addEventListener</span>(<span class="text">'change'</span>, <span class="param">e</span> <span class="declar">=></span> {
+                        <span class="declar">let</span> <span class="param">value</span> = <span class="param">e</span>.<span class="param">target</span>.<span class="param">value</span>
+                        <span class="ier">if</span>(<span class="param">inputValue</span> === <span class="text">'email'</span>) {
+                            <span class="ier">if</span> (<span class="nom">conditionsInput</span>(<span class="nomf">formCheckout</span>[<span class="text">'email'</span>], <span class="nomf">newDataForm</span>.<span class="nom">isValidMail</span>(<span class="param">value</span>), <span class="nomf">newDataForm</span>.<span class="nom">isEmpty</span>(<span class="param">value</span>))) {
+                                <span class="param">console</span>.<span class="nom">log</span>(<span class="param">'succés'</span>)
+                            } <span class="ier">else</span> {
+                                <span class="param">console</span>.<span class="nom">log</span>(<span class="param">'échec'</span>)
+                            }
+                        } <span class="ier">else if</span> (<span class="param">inputValue</span> === <span class="text">'address'</span>) {
+                            <span class="nom">conditionsInput</span>(<span class="nomf">formCheckout</span>[<span class="text">'address'</span>], <span class="nomf">newDataForm</span>.<span class="nom">isValidAddress</span>(<span class="param">value</span>), <span class="nomf">newDataForm</span>.<span class="nom">isEmpty</span>(<span class="param">value</span>))
+                        } <span class="ier">else</span> {
+                            <span class="nom">conditionsInput</span>(<span class="nomf">formCheckout</span>[<span class="param">inputValue</span>], <span class="nomf">newDataForm</span>.<span class="nom">isValidCharacter</span>(<span class="param">value</span>), <span class="nomf">newDataForm</span>.<span class="nom">isEmpty</span>(<span class="param">value</span>))
+                        }
+                    })
+                })
+            }
 
-            <span class="ier">if</span>(!<span class="nomf">newDataFrom</span>.<span class="nom">isValidCharacter</span>(<span class="nomf">firstName</span>) || !<span class="nomf">newDataFrom</span>.<span class="nom">isEmpty</span>(<span class="nomf">firstName</span>)) {<span class="param">errors</span>.<span class="param">firstName</span> = <span class="text">"Une erreur est survenue dans le champ de votre prénom. Vérifiez à ne pas utiliser des caractère spéciaux ou des nombres."</span>}
-            <span class="ier">if</span>(!<span class="nomf">newDataFrom</span>.<span class="nom">isValidCharacter</span>(<span class="nomf">lastName</span>) || !<span class="nomf">newDataFrom</span>.<span class="nom">isEmpty</span>(<span class="nomf">lastName</span>)) {<span class="param">errors</span>.<span class="param">lastName</span> = <span class="text">"Une erreur est survenue dans le champ de votre nom. Vérifiez à ne pas utiliser des caractère spéciaux ou des nombres."</span>}
-            <span class="ier">if</span>(!<span class="nomf">newDataFrom</span>.<span class="nom">isValidCharacter</span>(<span class="nomf">address</span>) || !<span class="nomf">newDataFrom</span>.<span class="nom">isEmpty</span>(<span class="nomf">address</span>)) {<span class="param">errors</span>.<span class="param">address</span> = <span class="text">"Une erreur est survenue dans le champ de votre adresse. Vérifiez à ne pas utiliser des caractère spéciaux ou des nombres."</span>}
-            <span class="ier">if</span>(!<span class="nomf">newDataFrom</span>.<span class="nom">isValidNumber</span>(<span class="nomf">numberStreet</span>) || !<span class="nomf">newDataFrom</span>.<span class="nom">isEmpty</span>(<span class="nomf">numberStreet</span>)) {<span class="param">errors</span>.<span class="param">numberStreet</span> = <span class="text">"Une erreur est survenue dans le numéro de votre rue. Vérifiez à utiliser uniquement des nombres."</span>}
-            <span class="ier">if</span>(!<span class="nomf">newDataFrom</span>.<span class="nom">isValidCharacter</span>(<span class="nomf">city</span>) || !<span class="nomf">newDataFrom</span>.<span class="nom">isEmpty</span>(<span class="nomf">city</span>)) {<span class="param">errors</span>.<span class="param">city</span> = <span class="text">"Une erreur est survenue dans le champ de votre ville. Vérifiez à ne pas utiliser des caractère spéciaux ou des nombres."</span>}
-            <span class="ier">if</span>(!<span class="nomf">newDataFrom</span>.<span class="nom">isValidNumber</span>(<span class="nomf">zipCode</span>) || !<span class="nomf">newDataFrom</span>.<span class="nom">isEmpty</span>(<span class="nomf">zipCode</span>)) {<span class="param">errors</span>.<span class="param">zipCode</span> = <span class="text">"Une erreur est survenue dans le numéro de votre code postale. Vérifiez à utiliser uniquement des nombres."</span>}
-            <span class="ier">if</span>(!<span class="nomf">newDataFrom</span>.<span class="nom">isValidCreditCard</span>(<span class="nomf">creditCard</span>) || !<span class="nomf">newDataFrom</span>.<span class="nom">isEmpty</span>(<span class="nomf">creditCard</span>)) {<span class="param">errors</span>.<span class="param">creditCard</span> = <span class="text">"Veuillez remplir le champ d\'un numéro de carte valide (Celui-ci doit commencer par "4")."</span>}
-            <span class="ier">if</span>(!<span class="nomf">newDataFrom</span>.<span class="nom">isValidDate</span>(<span class="nomf">date</span>) || !<span class="nomf">newDataFrom</span>.<span class="nom">isEmpty</span>(<span class="nomf">date</span>)) {<span class="param">errors</span>.<span class="param">date</span> = <span class="text">"Veuillez remplir le champ d\'une date valide (De 01/2020 au 12/2039)."</span>}
-            <span class="ier">if</span>(!<span class="nomf">newDataFrom</span>.<span class="nom">isValidMail</span>(<span class="nomf">email</span>) || !<span class="nomf">newDataFrom</span>.<span class="nom">isEmpty</span>(<span class="nomf">email</span>)) {<span class="param">errors</span>.<span class="param">email</span> = <span class="text">"Veuillez remplir le champ d'une adresse mail valide"</span>}
-            <span class="ier">if</span>(!<span class="nomf">newDataFrom</span>.<span class="nom">isValidCVC</span>(<span class="nomf">cvc</span>) || !<span class="nomf">newDataFrom</span>.<span class="nom">isEmpty</span>(<span class="nomf">cvc</span>)) {<span class="param">errors</span>.<span class="param">cvc</span> = <span class="text">"Veuillez renseigner un code cvc valide"</span>}
+            <span class="declar">let</span> <span class="param">array</span> = [<span class="text">'firstName'</span>, <span class="text">'lastName'</span>, <span class="text">'address'</span>, <span class="text">'city'</span>, <span class="text">'email'</span>];
+            <span class="nom">validationInput</span>(<span class="param">array</span>)
 
+            <span class="param">array</span>.<span class="nom">map</span>(<span class="param">e</span> <span class="declar">=></span> {
+                <span class="ier">if</span> (!<span class="nomf">formCheckout</span>[<span class="param">e</span>].<span class="param">value</span>) {
+                    <span class="nomf">formCheckout</span>[<span class="param">e</span>].<span class="param">classList</span>.<span class="nom">add</span>(<span class="text">'is-invalid'</span>)
+                }
+            })
+
+            <span class="declar">let</span> <span class="param">infos</span> = {}
+            <span class="ier">if</span>(!<span class="nomf">newDataFrom</span>.<span class="nom">isValidCharacter</span>(<span class="nomf">firstName</span>) === <span class="declar">false</span> || !<span class="nomf">newDataFrom</span>.<span class="nom">isEmpty</span>(<span class="nomf">firstName</span>) === <span class="declar">false</span>) {
+                <span class="param">errors</span>.<span class="param">firstName</span> = <span class="text">"Une erreur est survenue dans le champ de votre prénom. Vérifiez à ne pas utiliser des caractère spéciaux ou des nombres."</span>
+            } <span class="ier">else</span> {
+                <span class="param">infos</span>.<span class="param">firstName</span> = <span class="nomf">firstName</span>
+            }
+            <span class="ier">if</span>(!<span class="nomf">newDataFrom</span>.<span class="nom">isValidCharacter</span>(<span class="nomf">lastName</span>) === <span class="declar">false</span> || !<span class="nomf">newDataFrom</span>.<span class="nom">isEmpty</span>(<span class="nomf">lastName</span>) === <span class="declar">false</span>) {
+                <span class="param">errors</span>.<span class="param">lastName</span> = <span class="text">"Une erreur est survenue dans le champ de votre nom. Vérifiez à ne pas utiliser des caractère spéciaux ou des nombres."</span>
+            } <span class="ier">else</span> {
+                <span class="param">infos</span>.<span class="param">lastName</span> = <span class="nomf">lastName</span>
+            }
+            <span class="ier">if</span>(!<span class="nomf">newDataFrom</span>.<span class="nom">isValidCharacter</span>(<span class="nomf">address</span>) === <span class="declar">false</span> || !<span class="nomf">newDataFrom</span>.<span class="nom">isEmpty</span>(<span class="nomf">address</span>) === <span class="declar">false</span>) {
+                <span class="param">errors</span>.<span class="param">address</span> = <span class="text">"Une erreur est survenue dans le champ de votre adresse. Vérifiez à ne pas utiliser des caractère spéciaux ou des nombres."</span>
+            } <span class="ier">else</span> {
+                <span class="param">infos</span>.<span class="param">address</span> = <span class="nomf">address</span>
+            }
+            <span class="ier">if</span>(!<span class="nomf">newDataFrom</span>.<span class="nom">isValidCharacter</span>(<span class="nomf">city</span>) === <span class="declar">false</span> || !<span class="nomf">newDataFrom</span>.<span class="nom">isEmpty</span>(<span class="nomf">city</span>) === <span class="declar">false</span>) {
+                <span class="param">errors</span>.<span class="param">city</span> = <span class="text">"Une erreur est survenue dans le champ de votre ville. Vérifiez à ne pas utiliser des caractère spéciaux ou des nombres."</span>
+            } <span class="ier">else</span> {
+                <span class="param">infos</span>.<span class="param">city</span> = <span class="nomf">city</span>
+            }
+            <span class="ier">if</span>(!<span class="nomf">newDataFrom</span>.<span class="nom">isValidMail</span>(<span class="nomf">email</span>) === <span class="declar">false</span> || !<span class="nomf">newDataFrom</span>.<span class="nom">isEmpty</span>(<span class="nomf">email</span>) === <span class="declar">false</span>) {
+                <span class="param">errors</span>.<span class="param">email</span> = <span class="text">"Veuillez remplir le champ d'une adresse mail valide"</span>
+            } <span class="ier">else</span> {
+                <span class="param">infos</span>.<span class="param">email</span> = <span class="nomf">email</span>
+            }
+            
             <span class="ier">if</span>(<span class="class">Object</span>.<span class="nom">keys</span>(<span class="param">errors</span>).<span class="param">length</span> != <span class="num">0</span>) {
                 <span class="nomf">errorHtml</span>.<span class="param">innerHTML</span> = <span class="text">""</span>
                 <span class="nomf">errorHtml</span>.<span class="nomf">classList</span>.<span class="nom">add</span>(<span class="text">"alert-danger"</span>)
@@ -1193,30 +1200,37 @@
                     <span class="nomf">errorHtml</span>.<span class="nomf">classList</span>.<span class="nom">remove</span>(<span class="text">"alert-success"</span>)
                 }
                 <span class="ier">for</span>(<span class="declar">let</span> <span class="param">error</span> <span class="declar">in</span> <span class="param">errors</span>) {
+                    <span class="nomf">formCheckout</span>[<span class="param">error</span>].<span class="param">classList</span>.<span class="nom">remove</span>(<span class="text">"is-valid"</span>)
                     <span class="nomf">formCheckout</span>[<span class="param">error</span>].<span class="param">classList</span>.<span class="nom">add</span>(<span class="text">"is-invalid"</span>)
                     <span class="nomf">errorHtml</span>.<span class="param">innerHTML</span> += <span class="text">`&ltli class="ml-5"><span class="nomf">${</span><span class="param">errors</span>[<span class="param">error</span>]<span class="nomf">}</span>&lt/li>`</span>
                 }
             } <span class="ier">else</span> {
-                <span class="param">arrayError</span>.<span class="nom">map</span>(<span class="param">value</span> <span class="nomf">=></span> {
-                    <span class="ier">if</span>(<span class="nomf">formCheckout</span>[<span class="param">value</span>].<span class="param">classList</span>.<span class="nom">contains</span>(<span class="text">"is-invalid"</span>)) {
-                        <span class="nomf">formCheckout</span>[<span class="param">value</span>].<span class="param">classList</span>.<span class="nom">remove</span>(<span class="text">"is-invalid"</span>)
-                    }
-                    <span class="nomf">formCheckout</span>[<span class="param">value</span>].<span class="param">classList</span>.<span class="nom">add</span>(<span class="text">"is-valid"</span>)
+                <span class="param">array</span>.<span class="nom">map</span>(<span class="param">e</span> <span class="nomf">=></span> {
+                    <span class="nomf">formCheckout</span>[<span class="param">e</span>].<span class="param">classList</span>.<span class="nom">remove</span>(<span class="text">"is-invalid"</span>)
+                    <span class="nomf">formCheckout</span>[<span class="param">e</span>].<span class="param">classList</span>.<span class="nom">add</span>(<span class="text">"is-valid"</span>)
                 })
                 <span class="ier">if</span>(<span class="nomf">errorHtml</span>.<span class="nomf">classList</span>.<span class="nom">contains</span>(<span class="text">"alert-danger"</span>)) {
                     <span class="nomf">errorHtml</span>.<span class="nomf">classList</span>.<span class="nom">remove</span>(<span class="text">"alert-danger"</span>)
                 }
-                <span class="nom">addOrderLocalStorage</span>(<span class="nomf">newDataFrom</span>)
-                <span class="nom">setTimeout</span>(<span class="nom">sendForm</span>(<span class="text">"POST"</span>, <span class="text">"http://localhost:3000/order"</span>, <span class="nomf">newDataFrom</span>, <span class="text">`http://127.0.0.1:5500/front-end/thanks.html?order=<span class="nomf">${</span><span class="param">id</span><span class="nomf">}</span>`</span>)
-                .<span class="nom">then</span>(<span class="param">res</span> <span class="declar">=></span> {
-                    <span class="nomf">errorHtml</span>.<span class="nomf">classList</span>.<span class="nom">add</span>(<span class="text">"alert-success"</span>)
-                    <span class="nomf">errorHtml</span>.<span class="param">innerHTML</span> = <span class="text">"&ltp>Transaction en cours...&lt/p>"</span>
-                  })
-                  .<span class="nom">catch</span>(<span class="param">err</span> <span class="declar">=></span> {
-                    <span class="param">console</span>.<span class="nom">log</span>(<span class="param">err</span>)
-                  })
-                , <span class="num">1000</span>)
+
+                
+                <span class="nom">fetch</span>(<span class="text">"http://localhost:3000/api/cameras/order"</span>, <span class="nomf">options</span>)
+                    .<span class="nom">then</span>(<span class="param">res</span> <span class="declar">=></span> {
+                        <span class="ier">if</span> <span class="param">res</span>.<span class="nom">json</span>()
+                    })
+                    .<span class="nom">then</span>(<span class="param">data</span> <span class="declar">=></span> {
+                        <span class="nomf">errorHtml</span>.<span class="nomf">classList</span>.<span class="nom">add</span>(<span class="text">"alert-success"</span>)
+                        <span class="nomf">errorHtml</span>.<span class="param">innerHTML</span> = <span class="text">"&ltp>Transaction en cours...&lt/p>"</span>
+                        <span class="declar">let</span> <span class="param">id</span> = <span class="param">data</span>.<span class="param">orderId</span>
+                        <span class="nom">addOrderLocalStorage</span>(<span class="param">data</span>, <span class="param">id</span>)
+                    })
+                    .<span class="nom">catch</span>(<span class="param">err</span> <span class="declar">=></span> {
+                        <span class="param">console</span>.<span class="nom">log</span>(<span class="text">"test : "</span> + <span class="param">err</span>)
+                    })
             }
+        })
+        <span class="nom">$</span>(<span class="declar">function</span> () {
+            <span class="nom">$</span>(<span class="text">'[data-toggle="tooltip"]'</span>).<span class="nom">tooltip</span>()
         })
     }
                                             </code></pre>
@@ -1241,7 +1255,7 @@
 
     <span class="nom">badgeCount</span>();
     <span class="nom">cartDropdown</span>();
-    <span class="nom">apiCamera</span>(<span class="text">"GET"</span>, <span class="text">'http://localhost:3000/'</span>)
+    <span class="nom">apiCamera</span>(<span class="text">"GET"</span>, <span class="text">'http://localhost:3000/api/cameras'</span>)
         .<span class="nom">then</span>(<span class="param">res</span> <span class="declar">=></span> {
             <span class="declar">let</span> <span class="param">newCamera</span> = []
             <span class="declar">let</span> <span class="param">cameraObject</span> = <span class="param">res</span>.<span class="nom">map</span>(<span class="param">camera</span> <span class="declar">=></span> {
@@ -1256,6 +1270,8 @@
                     )
                 )
             })
+
+            <span class="declar">const</span> <span class="nomf">cardProduct</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">'cardProduct'</span>)
             <span class="declar">let</span> <span class="param">cardView</span> = <span class="param">res</span>.<span class="nom">map</span>(<span class="param">camera</span> <span class="declar">=></span> {
                 <span class="ier">return</span><span class="text">`
                     &ltdiv class="d-flex align-items-center mb-5">
@@ -1307,10 +1323,11 @@
     <span class="nom">badgeCount</span>();
     <span class="nom">cartDropdown</span>();
 
-    <span class="declar">let</span> <span class="param">urlcourante</span> = <span class="param">document</span>.<span class="param">location</span>.<span class="param">href</span>
-    <span class="param">urlcourante</span> = <span class="param">urlcourante</span>.<span class="nom">replace</span>(<span class="text">/\/$/</span>, <span class="text">""</span>)
-    <span class="declar">let</span> <span class="param">queueUrl</span> = <span class="param">urlcourante</span>.<span class="nom">substring</span>(<span class="param">urlcourante</span>.<span class="nom">lastIndexOf</span>(<span class="text">"/"</span>) + <span class="num">1</span>)
-    <span class="declar">let</span> <span class="param">idResponse</span> = <span class="param">queueUrl</span>.<span class="nom">substring</span>(<span class="num">16</span>)
+    <span class="declar">const</span> <span class="nomf">searchParams</span> = <span class="declar">new</span> <span class="class">URLSearchParams</span>(<span class="param">document</span>.<span class="param">location</span>.<span class="param">href</span>)
+    <span class="declar">let</span> <span class="param">idResponse</span>
+    <span class="ier">for</span>(<span class="declar">let</span> <span class="param">p</span> <span class="declar">of</span> <span class="nomf">searchParams</span>) {
+        <span class="param">idResponse</span> = <span class="param">p</span>[<span class="num">1</span>]
+    }
 
     <span class="declar">const</span> <span class="nomf">nameProduct</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"nameProduct"</span>)
     <span class="declar">const</span> <span class="nomf">bigNameProduct</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"bigNameProduct"</span>)
@@ -1322,7 +1339,7 @@
     <span class="declar">const</span> <span class="nomf">priceProduct</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"priceProduct"</span>)
     <span class="declar">const</span> <span class="nomf">addToCart</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"addToCart"</span>)
 
-    <span class="nom">apiCamera</span>(<span class="text">"GET"</span>, <span class="text">`http://localhost:3000/<span class="nomf">${</span><span class="param">idResponse</span><span class="nomf">}</span>`</span>);
+    <span class="nom">apiCamera</span>(<span class="text">"GET"</span>, <span class="text">`http://localhost:3000/api/cameras/<span class="nomf">${</span><span class="param">idResponse</span><span class="nomf">}</span>`</span>);
         .<span class="nom">then</span>(<span class="param">res</span> <span class="declar">=></span> {
             <span class="declar">let</span> <span class="param">lenseShow</span> = <span class="param">res</span>.<span class="param">lenses</span>.<span class="nom">map</span>(<span class="param">lense</span> <span class="nomf">=></span> {
                 <span class="ier">return</span><span class="text">`
@@ -1387,26 +1404,36 @@
                                             <pre><code>
     <span class="declar">let</span> <span class="param">keyStorage</span> = <span class="param">localStorage</span>.<span class="nom">getItem</span>(<span class="text">"Order"</span>);
     <span class="declar">let</span> <span class="param">products</span> = <span class="param">JSON</span>.<span class="nom">parse</span>(<span class="param">keyStorage</span>);
-    <span class="declar">let</span> <span class="param">urlcourante</span> = <span class="param">document</span>.<span class="param">location</span>.<span class="param">href</span>;
-    <span class="param">urlcourante</span> = <span class="param">urlcourante</span>.<span class="nom">replace</span>(<span class="text">/\/$/</span>, <span class="text">""</span>);
-    <span class="declar">let</span> <span class="param">queueUrl</span> = <span class="param">urlcourante</span>.<span class="nom">substring</span>(<span class="param">urlcourante</span>.<span class="nom">lastIndexOf</span>(<span class="text">"/"</span>) + <span class="num">1</span>);
-    <span class="declar">let</span> <span class="param">idResponse</span> = <span class="param">queueUrl</span>.<span class="nom">substring</span>(<span class="num">18</span>);
+
+    <span class="declar">const</span> <span class="nomf">searchParams</span> = <span class="declar">new</span> <span class="class">URLSearchParams</span>(<span class="param">document</span>.<span class="param">location</span>.<span class="param">href</span>)
+    <span class="declar">let</span> <span class="param">idResponse</span>
+
+    <span class="ier">for</span>(<span class="declar">let</span> <span class="param">p</span> <span class="declar">of</span> <span class="nomf">searchParams</span>) {
+        <span class="param">idResponse</span> = <span class="param">p</span>[<span class="num">1</span>]
+    }
+
     <span class="declar">const</span> <span class="nomf">section</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"container"</span>)
 
-    <span class="ier">if</span>(<span class="param">products</span> && <span class="param">products</span>.<span class="param">id</span> == <span class="param">idResponse</span>) {
+    <span class="ier">if</span>(<span class="param">products</span> && <span class="param">products</span>.<span class="param">orderId</span> == <span class="param">idResponse</span>) {
         <span class="declar">let</span> <span class="param">order</span> = <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"order"</span>)
         <span class="declar">let</span> <span class="param">reboot</span> = <span class="param">document</span>.<span class="nom">querySelectorAll</span>(<span class="text">"a"</span>)
-        <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"title"</span>).<span class="param">innerHTML</span> = <span class="text">`Merci pour votre commande <span class="nomf">${</span><span class="param">products</span>.<span class="param">prenom</span><span class="nomf">}</span> .`</span>
+
+        <span class="param">document</span>.<span class="nom">getElementById</span>(<span class="text">"title"</span>).<span class="param">innerHTML</span> = <span class="text">`Merci pour votre commande <span class="nomf">${</span><span class="param">products</span>.<span class="param">contact</span>.<span class="param">firstName</span><span class="nomf">}</span> .`</span>
+        <span class="param">order</span>.<span class="param">innerHTML</span> = <span class="text">`
+            Votre numéro de commande : &ltb><span class="nomf">${</span><span class="param">products</span>.<span class="param">orderId</span><span class="nomf">}</span>&lt/b>. &ltbr> 
+            Un email de confirmation vous a été envoyé à l'adresse suivante : &ltb><span class="nomf">${</span><span class="param">products</span>.<span class="param">contact</span>.<span class="param">email</span><span class="nomf">}</span>&lt/b>.&ltbr>
+            Votre colis vous sera livré à l'adresse suivante : &ltb><span class="nomf">${</span><span class="param">products</span>.<span class="param">contact</span>.<span class="param">address</span><span class="nomf">}</span>, <span class="nomf">${</span><span class="param">products</span>.<span class="param">contact</span>.<span class="param">city</span><span class="nomf">}</span>&lt/b>`</span>
+
         <span class="ier">for</span>(<span class="declar">let</span> <span class="param">i</span> = <span class="num">0</span>; <span class="param">i</span> &lt <span class="param">reboot</span>.<span class="param">length</span>; <span class="param">i</span>++) {
             <span class="param">reboot</span>[<span class="param">i</span>].<span class="nom">addEventListener</span>(<span class="text">"click"</span>, <span class="declar">function</span>() {
                 <span class="param">localStorage</span>.<span class="nom">removeItem</span>(<span class="text">"Order"</span>)
             })
         }
-    } <span class="ier">else if</span> (<span class="param">products</span> && <span class="param">products</span>.<span class="param">id</span> != <span class="param">idResponse</span> && <span class="class">Boolean</span>(<span class="param">idResponse</span>)) {
-        <span class="nomf">section</span>.<span class="param">innerHTML</span> = <span class="text">&ltp class='text-center mb-0'>Désolé mais ce numéro de commande ne vous appartient pas.&ltbr>Merci de &lta href='index.html'>retourner dans la boutique&lt/a> ou d'aller sur &lta href='http://127.0.0.1:5500/front-end/thanks.html?order=<span class="nomf">${</span><span class="param">products</span>.<span class="param">id</span><span class="nomf">}</span>'>votre numéro de commande&lt/a>&lt/p></span>
+    } <span class="ier">else if</span> (<span class="param">products</span> && <span class="param">products</span>.<span class="param">orderId</span> != <span class="param">idResponse</span> && <span class="class">Boolean</span>(<span class="param">idResponse</span>)) {
+        <span class="nomf">section</span>.<span class="param">innerHTML</span> = <span class="text">&ltp class='text-center mb-0'>Désolé mais ce numéro de commande ne vous appartient pas.&ltbr>Merci de &lta href='index.html'>retourner dans la boutique&lt/a> ou d'aller sur &lta href='http://127.0.0.1:5500/front-end/thanks.html?order=<span class="nomf">${</span><span class="param">products</span>.<span class="param">orderId</span><span class="nomf">}</span>'>votre numéro de commande&lt/a>&lt/p></span>
     } <span class="ier">else if</span> (<span class="class">Boolean</span>(<span class="param">idResponse</span>) === <span class="declar">false</span>) {
         <span class="ier">if</span>(<span class="param">products</span>) {
-            <span class="nomf">section</span>.<span class="param">innerHTML</span> = <span class="text">&ltp class='text-center mb-0'>Désolé, aucun numéro de commande est stipulé.&ltbr>Merci de &lta href='index.html'>retourner dans la boutique&lt/a> ou d'aller sur &lta href='http://127.0.0.1:5500/front-end/thanks.html?order=<span class="nomf">${</span><span class="param">products</span>.<span class="param">id</span><span class="nomf">}</span>'>votre numéro de commande&lt/a>&lt/p></span>
+            <span class="nomf">section</span>.<span class="param">innerHTML</span> = <span class="text">&ltp class='text-center mb-0'>Désolé, aucun numéro de commande est stipulé.&ltbr>Merci de &lta href='index.html'>retourner dans la boutique&lt/a> ou d'aller sur &lta href='http://127.0.0.1:5500/front-end/thanks.html?order=<span class="nomf">${</span><span class="param">products</span>.<span class="param">orderId</span><span class="nomf">}</span>'>votre numéro de commande&lt/a>&lt/p></span>
         } <span class="ier">else</span> {
             <span class="nomf">section</span>.<span class="param">innerHTML</span> = <span class="text">&ltp class='text-center mb-0'>Désolé, aucun numéro de commande est stipulé.&ltbr>Merci de &lta href='index.html'>retourner dans la boutique&lt/a></span>
         }
@@ -1415,6 +1442,150 @@
     }
                                             </code></pre>
                                         </figure>
+                                    </div>
+                                </article>
+                            </div>
+
+
+                            <!-- test-1 -->
+                            <div class="tab-pane fade" id="pills-cartTest" role="tabpanel" aria-labelledby="pills-cartTest-tab">
+                                <article>
+                                    <div class="article-header mb-5">
+                                        <h3 class="h1">Plan de tests : Cart</h3>
+                                    </div>
+                                    <div class="article-body">
+                                        <p class="h4">Les éléments à vérifier :</p>
+                                        <ol class="ml-5 mt-5 text-dark">
+                                            <li>
+                                                <p class="font-weight-bold h5">L'affichage des produits du panier</p>
+                                                <p>D'abord on vérifie si il existe bien une ou plusieurs valeurs dans la clé <b>Product</b> du localStorage. Si c'est le cas, une boucle <b>map( )</b> est faite sur ses éléments et nous retourne par la suite un block HTML qui affichera les lignes du tableau</p>
+                                            </li>
+                                            <li>
+                                                <p class="font-weight-bold h5">L'affichage du prix</p>
+                                                <p>L'affichage du prix reprend le concept de l'affichage des produits en y ajoutant une condition sur la longueur des valeurs dans la clé <b>Product</b> du localStorage. Si celle-ci est supérieur à 0, elle calculera la valeur total du prix en prenant en compte la quantité de chaque produit. Sinon, elle écrase la syntaxe de la page panier pour afficher le message <b>"Vous n'avez aucun produit dans votre panier. Retourner dans la boutique"</b>.</p>
+                                            </li>
+                                            <li>
+                                                <p class="font-weight-bold h5">L'incrémentation de la quantité d'un produit</p>
+                                                <p>Si on souhaite augmenter la quantité d'un produit, <b>addMoreProduct( )</b> récupère le produit en question dans un tableau secondaire qui reprend les valeurs du localStorage et incrémente la quantité du produit par 1 à chaque <b>clique</b>. Il met ensuite à jour le localStorage (<b>updateLocalStorage( )</b>) à l'aide du tableau secondaire et donne cet aspect dynamique au niveau du tableau de produit, du prix total, et du nombre de produits dans le panier.</p>
+                                            </li>
+                                            <li>
+                                                <p class="font-weight-bold h5">La décrémentation de la quantité d'un produit</p>
+                                                <p>Si on souhaite diminuer la quantité d'un produit, <b>removeMoreProduct( )</b> récupère le produit en question dans un tableau secondaire qui reprend les valeurs du localStorage et décrémente la quantité du produit par 1 à chaque <b>clique</b>. Il met ensuite à jour le localStorage (<b>updateLocalStorage( )</b>) à l'aide du tableau secondaire et donne cet aspect dynamique au niveau du tableau de produit, du prix total, et du nombre de produits dans le panier. Si le produit en question est décrémenté jusqu'au 0, alors celui-ci est automatique supprimer du tableau secondaire qui mettra ensuite à jour le localStorage et tous le processus qui en découle.</p>
+                                            </li>
+                                            <li>
+                                                <p class="font-weight-bold h5">La suppression d'un produit</p>
+                                                <p>Si on souhaite supprimer un produit, <b>removeProductLocalStorage( )</b> récupère le produit en question dans un tableau secondaire qui reprend les valeurs du localStorage et le supprime de son tableau au <b>clique</b>. Il met ensuite à jour le localStorage (<b>updateLocalStorage( )</b>) à l'aide du tableau secondaire et donne cet aspect dynamique au niveau du tableau de produit, du prix total, et du nombre de produits dans le panier.</p>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- test-2 -->
+                            <div class="tab-pane fade" id="pills-checkoutTest" role="tabpanel" aria-labelledby="pills-checkoutTest-tab">
+                                <article>
+                                    <div class="article-header mb-5">
+                                        <h3 class="h1">Plan de tests : Checkout</h3>
+                                    </div>
+                                    <div class="article-body">
+
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- test-3 -->
+                            <div class="tab-pane fade" id="pills-indexTest" role="tabpanel" aria-labelledby="pills-indexTest-tab">
+                                <article>
+                                    <div class="article-header mb-5">
+                                        <h3 class="h1">Plan de tests : Index</h3>
+                                    </div>
+                                    <div class="article-body">
+                                        <p class="h4">Les éléments à vérifier :</p>
+                                        <ol class="ml-5 mt-5 text-dark">
+                                            <li>
+                                                <p class="font-weight-bold h5">L'appel à l'API</p>
+                                                <p>En faisant une nouvelle Promise avec <b>apiCamera( )</b> et en lui passant en paramètres les éléments <b>"GET"</b> et l'url <b>"http://localhost:3000/"</b> dans l'appel de la fonction, nous avons bien un retour de réponse. En cas d'échec, la Promesse nous retourne un message d'erreur.</p>
+                                            </li>
+                                            <li>
+                                                <p class="font-weight-bold h5">L'affichage des produits</p>
+                                                <p>Une fois que nous avons bien une réponse, on l'initialise dans un objet avec la Classe <b>Camera</b>. Nous récupérons chacune des valeurs et on retourne un block HTML avec la méthode <b>map( )</b>. On modifie ensuite la syntaxe de l'élément HTML <b>cardProduct</b> pour l'affichage des produits.</p>
+                                            </li>
+                                            <li>
+                                                <p class="font-weight-bold h5">Pour une meilleur expérience utilisateur</p>
+                                                <p>Les appels des fonctions <b>badgeCount( )</b> et <b>cartDropdown( )</b> vont permettre d'avoir un visuel en temps réel sur le panier ainsi que sa quantité de produits. Une autre condition prend en compte la longueur de la clé <b>Product</b> du localStorage et, si celui-ci est vide, il nous retourne un message <b>"Vous n'avez aucun produit dans votre panier"</b> et le badge sera invisible.</p>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- test-4 -->
+                            <div class="tab-pane fade" id="pills-productTest" role="tabpanel" aria-labelledby="pills-productTest-tab">
+                                <article>
+                                    <div class="article-header mb-5">
+                                        <h3 class="h1">Plan de tests : Product</h3>
+                                    </div>
+                                    <div class="article-body">
+                                        <p class="h4">Les éléments à vérifier :</p>
+                                        <ol class="ml-5 mt-5 text-dark">
+                                            <li>
+                                                <p class="font-weight-bold h5">Récupérer l'id du produit</p>
+                                                <p>Ici on récupère l'id qui se trouve dans l'url grâce à <b>URLSearchParams( )</b>. A l'aide d'une boucle <b>for</b> et des éléments retourné avec <b>URLSearchParams( )</b>, on récupère l'id.</p>
+                                            </li>
+                                            <li>
+                                                <p class="font-weight-bold h5">L'appel à l'API</p>
+                                                <p>En faisant une nouvelle Promise avec <b>apiCamera( )</b> et en lui passant en paramètres les éléments <b>"GET"</b> et l'url <b>"http://localhost:3000/"</b> avec l'id récupéré dans l'appel de la fonction, nous avons bien un retour de réponse. En cas d'échec, la Promesse nous retourne un message d'erreur.</p>
+                                            </li>
+                                            <li>
+                                                <p class="font-weight-bold h5">L'affichage du produit</p>
+                                                <p>Un premier <b>then( )</b> est réaliser afin d'afficher un block HTML pour les lentilles à l'aide d'une boucle <b>map( )</b>. La syntaxe de certains éléments HTML sera modifié pour y afficher les informations du produit.</p>
+                                            </li>
+                                            <li>
+                                                <p class="font-weight-bold h5">L'ajout au panier</p>
+                                                <p>Un seconde <b>then( )</b> est fait pour l'événement au "click" du boutton <b>Ajouter au panier</b>. Celui-ci vérifie si ce produit n'existe pas dans le localStorage. Si c'est le cas, il ajoute le produit dans le localStorage. Sinon il incrémente la valeur de <b>quantité</b> d'un +1.</p>
+                                            </li>
+                                            <li>
+                                                <p class="font-weight-bold h5">Pour une meilleur expérience utilisateur</p>
+                                                <p>Les appels des fonctions <b>badgeCount( )</b> et <b>cartDropdown( )</b> vont permettre d'avoir un visuel en temps réel sur le panier ainsi que sa quantité de produits. Une autre condition prend en compte la longueur de la clé <b>Product</b> du localStorage et, si celui-ci est vide, il nous retourne un message <b>"Vous n'avez aucun produit dans votre panier"</b> et le badge sera invisible.</p>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- test-5 -->
+                            <div class="tab-pane fade" id="pills-thanksTest" role="tabpanel" aria-labelledby="pills-thanksTest-tab">
+                                <article>
+                                    <div class="article-header mb-5">
+                                        <h3 class="h1">Plan de tests : Thanks</h3>
+                                    </div>
+                                    <div class="article-body">
+                                        <p class="h4">Les éléments à vérifier :</p>
+                                        <ol class="ml-5 mt-5 text-dark">
+
+                                            <li>
+                                                <p class="font-weight-bold h5">Récupérer l'id de commande</p>
+                                                <p>Ici on récupère l'id qui se trouve dans l'url grâce à <b>URLSearchParams( )</b>. A l'aide d'une boucle <b>for</b> et des éléments retourné avec <b>URLSearchParams( )</b>, on récupère l'id.</p>
+                                            </li>
+                                            <li>
+                                                <p class="font-weight-bold h5">Les conditions d'affichage</p>
+                                                <p>Quatre affichages différents sont programmer en fonction de quatre cas :</p>
+                                                <ul class="ml-5">
+                                                    <li>
+                                                        <p>Si il existe un élément dans la clé <b>Order</b> du localStorage et si l'id récupéré par la valeur de cette clé est égale à l'id récupéré dans l'url alors on affiche le message de remerciement pour la commande.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Sinon si il existe un élément dans la clé <b>Order</b> du localStorage et si l'id récupéré par la valeur de cette clé n'est pas égale à l'id récupéré dans l'url et que le booléan de l'id de l'url est vrai, alors on affiche le message suivant : <b>Désolé mais ce numéro de commande ne vous appartient pas. Merci de retourner dans la boutique ou d'aller sur votre numéro de commande</b></p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Sinon si le booléan de l'id récupéré dans l'url est à false, alors on retourne le message suivant : <b>Désolé, aucun numéro de commande est stipulé. Merci de retourner dans la boutique</b></p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Sinon on retourne le message suivant : <b>Aucune commande n'a été faite, merci de retourner dans la boutique</b></p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p class="font-weight-bold h5">Suppression de la commande</p>
+                                                <p>Au click sur n'importe quel lien de cette page, la clé <b>Order</b> est automatiquement supprimé.</p>
+                                            </li>
+                                        </ol>
                                     </div>
                                 </article>
                             </div>

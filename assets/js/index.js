@@ -6,7 +6,7 @@ import { badgeCount, cartDropdown, price } from "./util/Function.js";
 badgeCount();
 cartDropdown();
 
-apiCamera("GET", "http://localhost:3000/")
+apiCamera("GET", "http://localhost:3000/api/cameras")
     .then(res => {
         // J'initialise un array vide afin de pushé par la suite chaque caméra donnée par l'api
         let newCamera = [];

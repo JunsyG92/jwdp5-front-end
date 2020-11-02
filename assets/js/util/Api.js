@@ -10,17 +10,4 @@ function apiCamera(method, url) {
     });
 }
 
-// L'envoie du formulaire passe par une fonction qui prend quatre paramètres :
-// une méthode, une URL, un corp de body et une redirection. Elle retourne une nouvelle Promesse.
-function sendForm (method, url, jsonBody, redirection) {
-    return new Promise((resolve, reject) => {
-      const xhr = new XMLHttpRequest();
-      xhr.open(method, url, true);
-      xhr.setRequestHeader("Content-type","application/json");
-      xhr.onload = () => resolve(window.location.href = redirection);
-      xhr.onerror = () => reject(console.log("Une erreur est survenue"));
-      xhr.send(JSON.stringify(jsonBody));
-    });
-}
-
-export { apiCamera, sendForm }
+export { apiCamera }

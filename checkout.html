@@ -80,7 +80,7 @@
                                                         </svg>
                                                     </div>
                                                   </div>
-                                                <input type="text" class="form-control" placeholder="John" name="firstName" required>
+                                                <input type="text" class="form-control" placeholder="John" name="firstName" value="" required>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -98,22 +98,7 @@
                                                 <input type="text" class="form-control" placeholder="Doe" name="lastName" required>
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <div class="row justify-content-between">
-                                                    <div class="col-8">
-                                                        <label class="control-label">N° de rue</label>
-                                                    </div>
-                                                    <div class="col-4 text-right">
-                                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg" data-toggle="tooltip" data-placement="right" title="Seul les caractères numériques (0 - 9) sont autorisé">
-                                                            <path fill-rule="evenodd" d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <input type="text" class="form-control" placeholder="50" name="numberStreet" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-9">
+                                        <div class="col-md-8">
                                             <div class="form-group">
                                                 <div class="row justify-content-between">
                                                     <div class="col-10">
@@ -132,24 +117,9 @@
                                             <div class="form-group">
                                                 <div class="row justify-content-between">
                                                     <div class="col-8">
-                                                        <label class="control-label">Code postale</label>
-                                                    </div>
-                                                    <div class="col-4">
-                                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg" data-toggle="tooltip" data-placement="right" title="Seul les caractères numériques (0 - 9) sont autorisé">
-                                                            <path fill-rule="evenodd" d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <input type="text" class="form-control" placeholder="75008" name="zipCode" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="form-group">
-                                                <div class="row justify-content-between">
-                                                    <div class="col-10">
                                                         <label class="control-label">Ville</label>
                                                     </div>
-                                                    <div class="col-2">
+                                                    <div class="col-4">
                                                         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg" data-toggle="tooltip" data-placement="right" title="Seul les caractères alphabétiques (a - z et A - Z) et les caractères spéciaux tel que (',. -) sont autorisé">
                                                             <path fill-rule="evenodd" d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
                                                         </svg>
@@ -176,79 +146,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <p class="lead font-weight-bold text-dark">Coordonnées bancaire</p>
-                                    <div class="row mt-3">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <div class="row justify-content-between">
-                                                    <div class="col-10">
-                                                        <label class="control-label">N° de carte bancaire</label>
-                                                    </div>
-                                                    <div class="col-2">
-                                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg" data-toggle="tooltip" data-placement="right" title="Seul les formats mastercard et visa sont autorisé (N° de carte qui commence par 4 ou 5), le format doit suivre cette régle : 4xxx-xxxx-xxxx-xxxx ou 5xxx-xxxx-xxxx-xxxx">
-                                                            <path fill-rule="evenodd" d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <div class="input-group input-group-merge">
-                                                    <input type="text" class="form-control" data-mask="0000 0000 0000 0000" placeholder="4789-5697-0541-7546" name="creditCard" required>
-                                                    <div class="input-group-append">
-                                                        <span class="input-group-text"><i class="fas fa-credit-card"></i></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <div class="row justify-content-between">
-                                                    <div class="col-10">
-                                                        <label class="control-label">Date d'expiration</label>
-                                                    </div>
-                                                    <div class="col-2">
-                                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg" data-toggle="tooltip" data-placement="right" title="Seul les formats de date (01/2020 ou 01/20) sont autorisé. Concernant l'année, elle doit se situer obligatoirement entre 2020 et 2039.">
-                                                            <path fill-rule="evenodd" d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <input type="text" class="form-control" data-mask="00/00" placeholder="mm/aaaa" name="date" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <div class="row justify-content-between">
-                                                    <div class="col-10">
-                                                        <label class="control-label">CVC code</label>
-                                                    </div>
-                                                    <div class="col-2">
-                                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg" data-toggle="tooltip" data-placement="right" title="Le code CVC est obligatoire trois chiffres.">
-                                                            <path fill-rule="evenodd" d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <div class="input-group input-group-merge">
-                                                    <input type="text" class="form-control" data-mask="000" placeholder="746" name="cvc" required>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                     <div class="alert d-none my-3 mx-5" role="alert" id="error">
                                         <ul id="list"></ul>
                                     </div>
                                     <div class="mt-4 text-right">
                                         <a href="index.html" class="btn btn-link text-sm text-dark font-weight-bold">Retourner au magasin</a>
                                         <button type="submit" class="btn btn-sm btn-success" id="button">Complétez la commande</button>
-                                    </div>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="row">
-                                        <div class="col-8">
-                                            <p class="h6 mb-0 lh-180">Carte de crédit</p>
-                                            <p class="text-muted mt-2 mb-0">Transfert d'argent sécurisé via votre compte bancaire. Nous soutenons Mastercard et Visa.</p>
-                                        </div>
-                                        <div class="col-4 text-right">
-                                            <img alt="Image placeholder" src="assets/img/icons/mastercard.png" width="40" class="mr-2">
-                                            <img alt="Image placeholder" src="assets/img/icons/visa.png" width="40" class="mr-2">
-                                        </div>
                                     </div>
                                 </div>
                             </div>

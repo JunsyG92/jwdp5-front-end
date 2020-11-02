@@ -40,9 +40,10 @@ const addProductLocalStorage = (data) => {
 
 // Cette fonction créer une nouvelle clé qui se nomme "Order" ou y on retrouve les informations de l'utilisateur transmise via le formulaire
 // et supprime la clé "Product" et ses valeurs. On y retrouve un aperçu dans la page de remerciement.
-const addOrderLocalStorage = (data) => {
+const addOrderLocalStorage = (data, id) => {
     localStorage.setItem("Order", JSON.stringify(data));
     localStorage.removeItem("Product");
+    window.location.href = `thanks.html?order=${id}`;
 };
 
 // Cette fonction permet de mettre à jour le localStorage après modification
@@ -224,13 +225,6 @@ const cartDropdown = () => {
                   <td class="price text-right pr-5">${price(product.price)} €</td>
                   <td class="price text-right pr-5">${product.add}</td>
                   <td class="price text-right pr-5">${price(product.price) * product.add} €</td>
-                  <td class="text-right">
-                      <button class="remove bg-transparent border-0" id="product-${product.id}" >
-                          <svg width="1.3em" height="1.3em" viewBox="0 0 16 16" class="bi bi-x-circle-fill text-danger" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.146-3.146a.5.5 0 0 0-.708-.708L8 7.293 4.854 4.146a.5.5 0 1 0-.708.708L7.293 8l-3.147 3.146a.5.5 0 0 0 .708.708L8 8.707l3.146 3.147a.5.5 0 0 0 .708-.708L8.707 8l3.147-3.146z"/>
-                          </svg>
-                      </button>
-                  </td>
               </tr>
           `;
         }).join("");
@@ -303,7 +297,6 @@ const cartChekcout = () => {
     }
 }
 
-
 // errorMessage affiche les messages d'erreurs retourné par les vérifications de validation des champs de formulaire.
 // On y trouve un aperçu dans la page checkout.
 const errorMessage = (message) => {
@@ -311,6 +304,19 @@ const errorMessage = (message) => {
     info.classList.remove('d-none')
     info.classList.add('d-block')
     info.innerHTML = `<p>${message}</p>`
+}
+
+const conditionsInput = (nameInput, validTypeClass, validEmptyClass) => {
+    if (validTypeClass === true && validEmptyClass === true) {
+        if(nameInput.classList.contains('is-invalid')) {
+            nameInput.classList.remove('is-invalid')
+        }
+        nameInput.classList.add('is-valid')
+        return true
+    } else {
+        nameInput.classList.add('is-invalid')
+        return false
+    }
 }
 
 export {
@@ -324,5 +330,6 @@ export {
   cartChekcout,
   displayPrice,
   errorMessage,
-  price
+  price,
+  conditionsInput
 };

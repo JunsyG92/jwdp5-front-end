@@ -4,14 +4,13 @@ import { AddProduct } from "./util/Class.js";
 
 badgeCount();
 cartDropdown();
-// .removeProductLocalStorage();
 
-let urlcourante = document.location.href;
-// Supprimons l'éventuel dernier slash de l'URL
-urlcourante = urlcourante.replace(/\/$/, "");
-// Gardons dans la variable queue_url uniquement la portion derrière le dernier slash de urlcourante
-let queueUrl = urlcourante.substring(urlcourante.lastIndexOf("/") + 1);
-let idResponse = queueUrl.substring(16);
+// Je récupère l'id du produit depuis l'URL
+const searchParams = new URLSearchParams(document.location.href)
+let idResponse
+for(let p of searchParams) {
+    idResponse = p[1]
+}
 
 // Récupération des élément du DOM
 const nameProduct = document.getElementById("nameProduct");
@@ -24,9 +23,8 @@ const viewLenses = document.getElementById("viewLenses");
 const priceProduct = document.getElementById("priceProduct");
 const addToCart = document.getElementById("addToCart");
 
-apiCamera("GET", `http://localhost:3000/${idResponse}`)
+apiCamera("GET", `http://localhost:3000/api/cameras/${idResponse}`)
   .then((res) => {
-
     /**
      * Affichage des élément du produit en modifiant le DOM
      */

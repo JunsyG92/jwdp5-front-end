@@ -1,34 +1,33 @@
 let keyStorage = localStorage.getItem("Order");
 let products = JSON.parse(keyStorage);
 
-let urlcourante = document.location.href;
-// Supprimons l'éventuel dernier slash de l'URL
-urlcourante  = urlcourante.replace(/\/$/, "");
-// Gardons dans la variable queue_url uniquement la portion derrière le dernier slash de urlcourante
-let queueUrl = urlcourante.substring(urlcourante.lastIndexOf("/") + 1);
-let idResponse = queueUrl.substring(18);
-const section = document.getElementById("container")
+const searchParams = new URLSearchParams(document.location.href)
+let idResponse
+for(let p of searchParams) {
+    idResponse = p[1]
+}
 
-if (products && products.id == idResponse) {
+const section = document.getElementById("container")
+if (products && products.orderId == idResponse) {
     let order = document.getElementById("order")
     let reboot = document.querySelectorAll('a');
     
-    document.getElementById("title").innerHTML = `Merci pour votre commande ${products.prenom}.`;
+    document.getElementById("title").innerHTML = `Merci pour votre commande ${products.contact.firstName}.`;
     order.innerHTML = `
-        Votre numéro de commande : <b>${products.id}</b>. <br>
-        Un email de confirmation vous a été envoyé à l'adresse suivante : <b>${products.email}</b>.<br>
-        Votre colis vous sera livré à l'adresse suivante : <b>${products.numero_de_rue} ${products.adresse}, ${products.code_postale} ${products.ville}</b>`
+        Votre numéro de commande : <b>${products.orderId}</b>. <br>
+        Un email de confirmation vous a été envoyé à l'adresse suivante : <b>${products.contact.email}</b>.<br>
+        Votre colis vous sera livré à l'adresse suivante : <b>${products.contact.address}, ${products.contact.city}</b>`
     
     for (let i = 0; i < reboot.length; i++) {
         reboot[i].addEventListener("click", function() {
             localStorage.removeItem("Order")
         });
     }
-} else if (products && products.id != idResponse && Boolean(idResponse)) {
-    section.innerHTML =  `<p class='text-center mb-0'>Désolé mais ce numéro de commande ne vous appartient pas.<br>Merci de <a href='index.html'>retourner dans la boutique</a> ou d'aller sur <a href='http://127.0.0.1:5500/front-end/thanks.html?order=${products.id}'>votre numéro de commande</a></p>`;
+} else if (products && products.orderId != idResponse && Boolean(idResponse)) {
+    section.innerHTML =  `<p class='text-center mb-0'>Désolé mais ce numéro de commande ne vous appartient pas.<br>Merci de <a href='index.html'>retourner dans la boutique</a> ou d'aller sur <a href='http://127.0.0.1:5500/front-end/thanks.html?order=${products.orderId}'>votre numéro de commande</a></p>`;
 } else if (Boolean(idResponse) === false) {
     if(products) {
-        section.innerHTML =  `<p class='text-center mb-0'>Désolé, aucun numéro de commande est stipulé.<br>Merci de <a href='index.html'>retourner dans la boutique</a> ou d'aller sur <a href='http://127.0.0.1:5500/front-end/thanks.html?order=${products.id}'>votre numéro de commande</a></p>`;
+        section.innerHTML =  `<p class='text-center mb-0'>Désolé, aucun numéro de commande est stipulé.<br>Merci de <a href='index.html'>retourner dans la boutique</a> ou d'aller sur <a href='http://127.0.0.1:5500/front-end/thanks.html?order=${products.orderId}'>votre numéro de commande</a></p>`;
     } else {
         section.innerHTML = "<p class='text-center mb-0'>Désolé, aucun numéro de commande est stipulé.<br>Merci de <a href='index.html'>retourner dans la boutique</a>";
     }
